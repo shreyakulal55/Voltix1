@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 const secretKey = 'c89d4b8e8870ff6a2515ee4bb8dd1f89d1e3c2ccf64e92b9e0283a0e98e632d7592b137a972b2a5f2947b8324f0205f3618578a268ad552b0650a0c0d61d198dd';
-const expiresIn = '15m';
+const expiresIn = '16m';
 
 // Sample user data
 const sampleUser = {
