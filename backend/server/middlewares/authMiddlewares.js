@@ -10,7 +10,7 @@ const verifyToken = (req, res, next) => {
   }
 
   // Split the token string and get the second part (index 1)
-  const tokenSplit = token.split(" ")[2];
+  const tokenSplit = token.split(" ")[1];
   // console.log(tokenSplit);
   jwt.verify(tokenSplit, secret, (err, decoded) => {
     if (err) {
@@ -18,7 +18,7 @@ const verifyToken = (req, res, next) => {
     }
     req.username = decoded.username;
     const user_Id = decoded.id;
-    console.log(req.username)
+    // console.log(req.username)
     next();
   });
 };

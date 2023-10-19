@@ -1,40 +1,114 @@
+require('dotenv').config();
 const jwt = require('jsonwebtoken');
-const secretKey = 'c89d4b8e8870ff6a2515ee4bb8dd1f89d1e3c2ccf64e92b9e0283a0e98e632d7592b137a972b2a5f2947b8324f0205f3618578a268ad552b0650a0c0d61d198dd';
+const secretKey = process.env.SECRET_KEY;
 const expiresIn = '16m';
-
-// Sample user data
-const sampleUser = {
-  username: 'sinan',
-};
-
+const User = require('../models/user');
+const bcrypt = require('bcrypt');
+// const sampleUsers = [
+//   {
+//     userId: '1',
+//     username: 'sinan',
+//     password: '12345', 
+//   },
+//   {
+//     userId: '2',
+//     username: 'alfaz',
+//     password: '12345',
+//   },
+// ];
 // Store valid refresh tokens
 const validRefreshTokens = new Set();
 
 // Login route handler
-const login = (req, res) => {
+// const login = (req, res) => {
+//   try {
+//     const { username } = req.body;
+
+//     if (username === sampleUser.username) {
+//       const accessToken = jwt.sign({ username: sampleUser.username }, secretKey, {
+//         expiresIn,
+//       });
+
+//       const refreshToken = jwt.sign({ username: sampleUser.username }, secretKey);
+
+//       // Store the refresh token
+//       validRefreshTokens.add(refreshToken);
+
+//       res.json({ accessToken, refreshToken });
+//     } else {
+//       res.status(401).json({ message: 'Invalid username' });
+//     }
+//   } catch (error) {
+//     res.status(500).json({ message: 'Internal server error' });
+//   }
+// };
+// const login = (req, res) => {
+//   try {
+//     const { username, password } = req.body;
+
+//     // Find the user in the sampleUsers array (Replace with database query)
+//     const user = sampleUsers.find((user) => user.username === username);
+
+//     if (!user) {
+//       return res.status(401).json({ message: 'Invalid username' });
+//     }
+
+//     // Verify the password (In a production app, use bcrypt.compare to compare hashed passwords)
+//     if (user.password !== password) {
+//       return res.status(401).json({ message: 'Invalid password' });
+//     }
+
+//     const accessToken = jwt.sign({ userId: user.userId }, secretKey, {
+//       expiresIn,
+//     });
+
+//     const refreshToken = jwt.sign({ userId: user.userId }, secretKey);
+
+//     // Store the refresh token
+//     validRefreshTokens.add(refreshToken);
+
+//     res.json({ accessToken, refreshToken });
+//   } catch (error) {
+//     res.status(500).json({ message: 'Internal server error' });
+//   }
+// };
+
+const login = async (req, res) => {
   try {
-    const { username } = req.body;
+    const { username, password } = req.body;
 
-    if (username === sampleUser.username) {
-      const accessToken = jwt.sign({ username: sampleUser.username }, secretKey, {
-        expiresIn,
-      });
+    // Find the user in the database by their username
+    const user = await User.findOne({ username });
 
-      const refreshToken = jwt.sign({ username: sampleUser.username }, secretKey);
-
-      // Store the refresh token
-      validRefreshTokens.add(refreshToken);
-
-      res.json({ accessToken, refreshToken });
-    } else {
-      res.status(401).json({ message: 'Invalid username' });
+    if (!user) {
+      return res.status(401).json({ message: 'Invalid username' });
     }
+
+    // Verify the password using bcrypt
+    const passwordMatch = await bcrypt.compare(password, user.password);
+
+    if (!passwordMatch) {
+      return res.status(401).json({ message: 'Invalid password' });
+    }
+
+    // Generate an access token
+    const accessToken = jwt.sign({ userId: user._id }, secretKey, {
+      expiresIn,
+    });
+
+    // Generate a refresh token
+    const refreshToken = jwt.sign({ userId: user._id }, secretKey);
+
+    // Store the refresh token (you can add additional logic to manage refresh tokens)
+    validRefreshTokens.add(refreshToken);
+
+    res.json({ accessToken, refreshToken });
   } catch (error) {
     res.status(500).json({ message: 'Internal server error' });
+    console.log(error);
   }
 };
 
-// Verify a refresh token and generate a new access token
 const refreshAccessToken = (req, res) => {
   try {
     const refreshToken = req.body.refreshToken;

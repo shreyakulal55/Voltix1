@@ -4,6 +4,7 @@ const { getProjects,getProjectById, createProject, updateProject, deleteProject 
 const { getTestimonials, getTestimonialById, createTestimonial, updateTestimonial, deleteTestimonial } = require('../controllers/testimonialcontrollers');
 const { getBanners, getBannerById, createBanner, updateBanner, deleteBanner } = require('../controllers/bannercontrollers');
 const {getSocialfeeds, getSocialfeedById, createSocialfeed, updateSocialfeed, deleteSocialfeed} = require('../controllers/socialfeedscontrollers');
+const { getUsers, getUserById, register, updateUser, deleteUser } = require('../controllers/userControllers');
 const authController = require('../controllers/authControllers');
 const authMiddleware = require('../middlewares/authMiddlewares');
 
@@ -30,6 +31,12 @@ router.get('/socialfeeds/:id', getSocialfeedById);
 router.post('/socialfeeds',authMiddleware.verifyToken, createSocialfeed);
 router.put('/socialfeeds/:id',authMiddleware.verifyToken, updateSocialfeed);
 router.delete('/socialfeeds/:id',authMiddleware.verifyToken, deleteSocialfeed);
+
+router.get('/users',authMiddleware.verifyToken, getUsers);
+router.get('/users/:id',authMiddleware.verifyToken, getUserById);
+router.post('/register', register);
+router.put('/users/:id',authMiddleware.verifyToken, updateUser);
+router.delete('/users/:id',authMiddleware.verifyToken, deleteUser);
 
 router.post('/login', authController.login);
 router.post('/refresh', authController.refreshAccessToken)
