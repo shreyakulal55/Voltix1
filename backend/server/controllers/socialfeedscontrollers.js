@@ -24,7 +24,12 @@ const getSocialfeeds = async (req, res) => {
     };
 
 const createSocialfeed = (req, res) => {
-    const socialfeed = new Socialfeed(req.body);
+    const socialfeedData = {
+      ...req.body,
+      created_by: req.userId, 
+    };
+
+    const socialfeed = new Socialfeed(socialfeedData);
     socialfeed.save()
       .then((savedsocialfeed) => {
         res.status(201).json({statusCode:"200",message :'socialfeed created successfully',savedsocialfeed});
@@ -38,7 +43,7 @@ const createSocialfeed = (req, res) => {
     const { id } = req.params;
     try{
         const updatesocialfeeds=await Socialfeed.findByIdAndUpdate(id, req.body, { new: true });
-        return res.status(200).json({statusCode:"200",message:'updated successfuly...',updatesocialfeeds});
+        return res.status(200).json({statusCode:"200",message:'updated successfuly...',updatesocialfeeds,userId: req.userId});
     }   
     catch(err){
         return res.status(500).json({statusCode:"500", error: err.message });
@@ -52,7 +57,7 @@ const deleteSocialfeed = async (req, res) => {
       if (!socialfeed) {
         return res.status(404).json({statusCode:"404", error: 'socialfeed not found' });
       }
-      return res.status(200).json({statusCode:"200",message:'deleted successfuly...'}); // Successful deletion, no content to return
+      return res.status(200).json({statusCode:"200",message:'deleted successfuly...',userId: req.userId}); // Successful deletion, no content to return
     } catch (err) {
       return res.status(500).json({statusCode:"404", error: err.message });
     }

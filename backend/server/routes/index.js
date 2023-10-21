@@ -5,6 +5,8 @@ const { getTestimonials, getTestimonialById, createTestimonial, updateTestimonia
 const { getBanners, getBannerById, createBanner, updateBanner, deleteBanner } = require('../controllers/bannercontrollers');
 const {getSocialfeeds, getSocialfeedById, createSocialfeed, updateSocialfeed, deleteSocialfeed} = require('../controllers/socialfeedscontrollers');
 const { getUsers, getUserById, register, updateUser, deleteUser } = require('../controllers/userControllers');
+const { getContacts, addContact } = require('../controllers/contactControllers');
+const uploadController = require('../controllers/uploadControllers');
 const authController = require('../controllers/authControllers');
 const authMiddleware = require('../middlewares/authMiddlewares');
 
@@ -42,8 +44,10 @@ router.post('/login', authController.login);
 router.post('/refresh', authController.refreshAccessToken)
 router.post('/logout', authController.logout);
 
+router.get('/contacts', getContacts);
+router.post('/contacts', addContact);
 
-
+router.post('/upload', uploadController);
 // add similar routes for other entities
 
 module.exports = router;

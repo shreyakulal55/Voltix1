@@ -55,7 +55,7 @@ const updateUser = async (req, res) => {
         const username = getUserIdFromToken(req); // Get the userId from the JWT token
         // console.log(userId);
         const updatedUser = await User.findByIdAndUpdate(id, req.body, { new: true });
-        return res.status(200).json({ statusCode: "200", message: 'Updated successfully...', updatedUser, username });
+        return res.status(200).json({ statusCode: "200", message: 'Updated successfully...', updatedUser, userId: req.userId});
     } catch (err) {
         return res.status(500).json({ statusCode: "500", error: err.message });
     }
@@ -66,7 +66,7 @@ const deleteUser = async (req, res) => {
     try{
         const userId = getUserIdFromToken(req);
         const deletedUser= await User.findByIdAndDelete(id);
-        return res.status(200).json({statusCode:"200",message:'deleted successfuly...',userId});
+        return res.status(200).json({statusCode:"200",message:'deleted successfuly...',userId: req.userId});
 
     }
     catch(err){
