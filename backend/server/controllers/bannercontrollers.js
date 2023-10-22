@@ -24,7 +24,11 @@ const getBannerById = async (req, res) => {
   };
 
 const createBanner = (req, res) => {
-    const banner = new Banner(req.body);
+  const bannerData = {
+    ...req.body,
+    created_by: req.userId, 
+  };
+    const banner = new Banner(bannerData);
     banner.save()
       .then((savedbanner) => {
         res.status(201).json({statusCode:"200",message :'banner created successfully',savedbanner});
@@ -38,7 +42,7 @@ const updateBanner = async (req, res) => {
     const { id } = req.params;
     try{
         const updatedBanner= await Banner.findByIdAndUpdate(id, req.body, { new: true });
-        return res.status(200).json({statusCode:"200",message:'updated successfuly...',updatedBanner});
+        return res.status(200).json({statusCode:"200",message:'updated successfuly...',updatedBanner,userId: req.userId});
     }catch(err){
         return res.status(500).json({statusCode:"500", error: err.message });
     }
@@ -51,7 +55,7 @@ const deleteBanner = async (req, res) => {
       if (!banner) {
         return res.status(404).json({statusCode:"404", error: 'banner not found' });
       }
-      return res.status(200).json({statusCode:"200",message:'deleted successfuly...'}); // Successful deletion, no content to return
+      return res.status(200).json({statusCode:"200",message:'deleted successfuly...',userId: req.userId}); // Successful deletion, no content to return
     } catch (err) {
       return res.status(500).json({statusCode:"404", error: err.message });
     }
