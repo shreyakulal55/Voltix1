@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <nav
       className="navbar navbar-expand-lg bg-body-primary"
-      style={{ backgroundColor: "#8492A2" }}
+      style={{ backgroundColor: " #ACAAD9" }}
     >
       <div className="container-fluid">
         <img
