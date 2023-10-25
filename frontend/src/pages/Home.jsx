@@ -1,188 +1,87 @@
-/* eslint-disable jsx-a11y/img-redundant-alt */
-// src/components/Home.js
 import React from "react";
-import "./Home.css"; // Import the CSS for this component
+import "./Home.css";
 import img from "../images/back.png";
+
 const Home = () => {
   return (
-    <div className="home-container">
-      <div className="background-image">
-  <img
-    src={img}
-    alt="Background" 
-    className="left-aligned-image" // Add a class for styling
-  />
-</div>
+    <>
+    <section id="intro" className="intro-background">
+      <div className="sticky-top bg-white hidden-spacer"> </div>
+      <div className="container-lg">
+        <div className="row g-4 justify-content-center align-items-center">
+          <div className="col-md-5 order-md-2 text-center text-md-start">
+            <h1>
+              <div className="circular-background">
+                <div className="display-6 bold-text">
+                  Where Ideas Come to Life
+                </div>
+                <div className="display-4 bold-text">Welcome to Voltix</div>
+              </div>
+            </h1>
+            
+          </div>
+          <div className="col-md-5 order-md-1 text-center d-none d-md-block">
+            <img src={img} className="img-fluid" alt="ebook" />
+          </div>
+        </div>
+      </div>
+    </section>
+     <section id="pricing" class="bg-light mt-5">
+     <div class="container-lg">
+       <div class="text-center">
+         <h2>Pricing Plans</h2>
+         <p class="lead text-muted">Choose a pricing plan to suit you.</p>
+       </div>
+ 
+       <div class="row my-5 g-0 align-items-center justify-content-center">
+         <div class="col-8 col-lg-4 col-xl-3">
+           <div class="card border-0">
+             <div class="card-body text-center py-4">
+               <h4 class="card-title">Starter Edition</h4>
+               <p class="lead card-subtitle">eBook download only</p>
+               <p class="display-5 my-4 text-primary fw-bold">$12.99</p>
+               <p class="card-text mx-5 text-muted d-none d-lg-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, vitae magni! Repellat commodi a fuga corporis saepe dolorum.</p>
+               <a href="#" class="btn btn-outline-primary btn-lg mt-3">
+                 Buy Now
+               </a>
+             </div>
+           </div>
+         </div>
+ 
+         <div class="col-9 col-lg-4">
+           <div class="card border-primary border-2">
+             <div class="card-header text-center text-primary">Most Popular</div>
+             <div class="card-body text-center py-5">
+               <h4 class="card-title">Complete Edition</h4>
+               <p class="lead card-subtitle">eBook download & all updates</p>
+               <p class="display-4 my-4 text-primary fw-bold">$18.99</p>
+               <p class="card-text mx-5 text-muted d-none d-lg-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, vitae magni! Repellat commodi a fuga corporis saepe dolorum.</p>
+               <a href="#" class="btn btn-outline-primary btn-lg mt-3">
+                 Buy Now
+               </a>
+             </div>
+           </div>
+         </div>
+ 
+         <div class="col-8 col-lg-4 col-xl-3">
+           <div class="card border-0">
+             <div class="card-body text-center py-4">
+               <h4 class="card-title">Ultimate Edition</h4>
+               <p class="lead card-subtitle">download, updates & extras</p>
+               <p class="display-5 my-4 text-primary fw-bold">$24.99</p>
+               <p class="card-text mx-5 text-muted d-none d-lg-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, vitae magni! Repellat commodi a fuga corporis saepe dolorum.</p>
+               <a href="#" class="btn btn-outline-primary btn-lg mt-3">
+                 Buy Now
+               </a>
+             </div>
+           </div>
+         </div>
+       </div>
+ 
+     </div>
+   </section>
 
-      {/* <div className="text-overlay">
-        <p>Where Ideas Come to Life </p>
-        <h2>Welcome to Voltix</h2>
-      </div> */}
-
-      <div className="additional-content">
-        <br></br>
-        <h3>What we do and why we do it!</h3>
-        <p>
-          Our success in creating business solutions is due in large part to{" "}
-          <br></br>our talented and highly committed team.
-        </p>
-      </div>
-
-      <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card bg-secondary-subtle">
-          <div class="card-body">
-            <div class="card-number">1</div>
-            <div class="card-content">
-              <h2 class="card-title">Mobile App</h2>
-              <p class="card-text">
-                Mobile apps are the future of business. If you're not on mobile, you're missing out.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card bg-secondary-subtle">
-          <div class="card-body">
-            <div class="card-number">2</div>
-            <div class="card-content">
-              <h2 class="card-title">Web Development</h2>
-              <p class="card-text">
-                A well-designed website can help you establish credibility and trust with potential customers.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card bg-secondary-subtle">
-          <div class="card-body">
-            <div class="card-number">3</div>
-            <div class="card-content">
-              <h2 class="card-title">Software Development</h2>
-              <p class="card-text">
-                Software development innovates products, markets, and enhances customer service.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card bg-secondary-subtle">
-          <div class="card-body">
-            <div class="card-number">4</div>
-            <div class="card-content">
-              <h2 class="card-title">Digital Marketing</h2>
-              <p class="card-text">
-                Digital marketing is the key to reaching your target audience and growing your business online.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card bg-secondary-subtle">
-          <div class="card-body">
-            <div class="card-number">5</div>
-            <div class="card-content">
-              <h2 class="card-title">UI/UX Design</h2>
-              <p class="card-text">
-                A professional UI/UX designer creates user-friendly interfaces, avoiding design mistakes.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card bg-secondary-subtle">
-          <div class="card-body">
-            <div class="card-number">6</div>
-            <div class="card-content">
-              <h2 class="card-title">Video Production</h2>
-              <p class="card-text">
-                Crafting compelling videos that tell a powerful story, leaving a lasting impact on viewers.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <br>
-  </br>
-  <h1 class="project-heading">Discover our Projects</h1>
-  <h3 class="project-subheading">Our projects that are a testament to our commitment to excellence.</h3>
-  
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card bg-secondary-subtle">
-          <div class="card-body">
-            <div class="card-number">1</div>
-            <div class="card-content">
-              <h2 class="card-title">Mobile App</h2>
-              <p class="card-text">
-                Mobile apps are the future of business. If you're not on mobile, you're missing out.
-              </p>
-            </div>
-          </div>
-      </div>
-      </div>
-      </div>
-      </div>
-
-    <br></br>
-  <h1 class="center-text">Trusted by Millions of Customers.</h1>
-  <h2 class="center-side">Our ability to create effective business solutions is greatly attributed to our exceptionally talented and dedicated team.</h2>
-    <br></br>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card bg-secondary-subtle">
-          <div class="card-body">
-            <div class="card-number">1</div>
-            <div class="card-content">
-              <h2 class="card-title">Mobile App</h2>
-              <p class="card-text">
-                Mobile apps are the future of business. If you're not on mobile, you're missing out.
-              </p>
-            </div>
-          </div>
-      </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card bg-secondary-subtle">
-          <div class="card-body">
-            <div class="card-number">1</div>
-            <div class="card-content">
-              <h2 class="card-title">Mobile App</h2>
-              <p class="card-text">
-                Mobile apps are the future of business. If you're not on mobile, you're missing out.
-              </p>
-            </div>
-          </div>
-      </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card bg-secondary-subtle">
-          <div class="card-body">
-            <div class="card-number">1</div>
-            <div class="card-content">
-              <h2 class="card-title">Mobile App</h2>
-              <p class="card-text">
-                Mobile apps are the future of business. If you're not on mobile, you're missing out.
-              </p>
-            </div>
-          </div>
-      </div>
-      </div>
-      </div>
-      </div>
-   
-   
-    </div>
+   </>
   );
 };
 
