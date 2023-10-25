@@ -21,7 +21,11 @@ const Home = () => {
 
       <div className="additional-content">
         <br></br>
-        
+        <h3>What we do and why we do it!</h3>
+        <p>
+          Our success in creating business solutions is due in large part to{" "}
+          <br></br>our talented and highly committed team.
+        </p>
       </div>
 
       <div class="container">
