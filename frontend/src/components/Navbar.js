@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <nav
       className="navbar navbar-expand-lg bg-body-primary"
-      style={{ backgroundColor: " #ACAAD9" }}
+      // style={{ backgroundColor: " #ACAAD9" }}
     >
       <div className="container-fluid">
         <img
@@ -40,13 +40,10 @@ const Navbar = () => {
             </li>
           </ul>
           <ul className="navbar-nav">
-            <li className="nav-item">
-              <Link to="/ContactUs" className="btn btn-primary" style={{ borderRadius: "30px", backgroundColor: "#182F38", color: "white" }}>
-                Contact Us
-              </Link>
-            </li>
+          <li className="btn btn-secondary" > <a className="nav-link" href="/ContactUs"> Contact Us </a> </li>
           </ul>
         </div>
+        
       </div>
     </nav>
   );

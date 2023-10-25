@@ -1,11 +1,11 @@
 
 .navbar {
-    background-color: #333; /* Set your desired background color */
+    background-color: #1B1919; /* Set your desired background color */
     color: white;
     display: flex;
     justify-content: space-between;
     padding: 10px;
-    position: fixed;
+    position: sticky;
   }
   
   .nav-list {
@@ -26,5 +26,10 @@
   
   .nav-item{
     color: #886f60;
+  }
+  .btn {
+    border-radius: 30px;
+   background-color:#182F38 ;
+     color: aliceblue;
   }
   

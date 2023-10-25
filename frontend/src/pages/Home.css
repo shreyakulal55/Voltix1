@@ -1,17 +1,24 @@
-/* src/components/Home.css */
 
 .home-container {
+  background-image: linear-gradient(#1C0706,#510E05);
+  background-color: #1C0706;
   position: relative;
   text-align: center;
   margin-top: 0px;
   size: fixed; /* Adjust the margin-top value to match your navbar's height */
 }
 
-.background-image img {
-  width: 100%;
-  height: auto;
-  z-index: -1;
+.background-image {
+  /* Additional styles for the container */
+  display: flex;
+  align-items: center; /* Vertically center the image if needed */
 }
+
+.left-aligned-image {
+  margin-right: auto; /* Push the image to the left */
+}
+
+
 
 .text-overlay {
   position: absolute;

@@ -2,20 +2,22 @@
 // src/components/Home.js
 import React from "react";
 import "./Home.css"; // Import the CSS for this component
-
+import img from "../images/back.png";
 const Home = () => {
   return (
     <div className="home-container">
       <div className="background-image">
-        <img
-          src="https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2020/07/Featured-Image-1.jpg"
-          alt="Background"
-        />
-      </div>
-      <div className="text-overlay">
+  <img
+    src={img}
+    alt="Background" 
+    className="left-aligned-image" // Add a class for styling
+  />
+</div>
+
+      {/* <div className="text-overlay">
         <p>Where Ideas Come to Life </p>
         <h2>Welcome to Voltix</h2>
-      </div>
+      </div> */}
 
       <div className="additional-content">
         <br></br>
