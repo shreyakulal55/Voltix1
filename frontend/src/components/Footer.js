@@ -16,7 +16,7 @@ const Footer = () => {
               />
             </a>
       
-          <p class="text-[#8D8D8E] mt-4">
+          <p className="text-[#8D8D8E] mt-4">
             We are not afraid to say no to projects that we cannot do well. We
             would rather focus on a few projects and do them right than take on
             too much and sacrifice quality.
@@ -24,7 +24,7 @@ const Footer = () => {
         </div>
         <div className="grid-item">
           <h3>Company</h3>
-          <hr class="w-8 h-1 bg-webGreen mt-2"></hr>
+          <hr className="w-8 h-1 bg-webGreen mt-2"></hr>
           <ul>
             <li>
               <a href="/Info">About Us</a>
@@ -42,7 +42,7 @@ const Footer = () => {
         </div>
         <div className="grid-item">
           <h3>Information</h3>
-          <hr class="w-8 h-1 bg-webGreen mt-2"></hr>
+          <hr className="w-8 h-1 bg-webGreen mt-2"></hr>
           <ul>
             <li>
               <a href="/Info">
@@ -68,7 +68,7 @@ const Footer = () => {
               />
             </a>
         
-          <p class="text-[#8D8D8E] mt-4">
+          <p className="text-[#8D8D8E] mt-4">
             Subscribe to our newsletter to stay up-to-date on the latest news and events.
           </p>
 

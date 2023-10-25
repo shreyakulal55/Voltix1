@@ -1,13 +1,13 @@
-/* CSS in your stylesheets or as a style tag in your React component */
 .bold-text {
+  padding-top: 10px;
   font-weight: bold;
-  font-family: "Arial", sans-serif; /* You can replace "Arial" with your preferred font family */
-  /* Add any other styles you want here */
+  /* font-family: Arial, Helvetica, sans-serif; */
 }
 
 
 .intro-background {
-  background-color:#111111;
+  height: 100vh;
+  background-image:url('https://e0.pxfuel.com/wallpapers/1023/5/desktop-wallpaper-dark-aesthetic-background-dark-aesthetic-star.jpg');
   background-size: cover; /* Adjust the size as needed */
   background-position: center; /* Adjust the position as needed */
   background-repeat: no-repeat;
@@ -21,9 +21,9 @@
   position: relative;
   display: inline-block;
   border-radius: 50%;
-  width: 400px; /* Adjust the width and height as needed */
+  width: 600px; /* Adjust the width and height as needed */
   height: 400px; /* Adjust the width and height as needed */
-  background-color: #877777; /* Background color of the circle */
+  background-image: url('https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRqzpghLzzjKwtydmQDrvoS1VT0lLoea1_KNKwNrkAFXZ6F63-e'); /* Background color of the circle */
   opacity: 0.7; /* Adjust the opacity to control the darkness of the circle */
   margin-right: 20px; /* Spacing between the circle and the text (adjust as needed) */
   color: #FFF; /* Text color */
@@ -31,26 +31,65 @@
   text-align: center;
 }
 
-.circular-background::before {
-  content: ""; /* Empty content for the pseudo-element */
-  display: inline-block; /* Display the pseudo-element as an inline block */
-  width: 100%; /* Use the full width of the container */
-  height: 100%; /* Use the full height of the container */
-  background-color: inherit; /* Inherit the circle's background color */
-  opacity: inherit; /* Inherit the circle's opacity */
-  position: absolute; /* Position the pseudo-element absolutely */
-  top: 50px;
-  left: 0;
-  border-radius: inherit; /* Inherit the border-radius for a circular shape */
-}
+
 
 .bold-text {
   font-weight: bold;
-  /* Add any other styles you want for the text */
+ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+.card-number {
+  color: rgb(123, 140, 134);
+  font-size: 60px;
+  font-weight: bold;
+  position: absolute;
+  left: 10px; 
+  top: 10px; 
+  letter-spacing: -1px;
+}
 
+/* Ensure text content is left-aligned */
+.card-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #fff;
+  line-height: 1.7;
+  display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
 
+.mb-4 {
+  margin-bottom: 20px; /* Adjust the margin as needed to control the space */
+}
 
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+.card-content{
+  color: #FFF;
+  text-align: right;
+  padding: 10px;
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBH720KwTKsxIAMhiVBBiAwj675SkQGX8sqw&usqp=CAU');
+}
 
+.bg-light 
+{
+  background-image: url('https://e0.pxfuel.com/wallpapers/766/75/desktop-wallpaper-space-colors-blue-purple-stars.jpg');
+}
 
+.text-center{
+  color: rgb(123, 140, 134);
+}
+.lead {
+  color: rgb(123, 140, 134);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
