@@ -7,6 +7,12 @@ import AboutUs from './pages/AboutUs';
 import ContactUs from './pages/ContactUs';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import MobileApp from './components/service/MobileApp';
+import WebDevelop from "./components/service/WebDevelop";
+import Software from "./components/service/Software";
+import UI from "./components/service/UI";
+import Video from "./components/service/Video";
+import Digital from "./components/service/Digital";
 
 function App() {
   return (
@@ -19,6 +25,12 @@ function App() {
           <Route path="/projects" component={Projects} />
           <Route path="/aboutus" component={AboutUs} />
           <Route path="/contactus" component={ContactUs} />
+          <Route path="/mobile" component={MobileApp} />
+          <Route path="/web" component={WebDevelop} />
+          <Route path="/soft" component={Software} />
+          <Route path="/ui" component={UI} />
+          <Route path="/video" component={Video} />
+          <Route path="/digital" component={Digital} />
         </Switch>
         <Footer />
       </div>
