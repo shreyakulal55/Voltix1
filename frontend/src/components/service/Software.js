@@ -1,35 +1,38 @@
 import React from 'react';
 import './Software.css'; // Import your CSS file
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
 
 const Software = () => {
     return (
         <section>
-            <div className="page1">
-                <div className='container'>
-                    <div className='row justify-content-center'>
-                        <div>
-                            <div className="g-container">
-                                <div className="g-item">
-                                    <div className='title'>
-                                        <h2 style={{ fontSize: "45px" }}>The Science
-                                            of Software Development</h2>
-                                        <h6 style={{ fontSize: "19px" }}>
-                                            Software's transformative power profoundly shapes our lives, from device functionality and services
-                                            to business operations, finance management, communication, and entertainment.
-                                        </h6>
-                                    </div>
-                                </div>
-                                <div className="g-item">
-                                    <img src="https://www.peregrineconnect.com/wp-content/uploads/2021/05/ds-infographic-2.png" alt="/" height="390px" />
-                                </div>
+            <Container fluid>
+                <div className="sticky-top bg-white hidden-spacer"> </div>
+                <Row>
+                    <div className="g-container">
+                        <div className="g-item">
+                            <div className='title'>
+                                <h2 style={{ fontSize: "45px" }}>The Science
+                                    of Software Development</h2>
+                                <h6 style={{ fontSize: "19px" }}>
+                                    Software's transformative power profoundly shapes our lives, from device functionality and services
+                                    to business operations, finance management, communication, and entertainment.
+                                </h6>
                             </div>
                         </div>
+                        <div className="g-item">
+                            <img src="https://www.peregrineconnect.com/wp-content/uploads/2021/05/ds-infographic-2.png" alt="/" height="390px" />
+                        </div>
                     </div>
+                </Row>
+                <Row>
                     <div>
                         <div class="center-container">
                             <img src="https://i.pinimg.com/originals/6c/26/88/6c268802efdfa3ed2cf7e2c6834a29d9.png" alt="/" />
                         </div>
                     </div>
+                </Row>
+                <Row>
                     <div>
                         <div className='title'>
                             <h2 style={{ fontSize: "35px" }}>Why Software Development with Our Company is a Good Idea</h2>
@@ -46,8 +49,8 @@ const Software = () => {
                             </p>
                         </div>
                     </div>
-                </div>
-            </div>
+                </Row>
+            </Container>
         </section>
     );
 }

@@ -1,37 +1,38 @@
 import React from 'react';
 import './Digital.css'; // Import your CSS file
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
 
 const Digital = () => {
     return (
         <section>
-            <div className="content-container">
-            <div className="sticky-top bg-white hidden-spacer"> </div>
-            <div className="page1">
-                <div className='container'>
-                    <div className='row justify-content-center'>
-                        <div>
-                            <div className="g-container">
-                                <div className="g-item">
-                                    <div className='title'>
-                                        <h2 style={{ fontSize: "45px" }}>Digital Marketing
-                                            The Future of Marketing</h2>
-                                        <h6 style={{ fontSize: "19px" }}>
-                                            In our digital world, businesses must establish an online presence
-                                            through digital marketing to connect with, engage, and convert their audience.
-                                        </h6>
-                                    </div>
-                                </div>
-                                <div className="g-item">
-                                    <img src="https://surchdigital.com/wp-content/uploads/2023/07/Graphics-03-1024x1024.png" alt="/" height="390px" />
-                                </div>
+            <Container fluid>
+                <div className="sticky-top bg-white hidden-spacer"> </div>
+                <Row>
+                    <div className="g-container">
+                        <div className="g-item">
+                            <div className='title'>
+                                <h2 style={{ fontSize: "45px" }}>Digital Marketing
+                                    The Future of Marketing</h2>
+                                <h6 style={{ fontSize: "19px" }}>
+                                    In our digital world, businesses must establish an online presence
+                                    through digital marketing to connect with, engage, and convert their audience.
+                                </h6>
                             </div>
                         </div>
+                        <div className="g-item">
+                            <img src="https://surchdigital.com/wp-content/uploads/2023/07/Graphics-03-1024x1024.png" alt="/" height="390px" />
+                        </div>
                     </div>
+                </Row>
+                <Row>
                     <div>
                         <div class="center-container">
                             <img src="https://www.udacity.com/blog/wp-content/uploads/2020/11/Digital-Marketing-Explained_Blog-scaled.jpeg" alt="/" />
                         </div>
                     </div>
+                </Row>
+                <Row>
                     <div>
                         <div className='title'>
                             <h2 style={{ fontSize: "35px" }}>Why Your Business Needs Digital Marketing in 2023</h2>
@@ -49,9 +50,8 @@ const Digital = () => {
                             </p>
                         </div>
                     </div>
-                </div>
-            </div>
-            </div>
+                </Row>
+            </Container>
         </section>
     );
 }
