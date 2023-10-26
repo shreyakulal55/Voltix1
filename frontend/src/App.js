@@ -5,8 +5,7 @@ import Home from './pages/Home1';
 import Services from './pages/Services';
 import Projects from './pages/Projects';
 import AboutUs from './pages/AboutUs';
-// import ContactUs from './pages/ContactUs';
-import ContactUs1 from './pages/ContactUs1';
+import ContactUs from './pages/ContactUs';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
@@ -20,7 +19,7 @@ function App() {
           <Route path="/services" component={Services} />
           <Route path="/projects" component={Projects} />
           <Route path="/aboutus" component={AboutUs} />
-          <Route path="/contactus" component={ContactUs1} />
+          <Route path="/contactus" component={ContactUs} />
         </Switch>
         <Footer />
       </div>
