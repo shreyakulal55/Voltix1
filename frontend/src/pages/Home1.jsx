@@ -1,10 +1,21 @@
-/* eslint-disable jsx-a11y/img-redundant-alt */
-// src/components/Home.js
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import "./Home.css"; // Import the CSS for this component
 import img from "../images/back.png";
 const Home = () => {
-        
+    const [testimonials, setTestimonials] = useState([]);
+
+    useEffect(() => {
+      // Fetch testimonials data from your API when the component mounts
+      axios.get('http://localhost:5000/testimonials')
+        .then((response) => {
+          setTestimonials(response.data);
+        })
+        .catch((error) => {
+          console.error("Error fetching testimonials: " + error);
+        });
+    }, []);
+  
   return (
     <div className="home-container">
       <div className="background-image">
@@ -138,48 +149,22 @@ const Home = () => {
   <h1 class="center-text">Trusted by Millions of Customers.</h1>
   <h2 class="center-side">Our ability to create effective business solutions is greatly attributed to our exceptionally talented and dedicated team.</h2>
     <br></br>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card bg-secondary-subtle">
-          <div class="card-body">
-            <div class="card-number">1</div>
-            <div class="card-content">
-              <h2 class="card-title">Mobile App</h2>
-              <p class="card-text">
-                Mobile apps are the future of business. If you're not on mobile, you're missing out.
-              </p>
+    <div class="container">
+        <div class="row">
+          {testimonials.map((testimonial, index) => (
+            <div class="col-md-4" key={index}>
+              <div class="card bg-secondary-subtle">
+                <div class="card-body">
+                  <div class="card-number">{index + 1}</div>
+                  <div class="card-content">
+                    <h2 class="card-title">{testimonial.author}</h2>
+                    <p class="card-text">{testimonial.text}</p>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-      </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card bg-secondary-subtle">
-          <div class="card-body">
-            <div class="card-number">1</div>
-            <div class="card-content">
-              <h2 class="card-title">Mobile App</h2>
-              <p class="card-text">
-                Mobile apps are the future of business. If you're not on mobile, you're missing out.
-              </p>
-            </div>
-          </div>
-      </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card bg-secondary-subtle">
-          <div class="card-body">
-            <div class="card-number">1</div>
-            <div class="card-content">
-              <h2 class="card-title">Mobile App</h2>
-              <p class="card-text">
-                Mobile apps are the future of business. If you're not on mobile, you're missing out.
-              </p>
-            </div>
-          </div>
-      </div>
-      </div>
-      </div>
+          ))}
+        </div>
       </div>
    
    
