@@ -13,21 +13,28 @@ const Services = () => {
   return (
     <section>
       <Container fluid>
+      <div className="sticky-top bg-white hidden-spacer"> </div>
         <Row>
-          <div className='heading'>
-            <h1 className='heading'>My Awesome Service</h1>
-            <p className='heading p__color'>
-              There are many variations of passages of Lorem Ipsum available,
-            </p>
-            <p className='heading p__color'>
-              but the majority have suffered alteration,
-            </p>
+        <div className="g-container">
+            <div className="g-item">
+              <div className='title'>
+                <h2 style={{ fontSize: "45px" }}>The software development
+                  company that puts your needs first.</h2>
+                <h6 style={{ fontSize: "19px" }}>
+                  Voltix Solution is Software company offering web and mobile app development,
+                  digital marketing, with a skilled team focused on tech-driven solutions.
+                </h6>
+              </div>
+            </div>
+            <div className="g-item">
+              <img src="https://studyrocket.co.uk/assets/img/wp-content/uploads/2017/09/gender-2.svg" alt="/" height="390px" />
+            </div>
           </div>
         </Row>
         <Row>
           <div className='container'>
             <div className='row'>
-              <div className='col__3'>
+              <div className='col-4'>
                 <div className='service__box pointer'>
                   <div className='icon'>
                     <FontAwesomeIcon icon={faMobile} color="currentColor" />
@@ -49,7 +56,7 @@ const Services = () => {
                   </div>
                 </div>
               </div>
-              <div className='col__3'>
+              <div className='col-4'>
                 <div className='service__box pointer'>
                   <div className='icon'>
                     <FontAwesomeIcon icon={faCode} color="currentColor" />
@@ -70,7 +77,7 @@ const Services = () => {
                   </div>
                 </div>
               </div>
-              <div className='col__3'>
+              <div className='col-4'>
                 <div className='service__box pointer'>
                   <div className='icon'>
                     <FontAwesomeIcon icon={faLaptop} color="currentColor" />
@@ -91,7 +98,7 @@ const Services = () => {
                   </div>
                 </div>
               </div>
-              <div className='col__3'>
+              <div className='col-4'>
                 <div className='service__box pointer'>
                   <div className='icon'>
                     <FontAwesomeIcon icon={faPalette} color="currentColor" />
@@ -113,7 +120,7 @@ const Services = () => {
                   </div>
                 </div>
               </div>
-              <div className='col__3'>
+              <div className='col-4'>
                 <div className='service__box pointer'>
                   <div className='icon'>
                     <FontAwesomeIcon icon={faVideo} color="currentColor" />
@@ -134,7 +141,7 @@ const Services = () => {
                   </div>
                 </div>
               </div>
-              <div className='col__3'>
+              <div className='col-4'>
                 <div className='service__box pointer'>
                   <div className='icon'>
                     <FontAwesomeIcon icon={faBullhorn} color="currentColor" />
