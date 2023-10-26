@@ -3,6 +3,7 @@ import "./Home.css";
 import img from "../images/back.png";
 
 const Home = () => {
+        
   return (
     <>
       <section id="intro" className="intro-background">
