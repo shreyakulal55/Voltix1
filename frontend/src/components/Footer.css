@@ -43,4 +43,9 @@
       text-align: center;
     }
   }
-  
+  /* Footer.css or your external stylesheet */
+
+/* Create space between content and footer */
+.content-container {
+  margin-bottom: 100px; /* Adjust the margin as needed to create space for the footer */
+}
