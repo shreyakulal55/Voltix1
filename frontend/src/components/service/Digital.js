@@ -4,6 +4,8 @@ import './Digital.css'; // Import your CSS file
 const Digital = () => {
     return (
         <section>
+            <div className="content-container">
+            <div className="sticky-top bg-white hidden-spacer"> </div>
             <div className="page1">
                 <div className='container'>
                     <div className='row justify-content-center'>
@@ -48,6 +50,7 @@ const Digital = () => {
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         </section>
     );
