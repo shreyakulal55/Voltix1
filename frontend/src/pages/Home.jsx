@@ -1,9 +1,23 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import "./Home.css";
 import img from "../images/back.png";
 
 const Home = () => {
-        
+  const [testimonials, setTestimonials] = useState([]);
+
+  useEffect(() => {
+    // Fetch testimonials data from your API when the component mounts
+    axios
+      .get("http://localhost:5000/testimonials")
+      .then((response) => {
+        setTestimonials(response.data);
+      })
+      .catch((error) => {
+        console.error("Error fetching testimonials: " + error);
+      });
+  }, []);
+
   return (
     <>
       <section id="intro" className="intro-background">
@@ -16,7 +30,9 @@ const Home = () => {
                   <div className="display-6 bold-text">
                     Where Ideas Come to<br></br> Life
                   </div>
-                  <div className="display-4 bold-text">Welcome to<br></br> Voltix</div>
+                  <div className="display-4 bold-text">
+                    Welcome to<br></br> Voltix
+                  </div>
                 </div>
               </h1>
             </div>
@@ -137,6 +153,61 @@ const Home = () => {
             </div>
           </div>
           <br></br>
+        </div>
+      </section>
+
+      <section id="projects" className="bg-light">
+        <div className="container-lg">
+          <h1 class="project-heading">Discover our Projects</h1>
+          <h3 class="project-subheading">
+            Our projects that are a testament to our commitment to excellence.
+          </h3>
+
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="card bg-secondary-subtle">
+                  <div class="card-body">
+                    <div class="card-number">1</div>
+                    <div class="card-content">
+                      <h2 class="card-title">Mobile App</h2>
+                      <p class="card-text">
+                        Mobile apps are the future of business. If you're not on
+                        mobile, you're missing out.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonial" className="bg-light">
+        <div className="container-lg">
+          <h1 class="center-text">Trusted by Millions of Customers.</h1>
+          <h2 class="center-side">
+            Our ability to create effective business solutions is greatly
+            attributed to our exceptionally talented and dedicated team.
+          </h2>
+          <div class="container">
+            <div class="row">
+              {testimonials.map((testimonial, index) => (
+                <div class="col-md-4" key={index}>
+                  <div class="card bg-secondary-subtle">
+                    <div class="card-body">
+                      <div class="card-number">{index + 1}</div>
+                      <div class="card-content">
+                        <h2 class="card-title">{testimonial.author}</h2>
+                        <p class="card-text">{testimonial.text}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
     </>
