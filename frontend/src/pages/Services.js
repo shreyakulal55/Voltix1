@@ -13,6 +13,7 @@ const Services = () => {
   return (
     <section>
       <Container fluid>
+      <div class="sticky-top bg-white hidden-spacer"> </div>
         <Row>
         <div className="g-container">
             <div className="g-item">
