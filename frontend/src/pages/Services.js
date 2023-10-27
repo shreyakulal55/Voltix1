@@ -13,11 +13,11 @@ const Services = () => {
   return (
     <section>
       <Container fluid>
-      {/* <div className="sticky-top bg-white hidden-spacer"> </div> */}
         <Row>
         <div className="g-container">
             <div className="g-item">
               <div className='title'>
+              <span className="tagline">OUR SERVICES</span>
                 <h2 style={{ fontSize: "45px" }}>The software development
                   company that puts your needs first.</h2>
                 <h6 style={{ fontSize: "19px" }}>
@@ -49,7 +49,7 @@ const Services = () => {
                     <button
                       className="icon-link"
                       type="button"
-                      onClick={() => goToNewPage('/mobile')} // Navigate to /page1
+                      onClick={() => goToNewPage('/mobile')}
                     >
                       <FontAwesomeIcon icon={faArrowRight} />
                     </button>
@@ -70,7 +70,7 @@ const Services = () => {
                     <button
                       className="icon-link"
                       type="button"
-                      onClick={() => goToNewPage('/web')} // Navigate to /page2
+                      onClick={() => goToNewPage('/web')}
                     >
                       <FontAwesomeIcon icon={faArrowRight} />
                     </button>
@@ -91,7 +91,7 @@ const Services = () => {
                     <button
                       className="icon-link"
                       type="button"
-                      onClick={() => goToNewPage('/soft')} // Navigate to /page2
+                      onClick={() => goToNewPage('/soft')}
                     >
                       <FontAwesomeIcon icon={faArrowRight} />
                     </button>
@@ -107,13 +107,13 @@ const Services = () => {
                     <h1 className='service__text'>UI/UX Design</h1>
                     <p className='p service_text p_color'>
                       UI/UX Design
-                      A professional UI/UX designer creates user-friendly interfaces, avoiding design mistakes.
+                      A professional UI/UX designer creates user-friendly interfaces, avoiding mistakes.
                     </p>
                     <br />
                     <button
                       className="icon-link"
                       type="button"
-                      onClick={() => goToNewPage('/ui')} // Navigate to /page2
+                      onClick={() => goToNewPage('/ui')} 
                     >
                       <FontAwesomeIcon icon={faArrowRight} />
                     </button>
@@ -134,7 +134,7 @@ const Services = () => {
                     <button
                       className="icon-link"
                       type="button"
-                      onClick={() => goToNewPage('/video')} // Navigate to /page2
+                      onClick={() => goToNewPage('/video')} 
                     >
                       <FontAwesomeIcon icon={faArrowRight} />
                     </button>
@@ -155,14 +155,13 @@ const Services = () => {
                     <button
                       className="icon-link"
                       type="button"
-                      onClick={() => goToNewPage('/digital')} // Navigate to /page2
+                      onClick={() => goToNewPage('/digital')} 
                     >
                       <FontAwesomeIcon icon={faArrowRight} />
                     </button>
                   </div>
                 </div>
               </div>
-              {/* Repeat for other columns as needed */}
             </div>
           </div>
         </Row>

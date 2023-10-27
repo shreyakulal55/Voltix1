@@ -18,6 +18,7 @@ const Home = () => {
       });
   }, []);
 
+
   return (
     <>
       <section id="intro" className="intro-background">
@@ -193,8 +194,11 @@ const Home = () => {
           </h2>
           <div class="container">
             <div class="row">
-              {testimonials.map((testimonial, index) => (
-                <div class="col-md-4" key={index}>
+              {testimonials.map((testimonial, index) => 
+                
+               {
+                console.log(testimonial)
+                return <div class="col-md-4" key={index}>
                   <div class="card bg-secondary-subtle">
                     <div class="card-body">
                       <div class="card-number">{index + 1}</div>
@@ -204,8 +208,8 @@ const Home = () => {
                       </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                </div>}
+              )}
             </div>
           </div>
         </div>

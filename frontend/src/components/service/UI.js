@@ -1,5 +1,5 @@
 import React from 'react';
-import './UI.css'; // Import your CSS file
+import './UI.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 
@@ -7,11 +7,11 @@ const UI = () => {
     return (
         <section>
             <Container fluid>
-                <div className="sticky-top bg-white hidden-spacer"> </div>
                 <Row>
                     <div className="g-container">
                         <div className="g-item">
                             <div className='title'>
+                                <span className="tagline">UI/UX DESIGN</span>
                                 <h2 style={{ fontSize: "45px" }}>UI/UX Design That
                                     Gets Results</h2>
                                 <h6 style={{ fontSize: "19px" }}>
@@ -21,15 +21,13 @@ const UI = () => {
                             </div>
                         </div>
                         <div className="g-item">
-                            <img src="https://th.bing.com/th/id/R.c5079f4c0e6a32ca499017654f819e87?rik=Q%2fFmlAcXAkZW1A&riu=http%3a%2f%2fwww.embin.com%2fimages%2fpageheader%2fphp-web-technologies.png&ehk=RnYJzao7nzFCqT7sKi2fWRXfxHfRpoKeRauYOKtHXdk%3d&risl=&pid=ImgRaw&r=0" alt="/" height="390px" />
+                            <img style={{ marginLeft: "80px" }} src="https://th.bing.com/th/id/R.c5079f4c0e6a32ca499017654f819e87?rik=Q%2fFmlAcXAkZW1A&riu=http%3a%2f%2fwww.embin.com%2fimages%2fpageheader%2fphp-web-technologies.png&ehk=RnYJzao7nzFCqT7sKi2fWRXfxHfRpoKeRauYOKtHXdk%3d&risl=&pid=ImgRaw&r=0" alt="/" height="390px" />
                         </div>
                     </div>
                 </Row>
                 <Row>
-                    <div>
-                        <div class="center-container">
-                            <img src="https://cdn.dribbble.com/users/11995070/screenshots/18524301/media/c3e5192f198cbb85984262b3a916091c.png?resize=840x630&vertical=center" alt="/" />
-                        </div>
+                    <div class="center-container">
+                        <img src="https://cdn.dribbble.com/users/11995070/screenshots/18524301/media/c3e5192f198cbb85984262b3a916091c.png?resize=840x630&vertical=center" alt="/" />
                     </div>
                 </Row>
                 <Row>

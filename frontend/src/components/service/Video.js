@@ -1,5 +1,5 @@
 import React from 'react';
-import './Video.css'; // Import your CSS file
+import './Video.css'; 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 
@@ -7,11 +7,11 @@ const Video = () => {
     return (
         <section>
             <Container fluid>
-                <div className="sticky-top bg-white hidden-spacer"> </div>
                 <Row>
                     <div className="g-container">
                         <div className="g-item">
                             <div className='title'>
+                            <span className="tagline">VIDEO PRODUCTION</span>
                                 <h2 style={{ fontSize: "45px" }}>We Make Videos
                                     That Get Results</h2>
                                 <h6 style={{ fontSize: "19px" }}>
@@ -21,15 +21,13 @@ const Video = () => {
                             </div>
                         </div>
                         <div className="g-item">
-                            <img src="https://www.nogentech.org/Video-Marketing-Statistics/img/Group.png" alt="/" height="390px" />
+                            <img style={{ marginLeft: "80px" }} src="https://www.nogentech.org/Video-Marketing-Statistics/img/Group.png" alt="/" height="390px" />
                         </div>
                     </div>
                 </Row>
                 <Row>
-                    <div>
-                        <div class="center-container">
-                            <img src="https://th.bing.com/th/id/R.b1e1f8fd9e694c419f3fbb9b4e571403?rik=M9MzPPi74RKbig&riu=http%3a%2f%2fnayturr.com%2fwp-content%2fuploads%2f2020%2f09%2fart-and-technology-sept012020-min.jpg&ehk=dJ5GSJU%2flfuPTerQr11oa7Q6WbWDZwsEQzxBjPlZin8%3d&risl=&pid=ImgRaw&r=0" alt="/" />
-                        </div>
+                    <div class="center-container">
+                        <img src="https://th.bing.com/th/id/R.b1e1f8fd9e694c419f3fbb9b4e571403?rik=M9MzPPi74RKbig&riu=http%3a%2f%2fnayturr.com%2fwp-content%2fuploads%2f2020%2f09%2fart-and-technology-sept012020-min.jpg&ehk=dJ5GSJU%2flfuPTerQr11oa7Q6WbWDZwsEQzxBjPlZin8%3d&risl=&pid=ImgRaw&r=0" alt="/" />
                     </div>
                 </Row>
                 <Row>
