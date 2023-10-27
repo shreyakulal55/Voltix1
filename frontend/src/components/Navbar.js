@@ -54,7 +54,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="ml-auto"> {/* Add this div to align "Contact Us" to the right */}
-          <a className="btn btn-secondary" href="/ContactUs">
+          <a className="btn btn-outline-secondary" href="/ContactUs">
             Contact Us
           </a>
         </div>

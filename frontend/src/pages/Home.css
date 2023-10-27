@@ -6,8 +6,9 @@
 
 
 .intro-background {
+  background-color: #FAFAFA;
   height: 100vh;
-  background-image:url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTpEI35EvncqB2raBgvebxyX6t5ragiK2vsXenXKocyYB4C4gAk');
+  /* background-image:url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTpEI35EvncqB2raBgvebxyX6t5ragiK2vsXenXKocyYB4C4gAk'); */
   background-size: cover; /* Adjust the size as needed */
   background-position: center; /* Adjust the position as needed */
   background-repeat: no-repeat;
