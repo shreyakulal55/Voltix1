@@ -48,17 +48,11 @@ const Home = () => {
                 </div>
               </h1>
             </div>
-            <div
-              className="col-md-5 order-md-1 text-center d-none d-md-block"
-              style={{ marginTop: "164px" }}
-            >
-              <img src={img} className="img-fluid" alt="ebook" />
-            </div>
           </div>
         </div>
       </section>
 
-      <section id="services" className="bg-light">
+      <section id="services" className="bg-services">
         <div className="container-lg">
           <div className="text-center">
             <br></br>
@@ -75,95 +69,89 @@ const Home = () => {
 
           <div className="container">
             <div className="row">
-              <div className="col-md-4 mb-4">
-                <div className="card bg-secondary-subtle">
-                  <div className="card-body">
-                    <div className="card-number">1</div>
-                    <div className="card-content">
-                      <h2 className="card-title">Mobile App</h2>
-                      <p className="card-text">
-                        Mobile apps are the future of business. If you're not on
-                        mobile, you're missing out.
-                      </p>
-                    </div>
+              <div className="col-4">
+                <div className="s__box pointer">
+                  <div className="content-number ">1</div>
+                  <div className="s__meta">
+                    <h1 className="s__text">Mobile App</h1>
+                    <p className="p s_text p_color">
+                      Mobile apps are essential for modern business success.
+                      Ignoring mobile means missed opportunities.
+                    </p>
+                    <br />
                   </div>
                 </div>
               </div>
-
-              <div className="col-md-4 mb-4">
-                <div className="card bg-secondary-subtle">
-                  <div className="card-body">
-                    <div className="card-number">2</div>
-                    <div className="card-content">
-                      <h2 className="card-title">Web Development</h2>
-                      <p className="card-text">
-                        A well-designed website can help you establish
-                        credibility and trust with potential customers.
-                      </p>
-                    </div>
+              <div className="col-4">
+                <div className="s__box pointer">
+                  <div className="content-number ">2</div>
+                  <div className="s__meta">
+                    <h1 className="s__text">Web Development</h1>
+                    <p className="p s_text p_color">
+                      A well-designed website can help you establish credibility
+                      and trust with potential customers
+                    </p>
+                    <br />
                   </div>
                 </div>
               </div>
-              <div className="col-md-4 mb-4">
-                <div className="card bg-secondary-subtle">
-                  <div className="card-body">
-                    <div className="card-number">3</div>
-                    <div className="card-content">
-                      <h2 className="card-title">Software Development</h2>
-                      <p className="card-text">
-                        Software development innovates products, markets, and
-                        enhances customer service.
-                      </p>
-                    </div>
+              <div className="col-4">
+                <div className="s__box pointer">
+                  <div className="content-number ">3</div>
+                  <div className="s__meta">
+                    <h1 className="s__text">Software Development</h1>
+                    <p className="p s_text p_color">
+                      Software development innovates products, markets, and
+                      enhances customer service.
+                    </p>
+                    <br />
                   </div>
                 </div>
               </div>
-
-              <div className="col-md-4 mb-4">
-                <div className="card bg-secondary-subtle">
-                  <div className="card-body">
-                    <div className="card-number">4</div>
-                    <div className="card-content">
-                      <h2 className="card-title">Digital Marketing</h2>
-                      <p className="card-text">
-                        Digital marketing is the key to reach your target
-                        audience and growing your business online.
-                      </p>
-                    </div>
+              <div className="col-4">
+                <div className="s__box pointer">
+                  <div className="content-number ">4</div>
+                  <div className="s__meta">
+                    <h1 className="s__text">UI/UX Design</h1>
+                    <p className="p s_text p_color">
+                      UI/UX Design A professional UI/UX designer creates
+                      user-friendly interfaces, avoiding design mistakes.
+                    </p>
+                    <br />
                   </div>
                 </div>
               </div>
-              <div className="col-md-4 mb-4">
-                <div className="card bg-secondary-subtle">
-                  <div className="card-body">
-                    {" "}
-                    <div className="card-number">5</div>
-                    <div className="card-content">
-                      <h2 className="card-title">UI/UX Design</h2>
-                      <p className="card-text">
-                        A professional UI/UX designer creates user-friendly
-                        interfaces, avoiding design mistakes.
-                      </p>
-                    </div>
+              <div className="col-4">
+                <div className="s__box pointer">
+                  <div className="content-number ">5</div>
+                  <div className="s__meta">
+                    <h1 className="s__text">Video Production</h1>
+                    <p className="p s_text p_color">
+                      Crafting compelling videos that tell a powerful story,
+                      leaving a lasting impact on viewers.
+                    </p>
+                    <br />
                   </div>
                 </div>
               </div>
-              <div className="col-md-4 mb-4">
-                <div className="card bg-secondary-subtle">
-                  <div className="card-body">
-                    <div className="card-number">6</div>
-                    <div className="card-content">
-                      <h2 className="card-title">Video Production</h2>
-                      <p className="card-text">
-                        Crafting compelling videos that tell a powerful story,
-                        leaving a lasting impact on viewers.
-                      </p>
-                    </div>
+              <div className="col-4">
+                <div className="s__box pointer">
+                  <div className="content-number ">6</div>
+                  <div className="s__meta">
+                    <h1 className="s__text">Digital Marketing</h1>
+                    <p className="p s_text p_color">
+                      Digital marketing is the key to reaching your target
+                      audience and growing your business online.
+                    </p>
+                    <br />
                   </div>
                 </div>
               </div>
             </div>
           </div>
+
+          <br></br>
+
           <br></br>
         </div>
       </section>
@@ -198,50 +186,81 @@ const Home = () => {
         </div>
       </section> */}
 
-      <section id="projects" className="bg-light">
+
+
+      {/* projects */}
+
+      <section id="projects" className="bg-projects">
         <div className="container-lg">
-          <h1 className="project-heading">Discover our Projects</h1>
-          <h3 className="project-subheading">
-            Our projects that are a testament to our commitment to excellence.
-          </h3>
+          <br></br>
+          <br></br>
+          <div className="d-flex justify-content-between align-items-center">
+            <div>
+              <h1 className="display-6 bold-txt project-heading">
+                Discover our Projects
+              </h1>
+              <h4 className="p_stat project-subheading">
+                Our projects that are a testament to our commitment to
+                excellence.
+              </h4>
+            </div>
+            <a className="btn btn-outline-secondary" href="/Projects">
+              View All Projects
+            </a>
+          </div>
+
+          <br></br>
+          <br></br>
+
           <div className="container">
             <div className="row">
-              {projects.map((project, index) => (
-                <div className="col-md-4" key={index}>
-                  <div className="card bg-secondary-subtle">
-                    <img src={img} className="card-img-top" alt="..."></img>
-                    <div className="card-body">
-                      <div className="card-number">{index + 1}</div>
-                      <div className="card-content">
-                        <h5 className="card-title">{project.name}</h5>
-                        <p className="card-text">{project.description}</p>
-                      </div>
+              {projects.slice(0, 3).map((project, index) => (
+                <div className="col-4" key={index}>
+                  <div className="p__box pointer">
+                    <div className="p__meta">
+                      <h1 className="p__text">{project.name}</h1>
+                      <p className="p p_text p_color">{project.description}</p>
+                      <br />
                     </div>
                   </div>
                 </div>
               ))}
             </div>
           </div>
-        </div>
+        </div>{" "}
+        <br></br>
+        <br></br>
       </section>
 
-      <section id="testimonial" className="bg-light">
+
+
+
+{/* testimonial */}
+      <section id="testimonial" className="bg-testimonial">
         <div className="container-lg">
-          <h1 className="center-text">Trusted by Millions of Customers.</h1>
-          <h2 className="center-side">
-            Our ability to create effective business solutions is greatly
-            attributed to our exceptionally talented and dedicated team.
-          </h2>
+          <div className="text-center">
+            <br></br>
+            <br></br>
+            <h2>Trusted by Millions of Customers.</h2>
+            <p className="lead ">
+              Our success in creating business solutions is due in large part
+              <br></br>
+              spacially to talented and highly committed team.
+            </p>
+            <br></br>
+            <br></br>
+          </div>
+
           <div className="container">
             <div className="row">
-              {testimonials.map((testimonial, index) => (
+              {testimonials.slice(0, 3).map((testimonial, index) => (
                 <div className="col-md-4" key={index}>
                   <div className="card bg-secondary-subtle">
                     <div className="card-body">
                       <div className="card-number">{index + 1}</div>
-                      <div className="card-content">
-                        <h2 className="card-title">{testimonial.author}</h2>
-                        <p className="card-text">{testimonial.text}</p>
+                      <div className="card-t">
+                        <h2 className="card-name">{testimonial.author}</h2>
+                        <p className="card-desc">{testimonial.text}</p>
                       </div>
                     </div>
                   </div>
@@ -249,8 +268,48 @@ const Home = () => {
               ))}
             </div>
           </div>
-        </div>
+        </div>{" "}
+        <br></br>
+        <br></br>
       </section>
+
+      {/* 
+      <section id="testimonial" className="bg-testimonial">
+        <div className="container-lg">
+          <div className="text-center">
+            <br></br>
+            <br></br>
+            <h2>Trusted by Millions of Customers.</h2>
+            <p className="lead ">
+              Our success in creating business solutions is due in large part
+              <br></br>
+              spacially to talented and highly committed team.
+            </p>
+            <br></br>
+            <br></br>
+          </div>
+
+          <div className="container">
+            <div className="row">
+              {testimonials.slice(0, 3).map((testimonial, index) => (
+                <div className="col-md-4" key={index}>
+                  <div className="card bg-secondary-subtle">
+                    <div className="card-body">
+                      <div className="card-number">{index + 1}</div>
+                      <div className="card-t">
+                        <h2 className="card-name">{testimonial.author}</h2>
+                        <p className="card-desc">{testimonial.text}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>{" "}
+        <br></br>
+        <br></br>
+      </section> */}
     </>
   );
 };
