@@ -27,7 +27,7 @@ const Digital = () => {
                 </Row>
                 <Row>
                     <div>
-                        <div class="center-container">
+                        <div className="center-container">
                             <img src="https://www.udacity.com/blog/wp-content/uploads/2020/11/Digital-Marketing-Explained_Blog-scaled.jpeg" alt="/" />
                         </div>
                     </div>

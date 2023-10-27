@@ -27,7 +27,7 @@ const MobileApp = () => {
                 </Row>
                 <Row>
                     <div>
-                        <div class="center-container">
+                        <div className="center-container">
                             <img src="https://th.bing.com/th/id/R.bb9afecd3d3f53d17853593c242b041a?rik=hngGBAPu%2bx%2fGqw&riu=http%3a%2f%2fzeldathezorse.com%2fwp-content%2fuploads%2f2021%2f03%2ftech.jpg&ehk=qP222W%2fThWyn9BJS%2b%2f5rAIe46d6uLxnBsW%2f0lc0vfzI%3d&risl=&pid=ImgRaw&r=0" alt="/" />
                         </div>
                     </div>

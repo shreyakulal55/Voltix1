@@ -18,12 +18,12 @@
 }
 
 .navbar-nav .nav-link {
-  color:   #FFA500; 
+  color:   #fefefe; 
 }
 
 .ml-auto .btn-secondary {
   background-color: #333333; /* Dark Gray */
-  color: #FFA500; /* Orange text */
+  color: #d9d9d9; /* Orange text */
   border: #FFA500 ; /* Optionally, remove the border */
 }
 

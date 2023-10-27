@@ -7,7 +7,7 @@
 
 .intro-background {
   height: 100vh;
-  background-image:url('https://e0.pxfuel.com/wallpapers/1023/5/desktop-wallpaper-dark-aesthetic-background-dark-aesthetic-star.jpg');
+  background-image:url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTpEI35EvncqB2raBgvebxyX6t5ragiK2vsXenXKocyYB4C4gAk');
   background-size: cover; /* Adjust the size as needed */
   background-position: center; /* Adjust the position as needed */
   background-repeat: no-repeat;
@@ -31,7 +31,9 @@
   text-align: center;
 }
 
-
+.img-fluid{
+  margin-right: 900px;
+}
 
 .bold-text {
   font-weight: bold;
@@ -92,4 +94,8 @@
 .lead {
   color: rgb(123, 140, 134);
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.projectstyle{
+width: 18rem;
 }

@@ -27,7 +27,7 @@ const UI = () => {
                 </Row>
                 <Row>
                     <div>
-                        <div class="center-container">
+                        <div className="center-container">
                             <img src="https://cdn.dribbble.com/users/11995070/screenshots/18524301/media/c3e5192f198cbb85984262b3a916091c.png?resize=840x630&vertical=center" alt="/" />
                         </div>
                     </div>

@@ -5,7 +5,7 @@ import img from "../images/back.png";
 
 const Home = () => {
   const [testimonials, setTestimonials] = useState([]);
-
+  const [projects, setProjects] = useState([]);
   useEffect(() => {
     // Fetch testimonials data from your API when the component mounts
     axios
@@ -15,6 +15,18 @@ const Home = () => {
       })
       .catch((error) => {
         console.error("Error fetching testimonials: " + error);
+      });
+  }, []);
+
+  useEffect(() => {
+    // Fetch testimonials data from your API when the component mounts
+    axios
+      .get("http://localhost:5000/projects")
+      .then((response) => {
+        setProjects(response.data);
+      })
+      .catch((error) => {
+        console.error("Error fetching projects: " + error);
       });
   }, []);
 
@@ -156,29 +168,58 @@ const Home = () => {
         </div>
       </section>
 
-      <section id="projects" className="bg-light">
+      {/* Projects */}
+      {/* <section id="projects" className="bg-light">
         <div className="container-lg">
-          <h1 class="project-heading">Discover our Projects</h1>
-          <h3 class="project-subheading">
+          <h1 className="project-heading">Discover our Projects</h1>
+          <h3 className="project-subheading">
             Our projects that are a testament to our commitment to excellence.
           </h3>
+          <div className="container">
+            <div className="row">
+              {projects.map((project, index) => (
+                <div className="col-md-4" key={index}>
+          <div className="card" class="projectstyle">
+            <img src={img} className="card-img-top" alt="..."></img>
+            <div className="card-body">
+              <h5 className="card-title">{project.title}</h5>
+              <p className="card-text">
+                {project.description}
+              </p>
+              <a href="#" className="btn btn-primary">
+                Go somewhere
+              </a>
+            </div>
+          </div>
+          </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section> */}
 
-          <div class="container">
-            <div class="row">
-              <div class="col-md-4">
-                <div class="card bg-secondary-subtle">
-                  <div class="card-body">
-                    <div class="card-number">1</div>
-                    <div class="card-content">
-                      <h2 class="card-title">Mobile App</h2>
-                      <p class="card-text">
-                        Mobile apps are the future of business. If you're not on
-                        mobile, you're missing out.
-                      </p>
+      <section id="projects" className="bg-light">
+        <div className="container-lg">
+          <h1 className="project-heading">Discover our Projects</h1>
+          <h3 className="project-subheading">
+            Our projects that are a testament to our commitment to excellence.
+          </h3>
+          <div className="container">
+            <div className="row">
+              {projects.map((project, index) => (
+                <div className="col-md-4" key={index}>
+                  <div className="card bg-secondary-subtle">
+                    <img src={img} className="card-img-top" alt="..."></img>
+                    <div className="card-body">
+                      <div className="card-number">{index + 1}</div>
+                      <div className="card-content">
+                        <h5 className="card-title">{project.name}</h5>
+                        <p className="card-text">{project.description}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
@@ -186,21 +227,21 @@ const Home = () => {
 
       <section id="testimonial" className="bg-light">
         <div className="container-lg">
-          <h1 class="center-text">Trusted by Millions of Customers.</h1>
-          <h2 class="center-side">
+          <h1 className="center-text">Trusted by Millions of Customers.</h1>
+          <h2 className="center-side">
             Our ability to create effective business solutions is greatly
             attributed to our exceptionally talented and dedicated team.
           </h2>
-          <div class="container">
-            <div class="row">
+          <div className="container">
+            <div className="row">
               {testimonials.map((testimonial, index) => (
-                <div class="col-md-4" key={index}>
-                  <div class="card bg-secondary-subtle">
-                    <div class="card-body">
-                      <div class="card-number">{index + 1}</div>
-                      <div class="card-content">
-                        <h2 class="card-title">{testimonial.author}</h2>
-                        <p class="card-text">{testimonial.text}</p>
+                <div className="col-md-4" key={index}>
+                  <div className="card bg-secondary-subtle">
+                    <div className="card-body">
+                      <div className="card-number">{index + 1}</div>
+                      <div className="card-content">
+                        <h2 className="card-title">{testimonial.author}</h2>
+                        <p className="card-text">{testimonial.text}</p>
                       </div>
                     </div>
                   </div>

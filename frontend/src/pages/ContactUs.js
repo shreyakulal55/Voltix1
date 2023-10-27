@@ -39,6 +39,7 @@ const ContactUs = () => {
 
   return (
     <div className="container">
+      <div className="sticky-top bg-white hidden-spacer"> </div>
       <div id="success-message" className={`alert ${successMessage ? 'alert-success' : 'd-none'}`}>
         {successMessage}
       </div>

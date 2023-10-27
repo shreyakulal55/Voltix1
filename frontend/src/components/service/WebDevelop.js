@@ -27,7 +27,7 @@ const WebDevelop = () => {
         </Row>
         <Row>
           <div>
-            <div class="center-container">
+            <div className="center-container">
               <img src="https://ai-techpark.com/wp-content/uploads/2023/02/Trellix-Finds-LockBit-960x540.jpg" alt="/" />
             </div>
           </div>
