@@ -7,7 +7,7 @@ const Digital = () => {
     return (
         <section>
             <Container fluid>
-                <div className="sticky-top bg-white hidden-spacer"> </div>
+                {/* <div className="sticky-top bg-white hidden-spacer"> </div> */}
                 <Row>
                     <div className="g-container">
                         <div className="g-item">
