@@ -8,7 +8,8 @@ body {
   
 
   .whole{
-    margin-top: 55px;
+    padding-top: 80px;
+    margin-top: 100px;
   }
   .form-width{
     width:100%;
@@ -19,7 +20,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 65vh;
     /* border: 2px solid #00BFFF; */
     padding: 20px;
     border-radius: 10px;
@@ -46,7 +47,7 @@ body {
     font-size: 14px;
   }
   .form-label{
-    color:aliceblue;
+    color:rgb(68, 74, 79);
   }
   /* ContactUs.css */
 
@@ -59,6 +60,7 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a box shadow */
+    margin-bottom: 105px;
   }
   
   /* Standard width for input fields */
@@ -66,9 +68,11 @@ body {
     width: 100%;
   }
   .contact-text{
-    color:antiquewhite;
+    color:rgb(54, 52, 50);
    padding-bottom: 20px;
-   font-family: 'Times New Roman', Times, serif;
+   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   text-align: center;
+   font-size:x-large;
   }
  /* ContactUs.css */
 

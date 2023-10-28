@@ -46,11 +46,12 @@ const ContactUs = () => {
 
   return (
     <div className='whole'>
+      <h1 className="contact-text">Contact Us</h1>
+
     <div className="container contact-form">
       <div id="success-message" className={`alert ${successMessage ? 'alert-success' : 'd-none'}`}>
         {successMessage}
       </div>
-      <h1 className="contact-text">Contact Us</h1>
       <form className="form-width" onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="name" className="form-label">Name:</label>

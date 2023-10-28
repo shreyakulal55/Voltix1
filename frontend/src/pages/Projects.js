@@ -39,7 +39,7 @@ const Projects = () => {
       
     <Container fluid>
             <Row>
-              {projects.slice(0,3).map((project,index) => (
+              {projects.map((project,index) => (
                 <div className="col-4" key={project.id}>
                   <div className="p__box pointer">
                  
