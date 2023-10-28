@@ -5,7 +5,7 @@ import Row from 'react-bootstrap/Row';
 
 const UI = () => {
     return (
-        <section>
+        <section className='ui'>
             <Container fluid>
                 <Row>
                     <div className="g-container">

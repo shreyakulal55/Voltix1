@@ -5,7 +5,7 @@ import Row from 'react-bootstrap/Row';
 
 const Video = () => {
     return (
-        <section>
+        <section className='video'>
             <Container fluid>
                 <Row>
                     <div className="g-container">

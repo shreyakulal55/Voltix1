@@ -5,7 +5,7 @@ import Row from 'react-bootstrap/Row';
 
 const Digital = () => {
     return (
-        <section>
+        <section className='digi'>
             <Container fluid>
                 <Row>
                     <div className="g-container">

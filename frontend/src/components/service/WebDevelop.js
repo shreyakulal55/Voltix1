@@ -5,7 +5,7 @@ import Row from 'react-bootstrap/Row';
 
 const WebDevelop = () => {
   return (
-    <section>
+    <section className='web'>
       <Container fluid>
         <Row>
           <div className="g-container">

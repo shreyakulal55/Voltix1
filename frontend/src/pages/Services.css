@@ -23,14 +23,16 @@ p.heading.p__color {
 .service__box {
     border-radius: 10px;
     width: 100%;
-    background-color: #191919;
+    background-color:  rgb(255, 255, 255);
     padding: 55px;
     transition: .4s ease;
 }
-
+.full{
+    background-image: linear-gradient(90deg,gray, rgb(229, 226, 226),gray);
+}
 .service__box:hover {
     transform: translateY(5px);
-    background-image: linear-gradient(90deg, #f61b10, #ef0963);
+    background-image: linear-gradient(90deg,white,gray);
 }
 
 .service__box:hover .icon {
@@ -48,19 +50,19 @@ p.heading.p__color {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #f9004d;
+    color: #000000;
 }
 
 p.service_text.p_color {
     margin-bottom: 0;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 h1.service__text {
     font-size: 19px;
     font-family: Poppins, sans-serif;
     padding: 10px 0px;
-    color: white;
+    color: rgb(4, 4, 4);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -113,7 +115,7 @@ h1.service__text {
     grid-gap: 10px;
     max-height: 100%; 
     padding: 20px; 
-    background-color: #f0f0f0;
+    background-image: linear-gradient(90deg,white, gray);
     border: none;
 }
 .title {

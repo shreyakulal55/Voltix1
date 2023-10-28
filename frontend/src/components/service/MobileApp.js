@@ -5,7 +5,7 @@ import Row from 'react-bootstrap/Row';
 
 const MobileApp = () => {
     return (
-        <section>
+        <section className='mobile'>
             <Container fluid>
                 <Row>
                     <div className="g-container">
