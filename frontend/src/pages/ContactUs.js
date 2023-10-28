@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './ContactUs.css';
 
 const ContactUs = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [phoneNumber, setPhoneNumber] = useState(''); // Change the state variable name
+  const [phoneNumber, setPhoneNumber] = useState('');
   const [message, setMessage] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
 
@@ -15,7 +16,7 @@ const ContactUs = () => {
     const data = {
       name,
       email,
-      phoneNumber, // Update the field name to match your database
+      phoneNumber,
       message,
     };
 
@@ -27,6 +28,12 @@ const ContactUs = () => {
         setTimeout(() => {
           setSuccessMessage('');
         }, 3000);
+
+        // Clear the form inputs after submission
+        setName('');
+        setEmail('');
+        setPhoneNumber('');
+        setMessage('');
       })
       .catch((error) => {
         setSuccessMessage('Error submitting the form');
@@ -38,13 +45,13 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="container">
-      <div className="sticky-top bg-white hidden-spacer"> </div>
+    <div className='whole'>
+    <div className="container contact-form">
       <div id="success-message" className={`alert ${successMessage ? 'alert-success' : 'd-none'}`}>
         {successMessage}
       </div>
-      <h1 className="my-4">Contact Us</h1>
-      <form onSubmit={handleSubmit}>
+      <h1 className="contact-text">Contact Us</h1>
+      <form className="form-width" onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="name" className="form-label">Name:</label>
           <input
@@ -72,13 +79,13 @@ const ContactUs = () => {
         </div>
 
         <div className="mb-3">
-          <label htmlFor="phoneNumber" className="form-label">Phone Number:</label> {/* Update the label and ID */}
+          <label htmlFor="phoneNumber" className="form-label">Phone Number:</label>
           <input
             type="tel"
-            id="phoneNumber" // Update the ID
-            name="phoneNumber" // Update the name
+            id="phoneNumber"
+            name="phoneNumber"
             value={phoneNumber}
-            onChange={(e) => setPhoneNumber(e.target.value)} // Update the state update function
+            onChange={(e) => setPhoneNumber(e.target.value)}
             className="form-control"
             required
           />
@@ -100,8 +107,8 @@ const ContactUs = () => {
         <button type="submit" className="btn btn-primary">Submit</button>
       </form>
     </div>
+    </div>
   );
 };
 
 export default ContactUs;
-

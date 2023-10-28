@@ -1,46 +1,70 @@
-import React from "react";
-import "./Projects.css";
-import * as Icon from "react-bootstrap-icons";
+//projects.js
+// Projects.js
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import './Projects.css';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import movingImage from '../images/2.webp';
+const Projects = () => {
+  const [projects, setProjects] = useState([]);
 
-const Project = () => {
-  return (
-    <div className="project-container">
-      <div className="project-content">
-        <h1 className="project-title">Project</h1>
-        <h2 className="project-title">Great Design That Actually Works!</h2>
-        <p className="project-description">
-          Our versatile team is built og designers, developers and design
-          marketers who all bring unique experience.
-        </p>
-      </div>
-      <div className="container">
-        <div className="card">
-          <img
-            src="https://th.bing.com/th/id/R.ea5aec3b071d84de241ba95657e6d05a?rik=pUQNBDk15QxnBQ&riu=http%3a%2f%2fstatic2.businessinsider.com%2fimage%2f54be6dc269bedd8644d27821%2fmicrosoft-may-be-working-on-a-strange-new-gadget-thats-a-mix-between-a-smartphone-and-a-laptop.jpg&ehk=obElsXElxkV5084eXHYenqgVQvEr%2fnVWyHZmwzTK5Qo%3d&risl=&pid=ImgRaw&r=0"
-            alt="Cart Shop"
-          />
-          <div className="intro">
-            <h1>Cart Shop</h1>
-            <a href="/cart" className="btn btn-primary">
-              <Icon.ArrowRightSquareFill color="yellow" size={40} />
-            </a>
+  useEffect(() => {
+    // Fetch projects from the API
+    fetch('http://localhost:5000/projects')
+      .then((response) => response.json())
+      .then((data) => setProjects(data));
+  }, []);
+
+  return (<div>
+    {/* <h1 className='display-5 text-center mx-auto font-weight-bold custom-heading'>Projects</h1> */}
+    <section className="introduction-section" style={{marginTop:"20px"}}>
+    <div className="g-container">
+            <div className="g-item">
+              <div className='title'>
+                <h2 style={{ fontSize: "45px" }}> Explore Our Featured Projects.</h2>
+                <h6 style={{ fontSize: "19px" }}>
+                Discover a collection of our recent projects showcasing innovation and creativity.
+                </h6>
+              </div>
+            </div>
+            <div className="g-item">
+              <img src={movingImage} alt="/" height="390px" />
+            </div>
           </div>
-        </div>
-        <div className="card">
-          <img
-            src="https://th.bing.com/th/id/R.f8cb19b22a2be32017f432d70467c7a3?rik=Sy3cpZ0LHUYLCg&riu=http%3a%2f%2fwallpapercave.com%2fwp%2fqtHXk2l.jpg&ehk=gYtagYDiAad%2fkDKkeu05eeQg9lyn0GqoFJeL72DFvrs%3d&risl=&pid=ImgRaw&r=0"
-            alt="Shoe Shop"
-          />
-          <div className="intro">
-            <h1>Shoe Shop</h1>
-            <a href="/shoe" className="btn btn-primary">
-              <Icon.ArrowRightSquareFill color="yellow" size={40} />
-            </a>
-          </div>
-        </div>
-      </div>
+      </section>
+    <section>
+      <Container fluid>
+        <Row>
+          {projects.map((project) => (
+            <div className='col-4' key={project.id}>
+              <div className='project__box pointer'>
+                <div className='icon'>
+                  <FontAwesomeIcon icon={faArrowRight} color='currentColor' />
+                </div>
+                <div className='project__meta'>
+                  <h1 className='project__text'>{project.name}</h1>
+                  <p className='p project_text p_color'>
+                    {project.description.slice(0, 10)}...
+                  </p>
+                  <br />
+                  <Link to={`/projects/${project._id}`}>
+                  {console.log(project._id)} {/* Use Link to navigate */}
+                      <button className='icon-link'>
+                        <FontAwesomeIcon icon={faArrowRight} />
+                      </button>
+                    </Link>
+                </div>
+              </div>
+            </div>
+          ))}
+        </Row>
+      </Container>
+    </section>
     </div>
   );
 };
 
-export default Project;
+export default Projects;
