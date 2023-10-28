@@ -1,5 +1,7 @@
+//projectDetails
 import React, { useState, useEffect } from 'react';
 import './projectDetails.css';
+import movingImage from '../images/2.webp';
 
 const ProjectDetails = ({ match }) => {
   const [project, setProject] = useState(null);
@@ -19,22 +21,19 @@ const ProjectDetails = ({ match }) => {
 
   return (
     <section className="whole">
-      <div className="side-heading">Project Details</div>
+      {/* <div className="side-heading">Project Details</div> */}
+      <h2 className="project-title">{project.name}</h2>
       <div className="project-details-container">
+     
         <div className="project-info">
-          <h2 className="project-title">{project.name}</h2>
+          
           <div className='descriptionbox'>
           <h6 className="project-description">{project.description}</h6>
+          <img src={movingImage} alt="/" height="390px" />
           </div>
-          <ul className="project-details-list">
-            <li>Start Date: {project.start_Date}</li>
-            <li>End Date: {project.end_Date}</li>
-            <li>Client: {project.client}</li>
-            <li>Status: {project.status}</li>
-            <li>Team: {project.team.join(', ')}</li>
-            <li>Tags: {project.tags.join(', ')}</li>
-          </ul>
-          <a
+          
+        </div>
+        <a
             className="project-link"
             href={project.url}
             target="_blank"
@@ -42,7 +41,6 @@ const ProjectDetails = ({ match }) => {
           >
             Visit Project
           </a>
-        </div>
       </div>
     </section>
   );

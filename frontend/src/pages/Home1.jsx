@@ -1,6 +1,13 @@
+/* eslint-disable react/jsx-no-undef */
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Home.css";
+import './Projects.css';
+import { Link } from 'react-router-dom';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 // import img from "../images/back.png";
 
 const Home = () => {
@@ -186,8 +193,6 @@ const Home = () => {
         </div>
       </section> */}
 
-
-
       {/* projects */}
 
       <section id="projects" className="bg-projects">
@@ -212,30 +217,37 @@ const Home = () => {
           <br></br>
           <br></br>
 
-          <div className="container">
-            <div className="row">
-              {projects.slice(0, 3).map((project, index) => (
-                <div className="col-4" key={index}>
+          <Container fluid>
+            <Row>
+              {projects.slice(0,3).map((project,index) => (
+                <div className="col-4" key={project.id}>
                   <div className="p__box pointer">
+                 
+                  {/* <div className="content-number ">{index+1}</div> */}
                     <div className="p__meta">
                       <h1 className="p__text">{project.name}</h1>
-                      <p className="p p_text p_color">{project.description}</p>
+                      <p className="p p_text p_color">
+                        {project.description.slice(0, 10)}...
+                      </p>
                       <br />
+                      <Link to={`/projects/${project._id}`}>
+                        {console.log(project._id)} {/* Use Link to navigate */}
+                        <button className="icon-link">
+                          <FontAwesomeIcon icon={faArrowRight} />
+                        </button>
+                      </Link>
                     </div>
                   </div>
                 </div>
               ))}
-            </div>
-          </div>
+            </Row>
+          </Container>
         </div>{" "}
         <br></br>
         <br></br>
       </section>
 
-
-
-
-{/* testimonial */}
+      {/* testimonial */}
       <section id="testimonial" className="bg-testimonial">
         <div className="container-lg">
           <div className="text-center">
@@ -272,44 +284,6 @@ const Home = () => {
         <br></br>
         <br></br>
       </section>
-
-      {/* 
-      <section id="testimonial" className="bg-testimonial">
-        <div className="container-lg">
-          <div className="text-center">
-            <br></br>
-            <br></br>
-            <h2>Trusted by Millions of Customers.</h2>
-            <p className="lead ">
-              Our success in creating business solutions is due in large part
-              <br></br>
-              spacially to talented and highly committed team.
-            </p>
-            <br></br>
-            <br></br>
-          </div>
-
-          <div className="container">
-            <div className="row">
-              {testimonials.slice(0, 3).map((testimonial, index) => (
-                <div className="col-md-4" key={index}>
-                  <div className="card bg-secondary-subtle">
-                    <div className="card-body">
-                      <div className="card-number">{index + 1}</div>
-                      <div className="card-t">
-                        <h2 className="card-name">{testimonial.author}</h2>
-                        <p className="card-desc">{testimonial.text}</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>{" "}
-        <br></br>
-        <br></br>
-      </section> */}
     </>
   );
 };
