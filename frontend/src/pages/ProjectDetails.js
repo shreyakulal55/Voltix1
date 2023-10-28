@@ -29,18 +29,12 @@ const ProjectDetails = ({ match }) => {
           
           <div className='descriptionbox'>
           <h6 className="project-description">{project.description}</h6>
-          <img src={movingImage} alt="/" height="390px" />
+          <img src={project.url} alt="/" height="390px" />
           </div>
           
         </div>
-        <a
-            className="project-link"
-            href={project.url}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Visit Project
-          </a>
+     
+      
       </div>
     </section>
   );
