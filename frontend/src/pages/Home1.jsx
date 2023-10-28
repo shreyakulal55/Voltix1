@@ -8,7 +8,6 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-// import img from "../images/back.png";
 
 const Home = () => {
   const [testimonials, setTestimonials] = useState([]);
@@ -168,36 +167,6 @@ const Home = () => {
           <br></br>
         </div>
       </section>
-
-      {/* Projects */}
-      {/* <section id="projects" className="bg-light">
-        <div className="container-lg">
-          <h1 className="project-heading">Discover our Projects</h1>
-          <h3 className="project-subheading">
-            Our projects that are a testament to our commitment to excellence.
-          </h3>
-          <div className="container">
-            <div className="row">
-              {projects.map((project, index) => (
-                <div className="col-md-4" key={index}>
-          <div className="card" class="projectstyle">
-            <img src={img} className="card-img-top" alt="..."></img>
-            <div className="card-body">
-              <h5 className="card-title">{project.title}</h5>
-              <p className="card-text">
-                {project.description}
-              </p>
-              <a href="#" className="btn btn-primary">
-                Go somewhere
-              </a>
-            </div>
-          </div>
-          </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section> */}
 
       {/* projects */}
 

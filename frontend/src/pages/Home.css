@@ -1,7 +1,6 @@
 .bold-text {
   padding-top: 10px;
   font-weight: bold;
-  /* font-family: Arial, Helvetica, sans-serif; */
 }
 
 
@@ -19,7 +18,7 @@
   background-color: gray;
   position: absolute;
   display: flex;
-  flex-direction: column; /* Stack content vertically */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
@@ -34,43 +33,18 @@
 }
 
 .above-text {
-  margin-bottom: 20px; /* Adjust the spacing between the text elements */
+  margin-bottom: 20px; 
 }
 
 .underline-text {
-  text-decoration: underline; /* Add underline */
-  color: black; /* Replace 'YourColor' with your desired color */
+  text-decoration: underline; 
+  color: black; 
 }
 
 .bold-text {
   font-weight: bold;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-
-
-/* 
-.bold-text {
-  animation: updown 3s linear infinite;
-}
-
-@keyframes updown {
-  0% {
-      transform: translateY(-20px);
-  }
-
-  50% {
-      transform: translateY(20px);
-  }
-
-  100% {
-      transform: translateY(-20px);
-  }
-}
-
-.img-fluid {
-  margin-right: 900px;
-} */
-
 
 
 .card-number {
@@ -114,8 +88,6 @@
   color: #FFF;
   text-align: right;
   padding: 10px;
-
-  /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBH720KwTKsxIAMhiVBBiAwj675SkQGX8sqw&usqp=CAU'); */
 }
 
 
@@ -149,7 +121,6 @@
 .content-number {
   font-weight: bold;
     font-size: 60px;
-    /* font-weight: 400; */
     margin-bottom: 23px;
     display: flex;
     align-items: center;
