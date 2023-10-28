@@ -5,7 +5,7 @@ import Row from 'react-bootstrap/Row';
 
 const Software = () => {
     return (
-        <section>
+        <section className='soft'>
             <Container fluid>
                 <Row>
                     <div className="g-container">

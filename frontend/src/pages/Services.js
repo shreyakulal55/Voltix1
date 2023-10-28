@@ -11,7 +11,7 @@ const goToNewPage = (url) => {
 
 const Services = () => {
   return (
-    <section>
+    <section className='full'>
       <Container fluid>
         <Row>
         <div className="g-container">
