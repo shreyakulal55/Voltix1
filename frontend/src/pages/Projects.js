@@ -47,7 +47,7 @@ const Projects = () => {
                     <div className="p__meta">
                       <h1 className="p__text">{project.name}</h1>
                       <p className="p p_text p_color">
-                        {project.description.slice(0, 10)}...
+                        {project.description.slice(0, 30)}...
                       </p>
                       <br />
                       <Link to={`/projects/${project._id}`}>

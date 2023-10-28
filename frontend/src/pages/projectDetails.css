@@ -2,6 +2,7 @@
 /* projectDetails.css */
 
 .whole {
+    background-color: gray;
   margin-top: 10px;
   display: flex;
   flex-direction: column;
@@ -18,7 +19,7 @@
 }
 
 .project-details-container {
-  background-color: #e4d7d7;
+  background-color: white;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -27,7 +28,7 @@
 
 .project-title {
   font-size: 45px;
-  margin: 0;
+  margin-top: 80px;
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   padding-bottom: 20px;
 }
@@ -58,3 +59,4 @@
 .descriptionbox{
   display: flex;
 }
+
