@@ -5,7 +5,6 @@ import Row from 'react-bootstrap/Row';
 
 const MobileApp = () => {
     return (
-        <>
         <section className='mobile'>
             <Container fluid>
                 <Row>
@@ -26,20 +25,14 @@ const MobileApp = () => {
                         </div>
                     </div>
                 </Row>
-                </Container>
-        </section>
-
-
                 <Row>
                     <div class="center-container">
                         <img src="https://th.bing.com/th/id/R.bb9afecd3d3f53d17853593c242b041a?rik=hngGBAPu%2bx%2fGqw&riu=http%3a%2f%2fzeldathezorse.com%2fwp-content%2fuploads%2f2021%2f03%2ftech.jpg&ehk=qP222W%2fThWyn9BJS%2b%2f5rAIe46d6uLxnBsW%2f0lc0vfzI%3d&risl=&pid=ImgRaw&r=0" alt="/" />
                     </div>
                 </Row>
-                <section className='mobile'>
-                <Container fluid>
                 <Row>
-    
-                        <div className='titl' >
+                    <div>
+                        <div className='title'>
                             <h2 style={{ fontSize: "35px" }}>Why Mobile Apps Are So Important in Our Lives</h2>
                             <p style={{ fontSize: "20px", lineHeight: "35px" }}>
                                 Mobile apps are becoming increasingly important in our lives. They are used for a variety of purposes, such as staying connected with friends and family, getting news and information, shopping, and doing business.
@@ -60,11 +53,10 @@ const MobileApp = () => {
                                 If you are looking to increase your reach, engagement, sales, and loyalty, then you should consider developing a mobile app for your business. Our mobile app development team can help you create a custom app that meets your specific needs.
                             </p>
                         </div>
-                   
+                    </div>
                 </Row>
             </Container>
         </section>
-        </>
     );
 }
 
