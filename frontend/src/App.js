@@ -14,6 +14,8 @@ import Software from "./components/service/Software";
 import UI from "./components/service/UI";
 import Video from "./components/service/Video";
 import Digital from "./components/service/Digital";
+import ProjectDetails from './pages/ProjectDetails';
+
 
 function App() {
   return (
@@ -23,7 +25,7 @@ function App() {
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/services" component={Services} />
-          <Route path="/projects" component={Projects} />
+          <Route exact path="/projects" component={Projects} />
           <Route path="/aboutus" component={AboutUs} />
           <Route path="/contactus" component={ContactUs} />
           <Route path="/mobile" component={MobileApp} />
@@ -32,6 +34,7 @@ function App() {
           <Route path="/ui" component={UI} />
           <Route path="/video" component={Video} />
           <Route path="/digital" component={Digital} />
+          <Route exact path="/projects/:id" component={ProjectDetails} />
         </Switch>
         <Footer />
       </div>

@@ -1,0 +1,94 @@
+/* projects.css */
+h1.custom-heading {
+    font-size: 50px;
+    text-align: center;
+    font-weight: 600;
+    font-family: Poppins, sans-serif;
+    margin-bottom: 5px;
+    margin-top: 70px;
+    color: #333;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.project__box {
+    border-radius: 10px;
+    width: 80%; /* Decreased width */
+    background-color: #191919;
+    padding: 30px; /* Decreased padding */
+    transition: .4s ease;
+}
+
+.project__box:hover {
+    transform: translateY(5px);
+    background-image: linear-gradient(90deg, #f61b10, #ef0963);
+}
+
+.project__box:hover .icon {
+    color: #fff;
+}
+
+.project__box:hover .project_text {
+    color: #fff !important;
+}
+
+.icon {
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f9004d;
+}
+
+.project_text {
+    margin-bottom: 0;
+    color: white;
+}
+
+h1.project__text {
+    font-size: 19px;
+    font-family: Poppins, sans-serif;
+    padding: 10px 0px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col-4 {
+    max-width: 33.33333%;
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 25%;
+    height: 35%;
+}
+
+.icon-link {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.icon-link:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.arrow-icon {
+    margin-left: 5px;
+    font-size: 1.2rem;
+}
