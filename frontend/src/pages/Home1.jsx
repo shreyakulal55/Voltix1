@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Home.css";
-import img from "../images/back.png";
+// import img from "../images/back.png";
 
 const Home = () => {
   const [testimonials, setTestimonials] = useState([]);
