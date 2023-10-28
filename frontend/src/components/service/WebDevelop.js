@@ -1,5 +1,5 @@
 import React from 'react';
-import './WebDevelop.css'; // Import your CSS file
+import './WebDevelop.css'; 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 
@@ -7,11 +7,11 @@ const WebDevelop = () => {
   return (
     <section>
       <Container fluid>
-      <div className="sticky-top bg-white hidden-spacer"> </div>
         <Row>
           <div className="g-container">
             <div className="g-item">
               <div className='title'>
+                <span className="tagline">WEB DEVELOPMENT</span>
                 <h2 style={{ fontSize: "45px" }}>We Build Websites
                   That Grow Your Business</h2>
                 <h6 style={{ fontSize: "19px" }}>
@@ -21,15 +21,14 @@ const WebDevelop = () => {
               </div>
             </div>
             <div className="g-item">
-              <img src="https://www.ejaftech.iq/images/2021/02/21/wan-accelerator.png" alt="/" height="390px" />
+              <img style={{ marginLeft: "100px" }} src="https://www.ejaftech.iq/images/2021/02/21/wan-accelerator.png" alt="/" height="390px" />
             </div>
+
           </div>
         </Row>
         <Row>
-          <div>
-            <div className="center-container">
-              <img src="https://ai-techpark.com/wp-content/uploads/2023/02/Trellix-Finds-LockBit-960x540.jpg" alt="/" />
-            </div>
+          <div class="center-container">
+            <img src="https://ai-techpark.com/wp-content/uploads/2023/02/Trellix-Finds-LockBit-960x540.jpg" alt="/" />
           </div>
         </Row>
         <Row>
