@@ -53,7 +53,7 @@
     font-weight: 700;
     letter-spacing: 0.8px;
     padding: 8px 10px;
-    background: linear-gradient(90.21deg, rgba(84, 13, 55, 0.5) -5.91%, rgba(63, 48, 130, 0.5) 111.58%);
+    background: linear-gradient(90.21deg, rgb(166, 166, 166), rgb(229, 226, 226),rgb(189, 187, 187));
     border: 1px solid rgba(255, 255, 255, 0.5);
     font-size: 30px;
     margin-bottom: 16px;
