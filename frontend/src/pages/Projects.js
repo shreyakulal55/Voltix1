@@ -36,32 +36,32 @@ const Projects = () => {
           </div>
       </section>
     <section>
-      <Container fluid>
-        <Row>
-          {projects.map((project) => (
-            <div className='col-4' key={project.id}>
-              <div className='project__box pointer'>
-                <div className='icon'>
-                  <FontAwesomeIcon icon={faArrowRight} color='currentColor' />
+      
+    <Container fluid>
+            <Row>
+              {projects.slice(0,3).map((project,index) => (
+                <div className="col-4" key={project.id}>
+                  <div className="p__box pointer">
+                 
+                  {/* <div className="content-number ">{index+1}</div> */}
+                    <div className="p__meta">
+                      <h1 className="p__text">{project.name}</h1>
+                      <p className="p p_text p_color">
+                        {project.description.slice(0, 10)}...
+                      </p>
+                      <br />
+                      <Link to={`/projects/${project._id}`}>
+                        {console.log(project._id)} {/* Use Link to navigate */}
+                        <button className="icon-link">
+                          <FontAwesomeIcon icon={faArrowRight} />
+                        </button>
+                      </Link>
+                    </div>
+                  </div>
                 </div>
-                <div className='project__meta'>
-                  <h1 className='project__text'>{project.name}</h1>
-                  <p className='p project_text p_color'>
-                    {project.description.slice(0, 10)}...
-                  </p>
-                  <br />
-                  <Link to={`/projects/${project._id}`}>
-                  {console.log(project._id)} {/* Use Link to navigate */}
-                      <button className='icon-link'>
-                        <FontAwesomeIcon icon={faArrowRight} />
-                      </button>
-                    </Link>
-                </div>
-              </div>
-            </div>
-          ))}
-        </Row>
-      </Container>
+              ))}
+            </Row>
+          </Container>
     </section>
     </div>
   );
