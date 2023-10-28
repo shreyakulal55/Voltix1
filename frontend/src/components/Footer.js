@@ -7,15 +7,14 @@ const Footer = () => {
     <footer className="footer">
       <div className="grid-container">
         <div className="grid-item">
-          
-            <a href="/Info">
-              <img
-                src="https://www.voltixsolution.com/assets/img/voltix_logo.png"
-                height="42.2"
-                width="170"
-              />
-            </a>
-      
+          <a href="/Info">
+            <img
+              src="https://www.voltixsolution.com/assets/img/voltix_logo.png"
+              height="42.2"
+              width="170"
+            />
+          </a>
+
           <p className="text-[#8D8D8E] mt-4">
             We are not afraid to say no to projects that we cannot do well. We
             would rather focus on a few projects and do them right than take on
@@ -59,22 +58,21 @@ const Footer = () => {
           </ul>
         </div>
         <div className="grid-item">
-          
-            <a href="/Info">
-              <img
-                src="https://www.voltixsolution.com/assets/img/illustration06.png"
-                height="150"
-                width="150"
-              />
-            </a>
-        
-          <p className="text-[#8D8D8E] mt-4">
-            Subscribe to our newsletter to stay up-to-date on the latest news and events.
-          </p>
+          <a href="/Info">
+            <img
+              src="https://www.voltixsolution.com/assets/img/illustration06.png"
+              height="150"
+              width="150"
+            />
+          </a>
 
+          <p className="text-[#8D8D8E] mt-4">
+            Subscribe to our newsletter to stay up-to-date on the latest news
+            and events.
+          </p>
         </div>
       </div>
-     
+
       <div className="copyright">
         © 2023 Voltix Solution , All Rights Reserved. Design By Team Voltix
       </div>
