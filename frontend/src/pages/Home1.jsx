@@ -39,25 +39,31 @@ const Home = () => {
 
   return (
     <>
-      <section id="intro" className="intro-background">
-        <div className="sticky-top bg-white hidden-spacer"> </div>
-        <div className="container-lg">
-          <div className="row g-4 justify-content-center align-items-center">
-            <div className="col-md-5 order-md-2 text-center text-md-start">
-              <h1>
-                <div className="circular-background">
-                  <div className="display-6 bold-text">
-                    Where Ideas Come to<br></br> Life
-                  </div>
-                  <div className="display-4 bold-text">
-                    Welcome to<br></br> Voltix
-                  </div>
-                </div>
-              </h1>
+   <section id="intro" className="intro-background">
+  <div className="sticky-top bg-white hidden-spacer"></div>
+  <div className="container-lg">
+    <div className="row g-4 justify-content-center align-items-center">
+      <div className="col-md-5 order-md-2 text-center text-md-start">
+        <h1>
+          <div className="circular-background">
+            <div className="above-text">
+              <div className="display-6 bold-text">
+                Where Ideas Come to <br></br><span className="underline-text">Life</span>
+              </div>
+            </div>
+            <div className="below-text">
+              <div className="display-4 bold-text">
+                Welcome to <br></br><span className="underline-text">Voltix</span>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </h1>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
       <section id="services" className="bg-services">
         <div className="container-lg">

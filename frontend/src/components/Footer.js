@@ -58,7 +58,7 @@ const Footer = () => {
           </ul>
         </div>
         <div className="grid-item">
-          <a href="/Info">
+          <a className="FI" href="/Info">
             <img
               src="https://www.voltixsolution.com/assets/img/illustration06.png"
               height="150"

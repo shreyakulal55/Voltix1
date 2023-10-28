@@ -6,6 +6,7 @@
   }
   
   .grid-container {
+    margin-bottom: 100px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
@@ -48,4 +49,50 @@
 /* Create space between content and footer */
 .content-container {
   margin-bottom: 100px; /* Adjust the margin as needed to create space for the footer */
+}
+
+
+/* Add this CSS to your existing Footer.css or your global CSS file */
+
+/* Make the footer stretch to full width of the screen */
+.footer {
+  width: 100%;
+  background-color: gray; /* Set your desired background color */
+  color: #fff; /* Set your desired text color */
+  padding: 20px 0; /* Add some vertical padding to make it look better */
+}
+
+/* Center the content within the footer */
+.grid-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+/* Style the individual grid items */
+.grid-item {
+  flex: 1; /* Each grid item takes an equal portion of the space */
+  max-width: 25%; /* Ensure that each item doesn't occupy more than 25% of the width */
+  margin: 10px; /* Add some spacing around the grid items */
+}
+
+/* Center the content in each grid item */
+.grid-item a,
+.grid-item p {
+  text-align: center;
+}
+
+/* Add more CSS styles as needed to style the footer content */
+
+/* Make the copyright text stretch to full width */
+.copyright {
+  width: 100%;
+  text-align: center;
+  background-color: gray; /* Set your desired background color for the copyright section */
+  padding: 10px 0; /* Add some vertical padding for better presentation */
+  font-size: 14px;
+}
+
+.FI{
+  margin-left: 45px;
 }
