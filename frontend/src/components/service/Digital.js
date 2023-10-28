@@ -1,5 +1,5 @@
 import React from 'react';
-import './Digital.css'; 
+import './Digital.css'; // Import your CSS file
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 
@@ -7,11 +7,11 @@ const Digital = () => {
     return (
         <section>
             <Container fluid>
+                {/* <div className="sticky-top bg-white hidden-spacer"> </div> */}
                 <Row>
                     <div className="g-container">
                         <div className="g-item">
                             <div className='title'>
-                            <span className="tagline">DIGITAL MARKETING</span>
                                 <h2 style={{ fontSize: "45px" }}>Digital Marketing
                                     The Future of Marketing</h2>
                                 <h6 style={{ fontSize: "19px" }}>
@@ -21,13 +21,15 @@ const Digital = () => {
                             </div>
                         </div>
                         <div className="g-item">
-                            <img style={{ marginLeft: "150px" }} src="https://surchdigital.com/wp-content/uploads/2023/07/Graphics-03-1024x1024.png" alt="/" height="390px" />
+                            <img src="https://surchdigital.com/wp-content/uploads/2023/07/Graphics-03-1024x1024.png" alt="/" height="390px" />
                         </div>
                     </div>
                 </Row>
                 <Row>
-                    <div class="center-container">
-                        <img src="https://www.udacity.com/blog/wp-content/uploads/2020/11/Digital-Marketing-Explained_Blog-scaled.jpeg" alt="/" />
+                    <div>
+                        <div className="center-container">
+                            <img src="https://www.udacity.com/blog/wp-content/uploads/2020/11/Digital-Marketing-Explained_Blog-scaled.jpeg" alt="/" />
+                        </div>
                     </div>
                 </Row>
                 <Row>

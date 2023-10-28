@@ -6,36 +6,41 @@
 
 
 .intro-background {
+
   height: 100vh;
-  background-image:url('https://e0.pxfuel.com/wallpapers/1023/5/desktop-wallpaper-dark-aesthetic-background-dark-aesthetic-star.jpg');
-  background-size: cover; /* Adjust the size as needed */
-  background-position: center; /* Adjust the position as needed */
+  background-image: url('https://codewithmel.com/images/site/desk.jpg');
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
-  padding-top: 10px; /* Add padding to create space between the navbar and the background image */
+  padding-top: 10px;
 }
 
 
-/* Home.css */
 .circular-background {
-
-  position: relative;
-  display: inline-block;
+  background-color: gray;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
-  width: 600px; /* Adjust the width and height as needed */
-  height: 400px; /* Adjust the width and height as needed */
-  background-image: url('https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRqzpghLzzjKwtydmQDrvoS1VT0lLoea1_KNKwNrkAFXZ6F63-e'); /* Background color of the circle */
-  opacity: 0.7; /* Adjust the opacity to control the darkness of the circle */
-  margin-right: 20px; /* Spacing between the circle and the text (adjust as needed) */
-  color: #FFF; /* Text color */
-  padding: 80px; /* Adjust the padding for text placement */
+  width: 600px;
+  height: 400px;
+  opacity: 0.7;
+  color: #FFF;
   text-align: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
-
+.img-fluid {
+  margin-right: 900px;
+}
 
 .bold-text {
+  
   font-weight: bold;
- font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .card-number {
@@ -43,12 +48,12 @@
   font-size: 60px;
   font-weight: bold;
   position: absolute;
-  left: 10px; 
-  top: 10px; 
+  left: 10px;
+  top: 10px;
   letter-spacing: -1px;
 }
 
-/* Ensure text content is left-aligned */
+
 .card-title {
   font-size: 18px;
   font-weight: 600;
@@ -56,16 +61,16 @@
   color: #fff;
   line-height: 1.7;
   display: block;
-    font-size: 1.17em;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
+  font-size: 1.17em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
 }
 
 .mb-4 {
-  margin-bottom: 20px; /* Adjust the margin as needed to control the space */
+  margin-bottom: 20px;
 }
 
 .card-body {
@@ -74,22 +79,171 @@
   justify-content: center;
   height: 100%;
 }
-.card-content{
+
+.card-content {
   color: #FFF;
   text-align: right;
   padding: 10px;
-  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBH720KwTKsxIAMhiVBBiAwj675SkQGX8sqw&usqp=CAU');
+
+  /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBH720KwTKsxIAMhiVBBiAwj675SkQGX8sqw&usqp=CAU'); */
 }
 
-.bg-light 
-{
+
+
+
+
+
+
+.bg-services {
+  background-image: linear-gradient(90deg,white,gray);
+}
+
+.bg-light {
+
   background-image: url('https://e0.pxfuel.com/wallpapers/766/75/desktop-wallpaper-space-colors-blue-purple-stars.jpg');
 }
 
-.text-center{
-  color: rgb(123, 140, 134);
+.text-center {
+  color: rgb(255, 255, 255);
 }
+
 .lead {
-  color: rgb(123, 140, 134);
+  color: rgb(255, 255, 255);
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+.projectstyle {
+  width: 18rem;
+}
+
+.content-number {
+  font-weight: bold;
+    font-size: 60px;
+    /* font-weight: 400; */
+    margin-bottom: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+  
+
+}
+
+p.heading.p__color {
+  margin-bottom: 0;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.s__box {
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  padding: 55px;
+  transition: .4s ease;
+}
+
+.s__box:hover {
+  transform: translateY(5px);
+  background-image: linear-gradient(90deg, gray, white);
+}
+
+.s__box:hover .content-number{
+  color: #5c5252;
+}
+
+.s_box:hover p.stext .p_color {
+  color: #000000 !important;
+}
+
+p.s_text.p_color {
+  margin-bottom: 0;
+  color: rgb(0, 0, 0);
+}
+
+h1.s__text {
+  font-weight: bold;
+  font-size: 19px;
+  font-family: Poppins, sans-serif;
+  padding: 10px 0px;
+  color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.p__box {
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  padding: 55px;
+  transition: .4s ease;
+}
+
+.p__box:hover {
+  transform: translateY(5px);
+  background-image: linear-gradient(90deg, gray, white);
+}
+
+.p__box:hover .content-number{
+  color: #5c5252;
+}
+
+.p_box:hover p.stext .p_color {
+  color: #000000 !important;
+}
+
+p.p_text.p_color {
+  margin-bottom: 0;
+  color: rgb(0, 0, 0);
+}
+
+h1.p__text {
+  font-weight: bold;
+  font-size: 19px;
+  font-family: Poppins, sans-serif;
+  padding: 10px 0px;
+  color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.bg-projects {
+  background-image: linear-gradient(90deg,gray,white);
+}
+.bold-txt {
+ color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.p_stat {
+  color: rgb(255, 255, 255);
+
+}
+
+
+.bg-testimonial{
+  background-image: linear-gradient(90deg,white,gray);
+}
+.bold-t {
+  color: rgb(255, 255, 255);
+   font-weight: bold;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ }
+
+
+ .card-name{
+  color: #000000;
+ }
+ .card-desc{
+  color: #000000;
+ }
+
+ .card-t{
+  text-align: center;
+ }
