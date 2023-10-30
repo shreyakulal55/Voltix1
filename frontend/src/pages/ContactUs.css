@@ -8,8 +8,8 @@ body {
   }
   
 
-  .whole{
-    /* background-color: #000; */
+  .wh{
+
     padding-top: 80px;
     margin-top: 75px;
   }
@@ -62,7 +62,7 @@ body {
     margin: 0 auto; /* Center the container horizontally */
     padding: 20px;
     border-radius: 10px;
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); Add a box shadow */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a box shadow */
     margin-bottom: 105px;
   }
   

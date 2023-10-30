@@ -98,7 +98,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div className='whole'>
+    <div className='wh'>
       <h1 className="contact-text">Contact Us</h1>
 
       <div className="container contact-form">
