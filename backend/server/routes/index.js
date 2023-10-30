@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const { getProjects,getProjectById, createProject, updateProject, deleteProject } = require('../controllers/projectcontrollers');
 const { getTestimonials, getTestimonialById, createTestimonial, updateTestimonial, deleteTestimonial } = require('../controllers/testimonialcontrollers');
+const { getServices, getServiceById, createService, updateService, deleteService } = require('../controllers/servicesControllers');
 const { getBanners, getBannerById, createBanner, updateBanner, deleteBanner } = require('../controllers/bannercontrollers');
 const {getSocialfeeds, getSocialfeedById, createSocialfeed, updateSocialfeed, deleteSocialfeed} = require('../controllers/socialfeedscontrollers');
 const { getUsers, getUserById, register, updateUser, deleteUser } = require('../controllers/userControllers');
@@ -21,6 +22,12 @@ router.get('/testimonials/:id', getTestimonialById);
 router.post('/testimonials',authMiddleware.verifyToken, createTestimonial);
 router.put('/testimonials/:id',authMiddleware.verifyToken, updateTestimonial);
 router.delete('/testimonials/:id',authMiddleware.verifyToken, deleteTestimonial);
+
+router.get('/services', getServices);
+router.get('/services/:id', getServiceById);
+router.post('/services',authMiddleware.verifyToken, createService);
+router.put('/services/:id',authMiddleware.verifyToken, updateService);
+router.delete('/services/:id',authMiddleware.verifyToken, deleteService);
 
 router.get('/banners', getBanners);
 router.get('/banners/:id',getBannerById);

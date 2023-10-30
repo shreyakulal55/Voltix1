@@ -3,7 +3,7 @@
 
 .whole {
     background-color: gray;
-  margin-top: 10px;
+  margin-top: 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,38 +18,41 @@
   margin-bottom: 20px;
 }
 
-.project-details-container {
+.pr-details-container {
   background-color: white;
   padding: 20px;
+  height: 100vh;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
+  padding-bottom: 0px;
 }
 
-.project-title {
+.pr-title {
+color: black;
   font-size: 45px;
   margin-top: 80px;
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   padding-bottom: 20px;
 }
 
-.project-description {
+.pr-description {
   padding-top: 90px;
   font-size: 19px;
   margin: 20px 0;
 }
 
-.project-details-list {
+.pr-details-list {
   list-style-type: none;
   padding: 0;
 }
 
-.project-details-list li {
+.pr-details-list li {
   font-size: 16px;
   margin: 8px 0;
 }
 
-.project-link {
+.pr-link {
   display: block;
   font-size: 18px;
   text-decoration: none;
@@ -59,4 +62,9 @@
 .descriptionbox{
   display: flex;
 }
+
+.project-t{
+  justify-content: center;
+}
+
 

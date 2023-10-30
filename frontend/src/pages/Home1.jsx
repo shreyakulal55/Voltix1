@@ -2,12 +2,18 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Home.css";
-import './Projects.css';
-import { Link } from 'react-router-dom';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+import "./Projects.css";
+import { Link } from "react-router-dom";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+
+
+
 
 const Home = () => {
   const [testimonials, setTestimonials] = useState([]);
@@ -36,33 +42,41 @@ const Home = () => {
       });
   }, []);
 
+  const settings = {
+  
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3, // Display 3 testimonials at a time
+    slidesToScroll: 1,
+  };
   return (
     <>
-   <section id="intro" className="intro-background">
-  <div className="sticky-top bg-white hidden-spacer"></div>
-  <div className="container-lg">
-    <div className="row g-4 justify-content-center align-items-center">
-      <div className="col-md-5 order-md-2 text-center text-md-start">
-        <h1>
-          <div className="circular-background">
-            <div className="above-text">
-              <div className="display-6 bold-text">
-                Where Ideas Come to <br></br><span className="underline-text">Life</span>
-              </div>
-            </div>
-            <div className="below-text">
-              <div className="display-4 bold-text">
-                Welcome to <br></br><span className="underline-text">Voltix</span>
-              </div>
+      <section id="intro" className="intro-background">
+        <div className="sticky-top bg-white hidden-spacer"></div>
+        <div className="container-lg">
+          <div className="row g-4 justify-content-center align-items-center">
+            <div className="col-md-5 order-md-2 text-center text-md-start">
+              <h1>
+                <div className="circular-background">
+                  <div className="above-text">
+                    <div className="display-6 bold-text">
+                      Where Ideas Come to <br></br>
+                      Life
+                    </div>
+                  </div>
+                  <div className="below-text">
+                    <div className="display-4 bold-text">
+                      Welcome to <br></br>
+            Voltix
+                    </div>
+                  </div>
+                </div>
+              </h1>
             </div>
           </div>
-        </h1>
-      </div>
-    </div>
-  </div>
-</section>
-
-
+        </div>
+      </section>
 
       <section id="services" className="bg-services">
         <div className="container-lg">
@@ -194,11 +208,10 @@ const Home = () => {
 
           <Container fluid>
             <Row>
-              {projects.slice(0,3).map((project,index) => (
+              {projects.slice(0, 3).map((project, index) => (
                 <div className="col-4" key={project.id}>
                   <div className="p__box pointer">
-                 
-                  {/* <div className="content-number ">{index+1}</div> */}
+                    {/* <div className="content-number ">{index+1}</div> */}
                     <div className="p__meta">
                       <h1 className="p__text">{project.name}</h1>
                       <p className="p p_text p_color">
@@ -240,19 +253,21 @@ const Home = () => {
 
           <div className="container">
             <div className="row">
-              {testimonials.slice(0, 3).map((testimonial, index) => (
-                <div className="col-md-4" key={index}>
-                  <div className="card bg-secondary-subtle">
-                    <div className="card-body">
-                      <div className="card-number">{index + 1}</div>
-                      <div className="card-t">
-                        <h2 className="card-name">{testimonial.author}</h2>
-                        <p className="card-desc">{testimonial.text}</p>
+              <Slider {...settings}>
+                {testimonials.map((testimonial, index) => (
+                  <div className="col-md-4" key={index}>
+                    <div className="card bg-secondary-subtle">
+                      <div className="card-body">
+                        <div className="card-number">{index + 1}</div>
+                        <div className="card-t">
+                          <h2 className="card-name">{testimonial.author}</h2>
+                          <p className="card-desc">{testimonial.text}</p>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </Slider>
             </div>
           </div>
         </div>{" "}

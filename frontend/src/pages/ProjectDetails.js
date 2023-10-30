@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./projectDetails.css";
-import movingImage from "../images/2.webp";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
 
 const ProjectDetails = ({ match }) => {
   const [project, setProject] = useState(null);
@@ -19,17 +20,26 @@ const ProjectDetails = ({ match }) => {
   }
 
   return (
-    <section className="whole">
-      <div className="sticky-top bg-white hidden-spacer"></div>
-      <h2 className="project-title">{project.name}</h2>
-
-      <div className="project-details-container">
-        <div className="project-info">
-          <img src={project.url} alt="/" height="390px" />
-          <h6 className="project-description">{project.description}</h6>
-        </div>
-      </div>
+    <section className="mobile">
+      <Container fluid>
+        <Row>
+          <div className="col-md-12 text-center">
+            <h2 className="pr-title">{project.name}</h2>
+          </div>
+        </Row>
+        <Row className="align-items-center">
+         
+            <img src={project.url} alt="/" height="390px" style={{justifyItems:"center", paddingLeft:"400px",paddingRight:"400px", marginTop:"10px"}}/>
+         
+        
+            <div className="project-t">
+              <h6 className="pr-description">{project.description}</h6>
+         <br></br>
+          </div>
+        </Row>
+      </Container>
     </section>
   );
 };
+
 export default ProjectDetails;

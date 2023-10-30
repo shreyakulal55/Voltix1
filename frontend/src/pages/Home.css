@@ -13,7 +13,9 @@
   background-repeat: no-repeat;
   padding-top: 10px;
 }
-
+.card {
+  margin: 10px; /* Adjust the margin value as needed */
+}
 .circular-background {
   background-color: gray;
   position: absolute;
@@ -55,6 +57,20 @@
   left: 10px;
   top: 10px;
   letter-spacing: -1px;
+}
+
+/* Change the color of the "Next" arrow */
+.slick-next {
+  color: blue; /* Change to your desired color */
+}
+
+/* Change the color of the "Previous" arrow */
+.slick-prev {
+  color: red; /* Change to your desired color */
+}
+
+.slick-prev:hover{
+  color: red !important;
 }
 
 
@@ -100,10 +116,7 @@
   background-image: linear-gradient(90deg,white,gray);
 }
 
-.bg-light {
 
-  background-image: url('https://e0.pxfuel.com/wallpapers/766/75/desktop-wallpaper-space-colors-blue-purple-stars.jpg');
-}
 
 .text-center {
   color: rgb(255, 255, 255);
@@ -146,6 +159,7 @@ p.heading.p__color {
 
 .s__box:hover {
   transform: translateY(5px);
+  
   background-image: linear-gradient(90deg, gray, white);
 }
 
