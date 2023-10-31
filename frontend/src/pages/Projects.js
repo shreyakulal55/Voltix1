@@ -7,7 +7,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import movingImage from '../images/2.webp';
+// import movingImage from '../images/2.webp';
 const Projects = () => {
   const [projects, setProjects] = useState([]);
 
@@ -31,7 +31,7 @@ const Projects = () => {
               </div>
             </div>
             <div className="g-item">
-              <img src={movingImage} alt="/" height="390px" />
+              <img src="https://voltix1.s3.amazonaws.com/2.webp" alt="/" height="390px" />
             </div>
           </div>
       </section>

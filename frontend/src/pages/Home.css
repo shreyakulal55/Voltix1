@@ -7,7 +7,7 @@
 .intro-background {
   height: 100vh;
   /* background-image: linear-gradient(to right top, #d16ba5, #ca7cbd, #c18ed2, #b69ee1, #adaeed, #a4b9f5, #9cc3fb, #96cdfe, #8cd6ff, #86deff, #84e6fc, #88edf7); */
-  background-image: url("https://media.istockphoto.com/id/1363982390/photo/minimalistic-showcase-with-empty-space.jpg?s=612x612&w=0&k=20&c=OnrolCynkZdJ4u5KjA0d36PArFfb9XXz8R103fjwTn4=");
+  background-image: url("https://voltix1.s3.amazonaws.com/homepage_img.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -213,9 +213,10 @@ h1.s__text {
   justify-content: center;
 }
 
-.t_box{
-    background-color: #4682DF;
+.t_box {
+  background-color: #4682DF;
 }
+
 .p__box {
   border-radius: 10px;
   width: 100%;
@@ -299,8 +300,9 @@ h1.p__text {
 .bg-socialfeeds {
   background-image: linear-gradient(90deg, white, gray);
 }
-.tst{
-    background-color: #4682DF;
+
+.tst {
+  background-color: #4682DF;
 
 }
 
@@ -309,7 +311,7 @@ h1.p__text {
 
 /* socialfeeds */
 
-.bg-socialfeeds{
+.bg-socialfeeds {
   background-image: linear-gradient(to right top, #5abfd2, #4db8e1, #5aafec, #79a3ef, #9f93e8, #a392e6, #a790e4, #ab8fe2, #919dea, #7ba8ea, #6db1e5, #6cb8dd);
 }
 
