@@ -192,47 +192,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* socialfeeds */}
-
-      {/* <section id="testimonial" className="bg-testimonial">
-        <div className="container-lg">
-          <div className="text-center">
-            <br></br>
-            <br></br>
-            <h2>Social Feeds</h2>
-            <p className="lead ">
-            Innovating Solutions, Empowering Lives
-             
-            </p>
-            <br></br>
-            <br></br>
-          </div>
-
-          <div className="container">
-            <div className="row">
-              <Slider {...settings}>
-                {socialFeeds.map((socialFeeds, index) => (
-                  <div className="col-md-4" key={index}>
-                    <div className="card bg-secondary-subtle">
-                      <div className="card-body">
-                        <div className="card-number">{index + 1}</div>
-                        <div className="card-t">
-                          <h2 className="card-name">{socialFeeds.author}</h2>
-                          <p className="card-desc">{socialFeeds.content}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </Slider>
-            </div>
-          </div>
-        </div>{" "}
-        <br></br>
-        <br></br>
-      </section>
- */}
-
       {/* projects */}
 
       <section id="projects" className="bg-projects">
@@ -286,52 +245,6 @@ const Home = () => {
         <br></br>
       </section>
 
-      {/* socialFeeds */}
-
-      <section id="socialfeeds" className="bg-socialfeeds">
-        <div className="container-lg">
-          <div className="text-keft">
-            <br></br>
-            <br></br>
-            <h2>Social Feeds</h2>
-            <p className="lead ">Innovating Solutions, Empowering Lives</p>
-            <br></br>
-            <br></br>
-          </div>
-
-          <div className="container">
-            <div className="row">
-              <Slider {...settings}>
-                {socialfeeds.map((socialfeeds, index) => (
-                  <div className="col-md-4" key={index}>
-                    <div className="card bg-secondary-subtle">
-                      <div className="card-body">
-                        <img
-                          src={socialfeeds.url}
-                          className="card-img-top"
-                          alt="loading..."
-                          style={{
-                            justifyItems: "center",
-                         
-                          }}
-                        />
-
-                        <div className="card-t">
-                          <h2 className="card-n">{socialfeeds.author}</h2>
-                          <p className="card-d">{socialfeeds.content}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </Slider>
-            </div>
-          </div>
-        </div>{" "}
-        <br></br>
-        <br></br>
-      </section>
-
       {/* testimonial */}
       <section id="testimonial" className="bg-testimonial">
         <div className="container-lg">
@@ -359,6 +272,51 @@ const Home = () => {
                         <div className="card-t">
                           <h2 className="card-name">{testimonial.author}</h2>
                           <p className="card-desc">{testimonial.text}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </Slider>
+            </div>
+          </div>
+        </div>{" "}
+        <br></br>
+        <br></br>
+      </section>
+
+      {/* socialFeeds */}
+
+      <section id="socialfeeds" className="bg-socialfeeds">
+        <div className="container-lg">
+          <div className="text-left">
+            <br></br>
+            <br></br>
+            <h2>Social Feeds</h2>
+            <p className="l ">Innovating Solutions, Empowering Lives</p>
+            <br></br>
+            <br></br>
+          </div>
+
+          <div className="container">
+            <div className="row">
+              <Slider {...settings}>
+                {socialfeeds.map((socialfeeds, index) => (
+                  <div className="col-md-4" key={index}>
+                    <div className="card bg-secondary-subtle">
+                      <div className="card-body">
+                        <img
+                          src={socialfeeds.url}
+                          className="card-img-top"
+                          alt="loading..."
+                          style={{
+                            justifyItems: "center",
+                          }}
+                        />
+
+                        <div className="card-t">
+                          <h2 className="card-n">{socialfeeds.author}</h2>
+                          <p className="card-d">{socialfeeds.content}</p>
                         </div>
                       </div>
                     </div>
