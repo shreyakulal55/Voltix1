@@ -13,7 +13,10 @@
 }
 
 .navbar {
-  background-color:#E5E5E5 ;
+  
+  background-image: linear-gradient(to right top, #b6d9e5, #add6e9, #a7d2ed, #a2cef1, #a1c9f4, #a6c6f6, #aec3f8, #b6bff8, #c3bdf7, #d0bcf4, #dcbaf1, #e7b9ec);
+
+  /* background-image: linear-gradient(to right top, #d16ba5, #ca7cbd, #c18ed2, #b69ee1, #adaeed, #a4b9f5, #9cc3fb, #96cdfe, #8cd6ff, #86deff, #84e6fc, #88edf7); */
   
 }
 

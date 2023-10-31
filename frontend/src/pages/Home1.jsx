@@ -12,6 +12,9 @@ import Row from "react-bootstrap/Row";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
+import back from "../images/back.png";
+import "../images/back.png";
+
 const Home = () => {
   const [socialfeeds, setSocialfeeds] = useState([]);
   const [testimonials, setTestimonials] = useState([]);
@@ -63,26 +66,31 @@ const Home = () => {
   return (
     <>
       <section id="intro" className="intro-background">
-        <div className="sticky-top bg-white hidden-spacer"></div>
+        {/* <div className="sticky-top bg-white hidden-spacer"></div> */}
         <div className="container-lg">
           <div className="row g-4 justify-content-center align-items-center">
             <div className="col-md-5 order-md-2 text-center text-md-start">
-              <h1>
-                <div className="circular-background">
-                  <div className="above-text">
-                    <div className="display-6 bold-text">
-                      Where Ideas Come to <br></br>
-                      Life
-                    </div>
-                  </div>
-                  <div className="below-text">
-                    <div className="display-4 bold-text">
-                      Welcome to <br></br>
-                      Voltix
-                    </div>
+              <img src={back} alt="back Img" class="left-image" />
+              <div className="circular-background">
+                <h4 className="tag">The Future</h4>
+                <div className="above-text">
+                  <div className="display-6 bold-text">
+                    Bring your ideas to life!
                   </div>
                 </div>
-              </h1>
+                <div className="below-text">
+                  <div className="dis">
+                    <p>
+                      Our team of talented and highly committed professionals is
+                      <br></br>
+                      the key to our success in creating business solutions.
+                    </p>
+                  </div>
+                  <a className="feel btn btn" href="/ContactUs">
+                    Feel free to ask
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -208,7 +216,7 @@ const Home = () => {
                 excellence.
               </h4>
             </div>
-            <a className="btn btn-outline-secondary" href="/Projects">
+            <a className="btn btn-info" href="/Projects">
               View All Projects
             </a>
           </div>
@@ -265,9 +273,9 @@ const Home = () => {
             <div className="row">
               <Slider {...settings}>
                 {testimonials.map((testimonial, index) => (
-                  <div className="col-md-4" key={index}>
-                    <div className="card bg-secondary-subtle">
-                      <div className="card-body">
+                  <div className="col-md-4 " key={index}>
+                    <div className="card bg-t_box">
+                      <div className="card-body t_box">
                         <div className="card-number">{index + 1}</div>
                         <div className="card-t">
                           <h2 className="card-name">{testimonial.author}</h2>
@@ -293,7 +301,7 @@ const Home = () => {
             <br></br>
             <br></br>
             <h2>Social Feeds</h2>
-            <p className="l ">Innovating Solutions, Empowering Lives</p>
+            <p className="lead ">Innovating Solutions, Empowering Lives</p>
             <br></br>
             <br></br>
           </div>
@@ -304,13 +312,15 @@ const Home = () => {
                 {socialfeeds.map((socialfeeds, index) => (
                   <div className="col-md-4" key={index}>
                     <div className="card bg-secondary-subtle">
-                      <div className="card-body">
+                      <div className="card-body t_box">
                         <img
                           src={socialfeeds.url}
                           className="card-img-top"
                           alt="loading..."
                           style={{
                             justifyItems: "center",
+                            height: "200px",
+                            objectFit: "cover",
                           }}
                         />
 

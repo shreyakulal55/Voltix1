@@ -1,5 +1,5 @@
 .footer {
-    background-color: gray;
+  background-image: linear-gradient(to right top, #b6d9e5, #add6e9, #a7d2ed, #a2cef1, #a1c9f4, #a6c6f6, #aec3f8, #b6bff8, #c3bdf7, #d0bcf4, #dcbaf1, #e7b9ec);
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -88,7 +88,6 @@
 .copyright {
   width: 100%;
   text-align: center;
-  background-color: gray; /* Set your desired background color for the copyright section */
   padding: 10px 0; /* Add some vertical padding for better presentation */
   font-size: 14px;
 }
