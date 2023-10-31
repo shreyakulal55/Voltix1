@@ -29,14 +29,14 @@ p.heading.p__color{
 .service__box{
     border-radius: 10px;
     width: 100%;
-    background-color: #191919;
+    background-color: #233e68;
     padding: 55px;
     transition: .4s ease;
 }
 
 .service__box:hover{
     transform: translateY(5px);
-    background-image: linear-gradient(90deg, #f61b10, #ef0963);
+    background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
 }
 
 .service__box:hover .icon{
@@ -51,7 +51,7 @@ p.heading.p__color{
     font-weight: 400;
     margin-bottom: 23px;
     display: inline-flex;
-    color: #f9004d;
+    color: white;
 }
 
 p.service_text.p_color{

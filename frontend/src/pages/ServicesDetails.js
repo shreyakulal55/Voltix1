@@ -14,7 +14,7 @@ const ServicesDetails = ({ match }) => {
       .then((response) => response.json())
       .then((data) => setServiceData(data));
   }, [match.params.id]);
-
+  
 
   if (!serviceData) {
     return <div>Loading...</div>;
