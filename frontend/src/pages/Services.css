@@ -141,5 +141,6 @@ h1.service__text{
   }
 
   .b-container{
-    background-image: linear-gradient(to right top, #95d0e5, #9eccea, #aac8eb, #b7c3e9, #c5bee4, #c3bde3, #c1bde2, #bfbce1, #afc0e3, #a1c3e0, #96c5d9, #92c6d0);
+    background-color: rgb(240, 238, 238);
+    /* background-image: linear-gradient(to right top, #95d0e5, #9eccea, #aac8eb, #b7c3e9, #c5bee4, #c3bde3, #c1bde2, #bfbce1, #afc0e3, #a1c3e0, #96c5d9, #92c6d0); */
   }

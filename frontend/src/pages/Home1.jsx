@@ -96,6 +96,9 @@ const Home = () => {
         </div>
       </section>
 
+
+      {/* services */}
+
       <section id="services" className="bg-services">
         <div className="container-lg">
           <div className="text-center">

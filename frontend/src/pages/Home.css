@@ -139,18 +139,19 @@
 
 
 .bg-services {
-  background-image: linear-gradient(to right top, #5dc5eb, #58bbf5, #69affa, #879ff9, #a88dee, #a38ded, #9e8eec, #998eeb, #719fed, #58aae4, #5bb2d4, #72b7c4);
+background-color: white;
+  /* background-image: linear-gradient(to right top, #5dc5eb, #58bbf5, #69affa, #879ff9, #a88dee, #a38ded, #9e8eec, #998eeb, #719fed, #58aae4, #5bb2d4, #72b7c4); */
   /* background-image: linear-gradient(90deg, white, gray); */
 }
 
 
 
 .text-center {
-  color: rgb(255, 255, 255);
+  color: black;
 }
 
 .lead {
-  color: rgb(255, 255, 255);
+  color: black;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
@@ -257,24 +258,26 @@ h1.p__text {
 
 
 .bg-projects {
-  background-image: linear-gradient(to right top, #8c82d4, #977cd1, #a276cc, #ad6fc6, #b768bf, #af70c8, #a777d1, #9e7ed8, #7b92e6, #5aa2e9, #48afe3, #50bad9);
+  background-color: rgb(240, 238, 238);
+  /* background-image: linear-gradient(to right top, #8c82d4, #977cd1, #a276cc, #ad6fc6, #b768bf, #af70c8, #a777d1, #9e7ed8, #7b92e6, #5aa2e9, #48afe3, #50bad9); */
   /* background-image: linear-gradient(to right top, #6453da, #7b4bce, #8c43c1, #993cb3, #a235a6, #9843ae, #8d4eb4, #8258b9, #5a6dc6, #2b7dc8, #008ac1, #1c93b5); */
 }
 
 .bold-txt {
-  color: rgb(255, 255, 255);
+  color: black;
   font-weight: bold;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .p_stat {
-  color: rgb(255, 255, 255);
+  color: black;
 
 }
 
 
 .bg-testimonial {
-  background-image: linear-gradient(to right top, #5abfd2, #4db8e1, #5aafec, #79a3ef, #9f93e8, #a392e6, #a790e4, #ab8fe2, #919dea, #7ba8ea, #6db1e5, #6cb8dd);
+  background-color: white;
+  /* background-image: linear-gradient(to right top, #5abfd2, #4db8e1, #5aafec, #79a3ef, #9f93e8, #a392e6, #a790e4, #ab8fe2, #919dea, #7ba8ea, #6db1e5, #6cb8dd); */
 }
 
 
@@ -298,7 +301,7 @@ h1.p__text {
 }
 
 .bg-socialfeeds {
-  background-image: linear-gradient(90deg, white, gray);
+  background-color: rgb(240, 238, 238);
 }
 
 .tst {
@@ -311,12 +314,13 @@ h1.p__text {
 
 /* socialfeeds */
 
-.bg-socialfeeds {
-  background-image: linear-gradient(to right top, #5abfd2, #4db8e1, #5aafec, #79a3ef, #9f93e8, #a392e6, #a790e4, #ab8fe2, #919dea, #7ba8ea, #6db1e5, #6cb8dd);
-}
+/* .bg-socialfeeds {
+  background-color: rgb(240, 238, 238);
+  /* background-image: linear-gradient(to right top, #5abfd2, #4db8e1, #5aafec, #79a3ef, #9f93e8, #a392e6, #a790e4, #ab8fe2, #919dea, #7ba8ea, #6db1e5, #6cb8dd); */
+/* } */
 
 .text-left {
-  color: rgb(255, 255, 255);
+  color: black;
 }
 
 .card-title {
