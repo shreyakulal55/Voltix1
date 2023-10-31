@@ -179,7 +179,7 @@ p.heading.p__color {
 .s__box {
   border-radius: 10px;
   width: 100%;
-  background-color: #4682DF;
+  background-color: #233e68;
   padding: 55px;
   transition: .4s ease;
 }
@@ -207,20 +207,20 @@ h1.s__text {
   font-size: 19px;
   font-family: Poppins, sans-serif;
   padding: 10px 0px;
-  color: white;
+  color: rgb(255, 255, 255);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .t_box {
-  background-color: #4682DF;
+  background-color: #233e68;
 }
 
 .p__box {
   border-radius: 10px;
   width: 100%;
-  background-color: #4682DF;
+  background-color: #233e68;
   padding: 55px;
   transition: .4s ease;
 }
@@ -240,7 +240,7 @@ h1.s__text {
 
 p.p_text.p_color {
   margin-bottom: 0;
-  color: rgb(0, 0, 0);
+  color: white;
 }
 
 h1.p__text {
@@ -248,7 +248,7 @@ h1.p__text {
   font-size: 19px;
   font-family: Poppins, sans-serif;
   padding: 10px 0px;
-  color: rgb(0, 0, 0);
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -286,11 +286,11 @@ h1.p__text {
 
 
 .card-name {
-  color: #000000;
+  color: white;
 }
 
 .card-desc {
-  color: #000000;
+  color: white;
 }
 
 .card-t {
@@ -320,7 +320,7 @@ h1.p__text {
 }
 
 .card-title {
-  color: #000000;
+  color: white;
 }
 
 .card {
@@ -330,11 +330,11 @@ h1.p__text {
 
 
 .card-n {
-  color: #000000;
+  color: white;
 }
 
 .card-d {
-  color: #000000;
+  color: white;
 }
 
 .l {
