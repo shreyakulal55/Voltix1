@@ -8,9 +8,9 @@
 .g-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-gap: 100px;
     min-width: 100%;
     max-height: 100%;
-    grid-gap: 100px;
     padding: 20px;
     background-image: linear-gradient(to right top, #75bfd9, #7bbce4, #89b8eb, #9eb3ee, #b6acec, #bfa7e6, #c7a2de, #ce9dd6, #c89acf, #c397c8, #bd94c2, #b791bb);
     border: none;

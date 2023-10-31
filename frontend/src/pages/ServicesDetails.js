@@ -1,7 +1,7 @@
 //servicesDetails.js
 import React, { useState, useEffect } from 'react';
-import './servicesDetails.css';
 import Container from 'react-bootstrap/Container';
+import './servicesDetails.css';
 import Row from 'react-bootstrap/Row';
 
 const ServicesDetails = ({ match }) => {
