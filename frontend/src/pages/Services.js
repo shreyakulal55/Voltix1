@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Services.css';
-import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Import Font Awesome icons
 import { faMobile, faCode, faLaptop, faPalette, faVideo, faBullhorn, faArrowRight } from '@fortawesome/free-solid-svg-icons'; // Import Font Awesome icons
 

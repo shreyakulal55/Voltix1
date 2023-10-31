@@ -29,8 +29,8 @@ p.heading.p__color{
 .service__box{
     border-radius: 10px;
     width: 100%;
-    background-color: #233e68;
     padding: 55px;
+    background-color: #233e68;
     transition: .4s ease;
 }
 
