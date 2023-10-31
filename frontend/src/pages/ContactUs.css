@@ -2,10 +2,12 @@
 
 /* 1. Background color with twinkling shiny dots */
 body {
-    background-image: linear-gradient(gray,white);
+
+    background-image: linear-gradient(to right top, #75bfd9, #7bbce4, #89b8eb, #9eb3ee, #b6acec, #bfa7e6, #c7a2de, #ce9dd6, #c89acf, #c397c8, #bd94c2, #b791bb);
+}
 
     
-  }
+  
   
 
   .wh{
