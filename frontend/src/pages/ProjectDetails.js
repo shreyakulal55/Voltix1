@@ -28,13 +28,21 @@ const ProjectDetails = ({ match }) => {
           </div>
         </Row>
         <Row className="align-items-center">
-         
-            <img src={project.url} alt="/" height="390px" style={{justifyItems:"center", paddingLeft:"400px",paddingRight:"400px", marginTop:"10px"}}/>
-         
-        
-            <div className="project-t">
-              <h6 className="pr-description">{project.description}</h6>
-         <br></br>
+          <img
+            src={project.url}
+            alt="/"
+            height="390px"
+            style={{
+              justifyItems: "center",
+              paddingLeft: "400px",
+              paddingRight: "400px",
+              marginTop: "10px",
+            }}
+          />
+
+          <div className="project-t">
+            <h6 className="pr-description">{project.description}</h6>
+            <br></br>
           </div>
         </Row>
       </Container>

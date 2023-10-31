@@ -1,6 +1,8 @@
 
 /* projectDetails.css */
-
+.mobile{
+  background-image: linear-gradient(to right top, #5abfd2, #4db8e1, #5aafec, #79a3ef, #9f93e8, #a392e6, #a790e4, #ab8fe2, #919dea, #7ba8ea, #6db1e5, #6cb8dd);
+}
 .whole {
     background-color: gray;
   margin-top: 0px;
