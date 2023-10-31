@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Services.css';
-import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
+import Container from 'react-bootstrap/Container';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Import Font Awesome icons
 import { faMobile, faCode, faLaptop, faPalette, faVideo, faBullhorn, faArrowRight } from '@fortawesome/free-solid-svg-icons'; // Import Font Awesome icons
 
@@ -40,27 +40,27 @@ const Services = () => {
           </div>
         </Row>
         <Row>
-          <div className='container'>
+          <div className='b-container'>
             <div className='row'>
               {services.map((service, index) => (
                 <div key={index} className='col-4'>
                   <div className='service__box pointer'>
                     <div className='icon'>
-                    {service.icon === 'faMobile' ? (
-                <FontAwesomeIcon icon={faMobile} color="currentColor" />
-              ) : service.section1.tagline === 'WEB DEVELOPMENT' ? (
-                <FontAwesomeIcon icon={faCode} color="currentColor" />
-              ) : service.section1.tagline ==='SOFTWARE DEVELOPMENT'?(
-                <FontAwesomeIcon icon={faLaptop} color="currentColor" />
-              ): service.section1.tagline ==='UI/UX DESIGN'?(
-                <FontAwesomeIcon icon={faPalette} color="currentColor" />
-              ): service.section1.tagline ==='VIDEO PRODUCTION'?(
-                <FontAwesomeIcon icon={faVideo} color="currentColor" />
-              ): service.section1.tagline ==='DIGITAL MARKETING'?(
-                <FontAwesomeIcon icon={faBullhorn} color="currentColor" />
-              ):(
-                <FontAwesomeIcon icon={faLaptop} color="currentColor" />
-              )}
+                      {service.icon === 'faMobile' ? (
+                        <FontAwesomeIcon icon={faMobile} color="currentColor" />
+                      ) : service.section1.tagline === 'WEB DEVELOPMENT' ? (
+                        <FontAwesomeIcon icon={faCode} color="currentColor" />
+                      ) : service.section1.tagline === 'SOFTWARE DEVELOPMENT' ? (
+                        <FontAwesomeIcon icon={faLaptop} color="currentColor" />
+                      ) : service.section1.tagline === 'UI/UX DESIGN' ? (
+                        <FontAwesomeIcon icon={faPalette} color="currentColor" />
+                      ) : service.section1.tagline === 'VIDEO PRODUCTION' ? (
+                        <FontAwesomeIcon icon={faVideo} color="currentColor" />
+                      ) : service.section1.tagline === 'DIGITAL MARKETING' ? (
+                        <FontAwesomeIcon icon={faBullhorn} color="currentColor" />
+                      ) : (
+                        <FontAwesomeIcon icon={faLaptop} color="currentColor" />
+                      )}
                     </div>
                     <div className='service__meta'>
                       <h1 className='service__text'>{service.section1.tagline}</h1>

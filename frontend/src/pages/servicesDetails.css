@@ -7,24 +7,20 @@
 
 .g-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr);
     min-width: 100%;
-    grid-gap: 100px; 
-    max-height: 100%; 
-    padding: 20px; 
-    background-image: linear-gradient(90deg, white, rgb(165, 165, 165));
+    max-height: 100%;
+    grid-gap: 100px;
+    padding: 20px;
+    background-image: linear-gradient(to right top, #75bfd9, #7bbce4, #89b8eb, #9eb3ee, #b6acec, #bfa7e6, #c7a2de, #ce9dd6, #c89acf, #c397c8, #bd94c2, #b791bb);
     border: none;
     margin-top: 60px;
 }
 
-.video{
-    background-image: linear-gradient(90deg, rgb(165, 165, 165), white);
+.mobile {
+    background-image: linear-gradient(to right top, #95d0e5, #9eccea, #aac8eb, #b7c3e9, #c5bee4, #c3bde3, #c1bde2, #bfbce1, #afc0e3, #a1c3e0, #96c5d9, #92c6d0);
 }
 
-.content-container {
-    margin-bottom: 100px; 
-  }
-  
 
 .title {
     color: #0e0c0c;
@@ -40,6 +36,8 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin-bottom: 100px;
+    /* background-image: linear-gradient(to right top, #95d0e5, #9eccea, #aac8eb, #b7c3e9, #c5bee4, #c3bde3, #c1bde2, #bfbce1, #afc0e3, #a1c3e0, #96c5d9, #92c6d0); */
 }
 
 .center-container img {
@@ -52,9 +50,9 @@
     font-weight: 700;
     letter-spacing: 0.8px;
     padding: 8px 10px;
-    background: linear-gradient(90.21deg, rgb(166, 166, 166), rgb(229, 226, 226),rgb(189, 187, 187));
+    background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
     border: 1px solid rgba(255, 255, 255, 0.5);
     font-size: 30px;
     margin-bottom: 16px;
     display: inline-block;
-  }
+}
