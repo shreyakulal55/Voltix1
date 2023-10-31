@@ -35,7 +35,7 @@ const Services = () => {
               </div>
             </div>
             <div className="g-item">
-              <img src="https://studyrocket.co.uk/assets/img/wp-content/uploads/2017/09/gender-2.svg" alt="/" height="390px" />
+              <img src="https://voltix1.s3.amazonaws.com/service_header.svg" alt="/" height="390px" />
             </div>
           </div>
         </Row>

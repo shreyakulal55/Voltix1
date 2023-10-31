@@ -1,6 +1,8 @@
 import React from "react";
 // import { Link } from "react-router-dom";
 import "./Navbar.css";
+// import voltix_logo from "../images/voltix_logo.png";
+
 
 const Navbar = () => {
   return (
@@ -8,7 +10,7 @@ const Navbar = () => {
       <div className="container">
         <a className="navbar-brand" href="/">
           <img
-            src="https://www.voltixsolution.com/assets/img/voltix_logo.png"
+            src="https://voltix1.s3.amazonaws.com/voltix_logo.png"
             alt="loading"
             width="170"
             height="42.2"

@@ -60,7 +60,7 @@ const Footer = () => {
         <div className="grid-item">
           <a className="FI" href="/Info">
             <img
-              src="https://www.voltixsolution.com/assets/img/illustration06.png"
+              src="https://voltix1.s3.amazonaws.com/favicon.ico"
               height="150"
               width="150"
             />

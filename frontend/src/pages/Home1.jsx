@@ -12,8 +12,8 @@ import Row from "react-bootstrap/Row";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
-import back from "../images/back.png";
-import "../images/back.png";
+// import back from "../images/back.png";
+// import "../images/back.png";
 
 const Home = () => {
   const [socialfeeds, setSocialfeeds] = useState([]);
@@ -70,7 +70,7 @@ const Home = () => {
         <div className="container-lg">
           <div className="row g-4 justify-content-center align-items-center">
             <div className="col-md-5 order-md-2 text-center text-md-start">
-              <img src={back} alt="back Img" class="left-image" />
+              <img src="https://voltix1.s3.amazonaws.com/back.png" alt="back Img" class="left-image" />
               <div className="circular-background">
                 <h4 className="tag">The Future</h4>
                 <div className="above-text">
