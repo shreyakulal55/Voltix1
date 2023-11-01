@@ -11,6 +11,7 @@ const uploadController = require('../controllers/uploadControllers');
 const authController = require('../controllers/authControllers');
 const authMiddleware = require('../middlewares/authMiddlewares');
 
+
 router.get('/projects', getProjects);
 router.get('/projects/:id', getProjectById);
 router.post('/projects',authMiddleware.verifyToken, createProject);
