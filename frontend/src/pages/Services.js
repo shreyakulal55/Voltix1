@@ -4,13 +4,13 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Import Font Awesome icons
 import { faMobile, faCode, faLaptop, faPalette, faVideo, faBullhorn, faArrowRight } from '@fortawesome/free-solid-svg-icons'; // Import Font Awesome icons
-
+import URL from '../.env/secret.js';
 const Services = () => {
   const [services, setServices] = useState([]);
 
   useEffect(() => {
     // Fetch projects from the API
-    fetch('http://localhost:5000/services')
+    fetch(`${URL}/services`)
       .then((response) => response.json())
       .then((data) => setServices(data));
   }, []);

@@ -5,7 +5,6 @@ import headerImg from "../images/header-img.svg";
 import "./AboutUs.css";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
-
 const AboutUs = () => {
   return (
     <section className="aboutus" id="aboutus">
