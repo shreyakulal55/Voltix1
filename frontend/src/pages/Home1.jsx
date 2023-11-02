@@ -70,7 +70,7 @@ const Home = () => {
         <div className="container-lg">
           <div className="row g-4 justify-content-center align-items-center">
             <div className="col-md-5 order-md-2 text-center text-md-start">
-              <img src="https://voltix1.s3.amazonaws.com/back.png" alt="back Img" class="left-image" />
+              <img src="https://voltix1.s3.amazonaws.com/back.png" alt="back Img" className="left-image" />
               <div className="circular-background">
                 <h4 className="tag">The Future</h4>
                 <div className="above-text">
