@@ -7,9 +7,13 @@
       "default",
       {
         "ignore": [
-          "position: sticky"
+          "position: sticky",
+          "-webkit-text-size-adjust",
+          "text-align: -webkit-match-parent"
         ]
       }
-    ]
+    ],
+    "meta-charset-utf-8": "off",
+    "meta-viewport": "off"
   }
 }
