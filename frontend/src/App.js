@@ -17,7 +17,7 @@ import Footer from './components/Footer';
 // import Digital from "./components/service/Digital";
 import ProjectDetails from './pages/ProjectDetails';
 import ServicesDetails from './pages/ServicesDetails';
-
+// require('dotenv').config();
 
 function App() {
   return (

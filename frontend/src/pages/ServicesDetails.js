@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
 import './servicesDetails.css';
 import Row from 'react-bootstrap/Row';
+import URL from '../.env/secret.js';
 
 const ServicesDetails = ({ match }) => {
   const [serviceData, setServiceData] = useState(null);
@@ -10,7 +11,7 @@ const ServicesDetails = ({ match }) => {
   useEffect(() => {
     const serviceId = match.params.id;
     // Fetch project details from the API using the projectId
-    fetch(`http://localhost:5000/services/${serviceId}`)
+    fetch(`${URL}/services/${serviceId}`)
       .then((response) => response.json())
       .then((data) => setServiceData(data));
   }, [match.params.id]);

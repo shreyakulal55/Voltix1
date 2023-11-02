@@ -7,13 +7,14 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import URL from '../.env/secret.js';
 // import movingImage from '../images/2.webp';
 const Projects = () => {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
     // Fetch projects from the API
-    fetch('http://localhost:5000/projects')
+    fetch(`${URL}/projects`)
       .then((response) => response.json())
       .then((data) => setProjects(data));
   }, []);

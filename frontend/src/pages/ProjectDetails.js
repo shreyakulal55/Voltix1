@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./projectDetails.css";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
+import URL from "../.env/secret.js";
 
 const ProjectDetails = ({ match }) => {
   const [project, setProject] = useState(null);
@@ -10,7 +11,7 @@ const ProjectDetails = ({ match }) => {
     const projectId = match.params.id;
 
     // Fetch project details from the API using the projectId
-    fetch(`http://localhost:5000/projects/${projectId}`)
+    fetch(`${URL}/projects/${projectId}`)
       .then((response) => response.json())
       .then((data) => setProject(data));
   }, [match.params.id]);

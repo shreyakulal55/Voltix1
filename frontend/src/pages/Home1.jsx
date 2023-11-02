@@ -11,7 +11,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-
+import URL from "../.env/secret.js"
 // import back from "../images/back.png";
 // import "../images/back.png";
 
@@ -23,7 +23,7 @@ const Home = () => {
   useEffect(() => {
     // Fetch SocialFeeds data from your API when the component mounts
     axios
-      .get("http://localhost:5000/socialfeeds")
+      .get(`${URL}/socialfeeds`)
       .then((response) => {
         setSocialfeeds(response.data);
       })
@@ -35,7 +35,7 @@ const Home = () => {
   useEffect(() => {
     // Fetch testimonials data from your API when the component mounts
     axios
-      .get("http://localhost:5000/testimonials")
+      .get(`${URL}/testimonials`)
       .then((response) => {
         setTestimonials(response.data);
       })
@@ -47,7 +47,7 @@ const Home = () => {
   useEffect(() => {
     // Fetch testimonials data from your API when the component mounts
     axios
-      .get("http://localhost:5000/projects")
+      .get(`${URL}/projects`)
       .then((response) => {
         setProjects(response.data);
       })

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './ContactUs.css';
+import URL from '../.env/secret.js';
 
 function validateEmail(email) {
   const emailPattern = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
@@ -65,7 +66,7 @@ const ContactUs = () => {
       message,
     };
 
-    const apiURL = 'http://localhost:5000/contacts'; // Replace with your actual endpoint
+    const apiURL = `${URL}/contacts`; // Replace with your actual endpoint
 
     axios
       .post(apiURL, data)
