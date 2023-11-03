@@ -7,17 +7,8 @@ const routes = require('./routes');
 
 
 
-
 app.use(cors());
 app.use(bodyParser.json());
-
-// app.use(express.json());
-// app.use(
-//   cors({
-//     origin: "*",
-//   })
-// );
-
 app.use('/', routes);
 
 const PORT = process.env.PORT || 5000;
