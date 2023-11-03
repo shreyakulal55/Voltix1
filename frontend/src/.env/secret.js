@@ -1,2 +1,2 @@
-const URL= "http://3.80.223.186";
+const URL= "http://localhost:5000";
 export default URL;
