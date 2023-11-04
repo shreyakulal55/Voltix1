@@ -7,13 +7,13 @@ import { getAnalytics } from "firebase/analytics";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyDls_RTqCR15nqrkuGKG6IYDRjA1zgAO_o",
-  authDomain: "voltixteam-2a395.firebaseapp.com",
-  projectId: "voltixteam-2a395",
-  storageBucket: "voltixteam-2a395.appspot.com",
-  messagingSenderId: "108995946756",
-  appId: "1:108995946756:web:e4f3e68e55d4dcd7474851",
-  measurementId: "G-Y0F0PPLM98"
+  apiKey: "AIzaSyAkiamlOPtf7yFustMbcmZIp3fNHk4S2Qo",
+  authDomain: "voltixcloud.firebaseapp.com",
+  projectId: "voltixcloud",
+  storageBucket: "voltixcloud.appspot.com",
+  messagingSenderId: "91471382924",
+  appId: "1:91471382924:web:6f1eab29f4bdbd2fe62ea9",
+  measurementId: "G-N2RRB34HHC"
 };
 
 // Initialize Firebase
