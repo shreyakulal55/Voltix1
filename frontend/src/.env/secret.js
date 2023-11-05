@@ -1,2 +1,2 @@
-const URL= "http://localhost:5000";
+const URL= "http://voltix1.cloud";
 export default URL;
