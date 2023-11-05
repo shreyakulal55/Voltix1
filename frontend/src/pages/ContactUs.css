@@ -3,24 +3,6 @@
   padding: 0px;
   box-sizing: border-box;
 }
-/* 
-body,
-html {
-  height: 100%;
-  font-family: Montserrat-Regular, sans-serif;
-} */
-
-/* a {
-  font-family: Montserrat-Regular;
-  font-size: 14px;
-  line-height: 1.7;
-  color: #666666;
-  margin: 0px;
-  transition: all 0.4s;
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-} */
 
 a:focus {
   outline: none !important;
@@ -39,14 +21,6 @@ h5,
 h6 {
   margin: 0px;
 }
-
-/* p {
-  font-family: Montserrat-Regular;
-  font-size: 14px;
-  line-height: 1.7;
-  color: #666666;
-  margin: 0px;
-} */
 
 ul,
 li {
@@ -190,8 +164,7 @@ iframe {
   padding-left:35px
 }
 
-/*------------------------------------------------------------------
-[  ]*/
+
 .contact100-pic {
   width: 310px;
   padding-top: 55px;
@@ -390,11 +363,6 @@ textarea.input100 {
   }
 }
 
-/* @media (max-width: 576px) {
-  .wrap-contact100 {
-      padding: 110px 15px 157px 15px;
-  }
-} */
 @media (max-width: 576px) {
   .wrap-contact100 {
       padding: 35px 15px 40px 15px;
@@ -403,8 +371,6 @@ textarea.input100 {
       text-align: center;
   }
 }
-
-
 
 .validate-input {
   position: relative;

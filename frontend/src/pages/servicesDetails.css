@@ -21,6 +21,12 @@
     background-image: linear-gradient(to right top, #95d0e5, #9eccea, #aac8eb, #b7c3e9, #c5bee4, #c3bde3, #c1bde2, #bfbce1, #afc0e3, #a1c3e0, #96c5d9, #92c6d0);
 }
 
+@media (max-width: 768px) {
+    .flt {
+        width: auto;
+        transform: translateX(-8%);
+    }
+}
 
 .title {
     color: #0e0c0c;
@@ -37,16 +43,14 @@
     align-items: center;
     height: 100vh;
     margin-bottom: 100px;
-    /* background-image: linear-gradient(to right top, #95d0e5, #9eccea, #aac8eb, #b7c3e9, #c5bee4, #c3bde3, #c1bde2, #bfbce1, #afc0e3, #a1c3e0, #96c5d9, #92c6d0); */
 }
 
 .center-container img {
     max-width: 100%;
     max-height: 75%;
-
 }
 
-.tagline {
+.taglineD {
     font-weight: 700;
     letter-spacing: 0.8px;
     padding: 8px 10px;
@@ -70,7 +74,6 @@
 
 .h-container {
     background-image: linear-gradient(to right top, #75bfd9, #7bbce4, #89b8eb, #9eb3ee, #b6acec, #bfa7e6, #c7a2de, #ce9dd6, #c89acf, #c397c8, #bd94c2, #b791bb);
-    /* color: #0b0b0b !important; Use the desired text color */
     font-display: flex;
     justify-content: center;
     align-items: center;
@@ -85,29 +88,23 @@
 
     #im-container {
         display: flex;
-        /* margin-top: 20px; */
-    margin-left: 0;
-    align-items: center;
+        margin-left: 0;
+        align-items: center;
     }
 
     .center-container {
         display: flex;
         justify-content: flex-start;
-        /* Adjust the horizontal alignment as needed */
         align-items: flex-start;
-        /* Adjust the vertical alignment as needed */
         height: 50vh;
         margin-bottom: 0;
         margin-top: 0;
-        /* Add your background-image property here if needed */
     }
 
     .center-container img {
         max-width: 100%;
         max-height: 100%;
-        /* Allow the image to take the full height of the container */
         object-fit: cover;
-        /* This will make the image fill the container while maintaining its aspect ratio */
     }
 
     .titl {
@@ -118,8 +115,25 @@
         text-align: left;
         padding-top: 0%;
     }
-    .img{
+
+    .img {
         display: none;
     }
 
 }
+
+.custom-image {
+    max-width: 50%;
+    height: auto;
+    max-height: 450px; /* Set your desired max height */
+    display: block;
+    margin: 0 auto;
+  }
+  
+
+  @media (max-width: 768px) {
+    .custom-image {
+      max-height: 250px;
+    }
+  }
+  

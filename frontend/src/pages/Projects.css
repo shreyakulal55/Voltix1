@@ -17,9 +17,9 @@ h1.custom-heading {
 
 .project__box {
     border-radius: 10px;
-    width: 80%; /* Decreased width */
+    width: 80%;
     background-color: #191919;
-    padding: 30px; /* Decreased padding */
+    padding: 30px; 
     transition: .4s ease;
 }
 
@@ -106,7 +106,6 @@ h1.project__text {
         width: 100%;
         display: flex;
         flex-direction: column;
-        /* Change this to column to stack elements vertically */
         justify-content: center;
         align-items: center;
       }
@@ -125,14 +124,12 @@ h1.project__text {
         margin-bottom: 20px;
         font-family: Poppins, sans-serif;
         text-align: center;
-        /* Center text on smaller screens */
       }
     
       h6.head {
         font-size: 20px;
         font-family: Poppins, sans-serif;
         text-align: justify;
-        /* Center text on smaller screens */
       }
 }
 
@@ -181,7 +178,6 @@ h1.project__text {
 
 .hi-container {
     background-image: linear-gradient(to right top, #75bfd9, #7bbce4, #89b8eb, #9eb3ee, #b6acec, #bfa7e6, #c7a2de, #ce9dd6, #c89acf, #c397c8, #bd94c2, #b791bb);
-    /* color: #0b0b0b !important; Use the desired text color */
     display: flex;
     padding-top: 50px;
     justify-content: center;
@@ -204,5 +200,11 @@ h1.project__text {
 
   .b-container {
     background-color: rgb(240, 238, 238);
-    /* background-image: linear-gradient(to right top, #95d0e5, #9eccea, #aac8eb, #b7c3e9, #c5bee4, #c3bde3, #c1bde2, #bfbce1, #afc0e3, #a1c3e0, #96c5d9, #92c6d0); */
   }
+
+@media (max-width: 768px) {
+  .primg {
+    margin-top: 120px;
+    max-width: 100%;
+  }
+}

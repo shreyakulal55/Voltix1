@@ -22,12 +22,6 @@ function App() {
           <Route exact path="/projects" component={Projects} />
           <Route path="/aboutus" component={AboutUs} />
           <Route path="/contactus" component={ContactUs} />
-          {/* <Route path="/mobile" component={MobileApp} />
-          <Route path="/web" component={WebDevelop} />
-          <Route path="/soft" component={Software} />
-          <Route path="/ui" component={UI} />
-          <Route path="/video" component={Video} />
-  <Route path="/digital" component={Digital} />*/}
           <Route exact path="/projects/:id" component={ProjectDetails} />
           <Route exact path="/services/:id" component={ServicesDetails} /> 
         </Switch>

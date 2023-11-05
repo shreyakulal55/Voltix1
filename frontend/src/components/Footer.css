@@ -14,7 +14,6 @@
   gap: 20px;
   margin: 0 auto;
   max-width: 1200px;
-  /* Adjust the maximum width as needed */
   padding: 20px;
 }
 
@@ -56,21 +55,16 @@ hr {
   margin-bottom: 100px;
 }
 
-
-
-
 .grid-item {
   flex: 1;
   max-width: 25%;
   margin: 10px;
 }
 
-
 .grid-item a,
 .grid-item p {
   text-align: center;
 }
-
 
 .FI {
   margin-left: 45px;
@@ -81,7 +75,6 @@ grid-item {
   flex-basis: 100%;
 
 }
-
 
 .grid-item a,
 .grid-item p {
@@ -94,10 +87,44 @@ grid-item {
   margin-top: 10px;
 }
 
-
 .FI img {
   max-width: 80px;
   height: auto;
   display: block;
   margin: 0 auto;
+}
+
+.grid-item a,
+.grid-item p {
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    gap: 10px; 
+  }
+
+  .grid-item {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .grid-item a,
+  .grid-item p {
+    margin: 0;
+  }
+
+  .FI img {
+    max-width: 60px; 
+  }
+
+  hr {
+    margin-top: 5px; 
+  }
+}
+
+.copyright {
+  font-size: 12px;
+  margin-top: 10px;
 }

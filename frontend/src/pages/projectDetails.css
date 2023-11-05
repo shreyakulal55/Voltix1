@@ -1,70 +1,77 @@
 
-/* projectDetails.css */
-
 .whole {
-    background-color: gray;
-  margin-top: 0px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  font-family: 'Arial', sans-serif;
+  background-color: gray;
+margin-top: 0px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height: 100vh;
+font-family: 'Arial', sans-serif;
 }
 
 .side-heading {
-  font-size: 24px;
-  text-align: center;
-  margin-bottom: 20px;
+font-size: 24px;
+text-align: center;
+margin-bottom: 20px;
 }
 
 .pr-details-container {
-  background-color: white;
-  padding: 20px;
-  height: 100vh;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  padding-bottom: 0px;
+background-color: white;
+padding: 20px;
+height: 100vh;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+text-align: center;
+padding-bottom: 0px;
 }
 
 .pr-title {
 color: black;
-  font-size: 45px;
-  margin-top: 80px;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  padding-bottom: 20px;
+font-size: 45px;
+margin-top: 80px;
+font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+padding-bottom: 20px;
 }
 
 .pr-description {
-  padding-top: 90px;
-  font-size: 19px;
-  margin: 20px 0;
+padding-top: 90px;
+font-size: 19px;
+margin: 20px 0;
 }
 
 .pr-details-list {
-  list-style-type: none;
-  padding: 0;
+list-style-type: none;
+padding: 0;
 }
 
 .pr-details-list li {
-  font-size: 16px;
-  margin: 8px 0;
+font-size: 16px;
+margin: 8px 0;
 }
 
 .pr-link {
-  display: block;
-  font-size: 18px;
-  text-decoration: none;
-  color: #0074d9;
-  margin-top: 20px;
+display: block;
+font-size: 18px;
+text-decoration: none;
+color: #0074d9;
+margin-top: 20px;
 }
 .descriptionbox{
-  display: flex;
+display: flex;
 }
 
 .project-t{
-  justify-content: center;
+  
+justify-content: center;
 }
 
+.centered-image-container {
+text-align: center; 
+}
 
+.centered-image-container img {
+width: 50%; 
+height: auto; 
+display: inline-block; 
+}

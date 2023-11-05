@@ -9,19 +9,17 @@
 }
 
 .tag {
+  margin-top: -70px;
   font-weight: 700;
   letter-spacing: 0.8px;
-  background: linear-gradient(45deg, #FFD700, #87CEEB);
-  font-size: 30px;
-  margin-bottom: 0px;
-  margin-top: 0px;
+  background-image: linear-gradient(to right top, #d686b4, #d081b7, #c97cba, #c078be, #b675c2, #b174c4, #ac72c5, #a671c7, #a671c7, #a671c7, #a671c7, #a671c7);
   display: inline-block;
   text-align: center;
 
   @media (max-width: 768px) {
     margin-top: 20px;
-    font-size: 24px; 
-    padding: 6px 8px; 
+    font-size: 24px;
+    padding: 6px 8px;
   }
 }
 
@@ -29,22 +27,24 @@
   margin-bottom: 20px;
 
   @media (max-width: 768px) {
-    margin-bottom: 10px; /* Adjust the margin for smaller screens if needed */
+    margin-bottom: 10px;
   }
 }
 
 
 .bold-text {
   padding-top: 10px;
+  color: white;
   font-weight: bold;
   margin-left: 20px;
-  text-align: center; 
+  text-align: center;
 }
+
 .dis {
   margin-left: 20px;
   text-align: center;
-  font-size: 16px; 
-  line-height: 1.5; 
+  font-size: 16px;
+  line-height: 1.5;
 
   @media (max-width: 768px) {
     font-size: 14px;
@@ -54,12 +54,13 @@
 
 .feel {
   position: absolute;
-  bottom: 40px; 
+  bottom: 60px;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
   background-image: linear-gradient(to right top, #95d0e5, #9eccea, #aac8eb, #b7c3e9, #c5bee4, #c3bde3, #c1bde2, #bfbce1, #afc0e3, #a1c3e0, #96c5d9, #92c6d0);
 }
+
 @media (max-width: 768px) {
   .feel {
     bottom: 10px;
@@ -67,7 +68,7 @@
     left: auto;
     transform: none;
     text-align: center;
-    margin-right: 120px; 
+    margin-right: 120px;
   }
 }
 
@@ -94,11 +95,12 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   color: #ededed;
 }
+
 @media (max-width: 768px) {
   .circular-background {
-    width: 100%; 
+    width: 100%;
     height: auto;
-    left: 50%; 
+    left: 50%;
     transform: translateX(-50%);
     top: 90px;
   }
@@ -114,18 +116,17 @@
   position: absolute;
   left: 0;
   top: 124px;
-  /* width: 200px; Adjust this value for the desired width */
   height: 650px;
-  /* Adjust this value for the desired height */
 }
+
 @media (max-width: 768px) {
   .left-image {
-   
-    width: auto; /* Adjust the width based on your design */
-    height: 370px; /* Automatically adjust height to maintain aspect ratio */
-    left: 50%; /* Center horizontally */
+
+    width: auto;
+    height: 370px;
+    left: 50%;
     transform: translateX(-50%);
-    top: 363px; /* Adjust the top position as needed */
+    top: 363px;
   }
 }
 
@@ -138,7 +139,6 @@
 
 
 .bold-text {
-/* margin-left: 100px; */
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
@@ -152,23 +152,6 @@
   top: 10px;
   letter-spacing: -1px;
 }
-
-/* Change the color of the "Next" arrow */
-.slick-next {
-  color: blue;
-  /* Change to your desired color */
-}
-
-/* Change the color of the "Previous" arrow */
-.slick-prev {
-  color: red;
-  /* Change to your desired color */
-}
-
-.slick-prev:hover {
-  color: red !important;
-}
-
 
 .card-title {
   font-size: 18px;
@@ -185,10 +168,6 @@
   font-weight: bold;
 }
 
-/* .mb-4 {
-  margin-bottom: 20px;
-} */
-
 .card-body {
   display: flex;
   flex-direction: column;
@@ -202,19 +181,9 @@
   padding: 10px;
 }
 
-
-
-
-
-
-
 .bg-services {
-background-color: white;
-  /* background-image: linear-gradient(to right top, #5dc5eb, #58bbf5, #69affa, #879ff9, #a88dee, #a38ded, #9e8eec, #998eeb, #719fed, #58aae4, #5bb2d4, #72b7c4); */
-  /* background-image: linear-gradient(90deg, white, gray); */
+  background-color: white;
 }
-
-
 
 .text-center {
   color: black;
@@ -237,8 +206,6 @@ background-color: white;
   align-items: center;
   justify-content: center;
   color: white;
-
-
 }
 
 p.heading.p__color {
@@ -285,15 +252,16 @@ h1.s__text {
   justify-content: center;
 }
 
-/* Change the color of the "Next" arrow */
+
 div.container .slick-next {
   background-color: gray !important;
 }
 
 div.container .slick-prev {
+
   background-color: gray !important;
 }
-/* Hover styles for the arrows (optional) */
+
 .slick-prev:hover {
   background-color: gray !important;
 }
@@ -302,6 +270,26 @@ div.container .slick-prev {
   background-color: gray !important;
 }
 
+@media (max-width: 768px) {
+
+  div.container .slick-next {
+    left: 330px;
+    background-color: gray !important;
+  }
+
+  div.container .slick-prev {
+    left: -3px;
+    background-color: gray !important;
+  }
+
+  .slick-prev:hover {
+    background-color: gray !important;
+  }
+
+  .slick-next:hover {
+    background-color: gray !important;
+  }
+}
 
 .p__box {
   margin: 20px;
@@ -345,8 +333,6 @@ h1.p__text {
 
 .bg-projects {
   background-color: rgb(240, 238, 238);
-  /* background-image: linear-gradient(to right top, #8c82d4, #977cd1, #a276cc, #ad6fc6, #b768bf, #af70c8, #a777d1, #9e7ed8, #7b92e6, #5aa2e9, #48afe3, #50bad9); */
-  /* background-image: linear-gradient(to right top, #6453da, #7b4bce, #8c43c1, #993cb3, #a235a6, #9843ae, #8d4eb4, #8258b9, #5a6dc6, #2b7dc8, #008ac1, #1c93b5); */
 }
 
 .bold-txt {
@@ -364,9 +350,9 @@ h1.p__text {
 .t_box {
   background-color: #233e68;
 }
+
 .bg-testimonial {
   background-color: white;
-  /* background-image: linear-gradient(to right top, #5abfd2, #4db8e1, #5aafec, #79a3ef, #9f93e8, #a392e6, #a790e4, #ab8fe2, #919dea, #7ba8ea, #6db1e5, #6cb8dd); */
 }
 
 
@@ -398,16 +384,7 @@ h1.p__text {
 
 }
 
-
-
-
-
 /* socialfeeds */
-
-/* .bg-socialfeeds {
-  background-color: rgb(240, 238, 238);
-  /* background-image: linear-gradient(to right top, #5abfd2, #4db8e1, #5aafec, #79a3ef, #9f93e8, #a392e6, #a790e4, #ab8fe2, #919dea, #7ba8ea, #6db1e5, #6cb8dd); */
-/* } */
 
 .text-left {
   color: black;
@@ -422,7 +399,6 @@ h1.p__text {
   margin-bottom: 15px;
 }
 
-
 .card-n {
   color: white;
 }
@@ -435,7 +411,3 @@ h1.p__text {
   color: rgb(255, 255, 255);
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-
-
-
-

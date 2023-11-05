@@ -1,4 +1,3 @@
-//AboutUs.js
 // import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import headerImg from "../images/header-img.svg";
@@ -59,7 +58,11 @@ Our versatile team is built of designers, developers and digital marketers who a
                 <div
                   className={isVisible ? "animate_animated animate_zoomIn" : ""}
                 >
-                  <img class="header-img" src={headerImg} alt="Header Img" />
+                  <img
+                    className="header-img"
+                    src={headerImg}
+                    alt="Header Img"
+                  />
                 </div>
               )}
             </TrackVisibility>

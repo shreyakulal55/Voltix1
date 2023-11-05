@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import Container from 'react-bootstrap/Container';
-import './servicesDetails.css';
-import Row from 'react-bootstrap/Row';
+import React, { useState, useEffect } from "react";
+import Container from "react-bootstrap/Container";
+import "./servicesDetails.css";
+import Row from "react-bootstrap/Row";
+import URL from "../.env/secret";
 
 const ServicesDetails = ({ match }) => {
   const [serviceData, setServiceData] = useState(null);
@@ -9,11 +10,10 @@ const ServicesDetails = ({ match }) => {
   useEffect(() => {
     const serviceId = match.params.id;
     // Fetch project details from the API using the projectId
-    fetch(`http://localhost:5000/services/${serviceId}`)
+    fetch(`${URL}/services/${serviceId}`)
       .then((response) => response.json())
       .then((data) => setServiceData(data));
   }, [match.params.id]);
-
 
   if (!serviceData) {
     return <div>Loading...</div>;
@@ -22,73 +22,35 @@ const ServicesDetails = ({ match }) => {
   return (
     <>
       <section className="mobile">
+        <div className="sticky-top bg-white hidden-spacer"> </div>
         <Container fluid>
-          {/* <Row>
-            <div className="g-container">
-              <div className="g-item">
-                <div className="title">
-                  <span className="tagline">{serviceData.section1.tagline}</span>
-                  <h2 style={{ fontSize: "45px" }}>
-                    {serviceData.section1.title}
-                  </h2>
-                  <h6 style={{ fontSize: "19px" }}>
-                    {serviceData.section1.introduction}
-                  </h6>
-                </div>
-              </div>
-              <div className="g-item">
-                <img
-                  style={{ marginLeft: "150px" }}
-                  src={serviceData.section1.imageURL}
-                  alt="/"
-                  height="390px"
-                />
-              </div>
-            </div>
-          </Row> */}
-          {/* <Row>
-          <div className="h-container">
-            <div className="row">
-              <div className="col" id='c-container'>
-              <div className="title">
-                  <span className="tag">{serviceData.section1.tagline}</span>
-                  <h2 style={{ fontSize: "45px" }}>
-                    {serviceData.section1.title}
-                  </h2>
-                  <h6 style={{ fontSize: "19px" }}>
-                    {serviceData.section1.introduction}
-                  </h6>
-                </div>
-              </div>
-              <br />
-              <div className="col" id='im-container' >
-              <img
-                  src={serviceData.section1.imageURL}
-                  alt="/"
-                  height="300px"
-                />
-              </div>
-            </div>
-          </div>
-        </Row> */}
           <Row>
             <div className="hi-container">
               <div className="row container ">
-                <div className="col-lg-6" id='c-container' style={{ height: "55.5vh" }}>
-                  <span className="tagline">{serviceData.section1.tagline}</span>
+                <div className="col-lg-6" id="c-container">
+                  <span className="taglineD">
+                    {serviceData.section1.tagline}
+                  </span>
                   <h2 style={{ fontSize: "45px" }}>
                     {serviceData.section1.title}
                   </h2>
+                  <br></br>
                   <h6 style={{ fontSize: "19px" }}>
                     {serviceData.section1.introduction}
                   </h6>
+                  <br></br>
+                  <br></br>
                 </div>
-                <div className="col-lg-6 d-flex justify-content-center align-items-end flex-column" style={{ height: "55.5vh" }}>
-                  <div className='img'>
+                <div
+                  className="flt col-lg-6 d-flex justify-content-center align-items-end flex-column"
+                  style={{ height: "35.5vh" }}
+                >
+                  <div className="img-fluid">
                     <img
                       src={serviceData.section1.imageURL}
                       alt="/"
-                      height="300px"
+                      height="250px"
+                      width="100%"
                     />
                   </div>
                 </div>
@@ -98,18 +60,21 @@ const ServicesDetails = ({ match }) => {
         </Container>
       </section>
       <section className="mobile">
-        <Row>
-          <div className="center-container">
-            <img src={serviceData.section2.imageURL} alt="/" />
-          </div>
-        </Row>
-
+        {" "}
+        <br></br>
+        <br></br>
+        <img
+          src={serviceData.section2.imageURL}
+          alt="/"
+          className="img-fluid custom-image"
+        />
+        <br></br>
+        <br></br>
         <Container fluid>
           <Row>
             <div className="titl">
-              <h2 style={{ fontSize: "35px" }}>
-                {serviceData.section3.title}
-              </h2>
+              <h2 style={{ fontSize: "35px" }}>{serviceData.section3.title}</h2>
+              <br></br>
               {serviceData.section3.content.map((paragraph, index) => (
                 <p key={index} style={{ fontSize: "20px", lineHeight: "35px" }}>
                   {paragraph}
@@ -120,16 +85,14 @@ const ServicesDetails = ({ match }) => {
                 Business :
               </h2>
               {serviceData.section3.benefits.map((benefit, index) => (
-                <li
-                  key={index}
-                  style={{ fontSize: "20px", padding: "8px" }}
-                >
+                <li key={index} style={{ fontSize: "20px", padding: "8px" }}>
                   {benefit}
                 </li>
               ))}
               <p style={{ fontSize: "20px", lineHeight: "35px" }}>
                 {serviceData.section3.callToAction}
               </p>
+              <br></br>
             </div>
           </Row>
         </Container>

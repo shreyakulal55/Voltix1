@@ -93,7 +93,7 @@ const Home = () => {
               />
 
               <div className="col-lg circular-background">
-                <h4 className="tag">The Future</h4>
+                <h4 className="tag">The Future</h4><br></br>
                 <div className="above-text">
                   <div className="display-6 bold-text">
                     Bring your ideas to life!
@@ -259,7 +259,7 @@ const Home = () => {
                       </p>
                       <br />
                       <Link to={`/projects/${project._id}`}>
-                        {console.log(project._id)} {/* Use Link to navigate */}
+                        {console.log(project._id)}
                         <button className="icon-link">
                           <FontAwesomeIcon icon={faArrowRight} />
                         </button>
@@ -300,8 +300,10 @@ const Home = () => {
                       <div className="card-body t_box">
                         <div className="card-number">{index + 1}</div>
                         <div className="card-t">
+                          <br></br>
                           <h2 className="card-name">{testimonial.author}</h2>
-                          <p className="card-desc">{testimonial.text}</p>
+                          <br></br>
+                          <p className="card-desc">{testimonial.text}</p><br></br>
                         </div>
                       </div>
                     </div>
