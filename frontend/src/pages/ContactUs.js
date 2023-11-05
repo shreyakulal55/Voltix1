@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import axios from "axios";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./ContactUs.css";
-import URL from "../.env/secret.js";
+import React, { useState } from 'react';
+import axios from 'axios';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './ContactUs.css';
+import URL from '../.env/secret.js';
 
 function validateEmail(email) {
   const emailPattern = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
@@ -15,13 +15,13 @@ function validateMobileNumber(phoneNumber) {
 }
 
 const ContactUs = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [message, setMessage] = useState("");
-  const [successMessage, setSuccessMessage] = useState("");
-  const [emailError, setEmailError] = useState("");
-  const [phoneNumberError, setPhoneNumberError] = useState("");
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const [message, setMessage] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
+  const [emailError, setEmailError] = useState('');
+  const [phoneNumberError, setPhoneNumberError] = useState('');
 
   const handleEmailChange = (e) => {
     const newEmail = e.target.value;
@@ -34,17 +34,15 @@ const ContactUs = () => {
   };
 
   const handleEmailBlur = () => {
-    setEmailError(validateEmail(email) ? "" : "Invalid email address");
+    setEmailError(validateEmail(email) ? '' : 'Invalid email address');
   };
 
   const handlePhoneNumberBlur = () => {
-    setPhoneNumberError(
-      validateMobileNumber(phoneNumber) ? "" : "Invalid phone number"
-    );
+    setPhoneNumberError(validateMobileNumber(phoneNumber) ? '' : 'Invalid phone number');
   };
 
   const handleEnterKey = (e, nextField) => {
-    if (e.key === "Enter") {
+    if (e.key === 'Enter') {
       e.preventDefault();
       nextField.focus();
     }
@@ -54,9 +52,9 @@ const ContactUs = () => {
     e.preventDefault();
 
     if (emailError || phoneNumberError) {
-      setSuccessMessage("Please fix the validation errors before submitting.");
+      setSuccessMessage('Please fix the validation errors before submitting.');
       setTimeout(() => {
-        setSuccessMessage("");
+        setSuccessMessage('');
       }, 3000);
       return;
     }
@@ -68,39 +66,41 @@ const ContactUs = () => {
       message,
     };
 
-    const apiURL = `${URL}/contacts`; 
+    const apiURL = `${URL}/contacts`; // Replace with your actual endpoint
 
     axios
       .post(apiURL, data)
       .then((response) => {
-        setSuccessMessage("Submitted successfully");
+        setSuccessMessage('Submitted successfully');
         setTimeout(() => {
-          setSuccessMessage("");
+          setSuccessMessage('');
         }, 3000);
 
-        setName("");
-        setEmail("");
-        setPhoneNumber("");
-        setMessage("");
+        // Clear the form fields on successful submission
+        setName('');
+        setEmail('');
+        setPhoneNumber('');
+        setMessage('');
       })
       .catch((error) => {
-        console.error("Error submitting the form:", error);
-        setSuccessMessage("Error submitting the form");
+        console.error('Error submitting the form:', error);
+        setSuccessMessage('Error submitting the form');
         setTimeout(() => {
-          setSuccessMessage("");
+          setSuccessMessage('');
         }, 3000);
 
- 
+        // Additional error handling:
         if (error.response) {
-          console.log("Response data:", error.response.data);
-          console.log("Response status:", error.response.status);
+          console.log('Response data:', error.response.data);
+          console.log('Response status:', error.response.status);
+          // You can add more specific error handling here if needed.
         }
       });
   };
 
   return (
     <div>
-      <div id="success-message" class="mobt" className={`alert ${successMessage ? 'alert-success' : 'd-none'}`}>
+      <div id="success-message" className={`alert ${successMessage ? 'alert-success' : 'd-none'}`}>
           {successMessage}
         </div>
     <div class="bg-contact100">
@@ -153,110 +153,6 @@ const ContactUs = () => {
                 </div>
             </form>
         </div>
-=======
-      <div
-        id="success-message"
-        className={`alert ${successMessage ? "alert-success" : "d-none"}`}
-      >
-        {successMessage}
-      </div>
-      <div className="bg-contact100">
-        <div className="container-contact100">
-          <div className="wrap-contact100">
-            <div className="contact100-pic js-tilt" data-tilt>
-              <img src="https://i.imgur.com/VRFiMzM.png" alt="IMG" />
-            </div>
-            <form className="contact100-form validate-form" onSubmit={handleSubmit}>
-              <span className="contact100-form-title">Get in touch</span>
-              <div
-                className="wrap-input100 validate-input"
-                data-validate="Name is required"
-              >
-                <input
-                  className="input100"
-                  id="name"
-                  type="text"
-                  name="name"
-                  placeholder="Name"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  required
-                />
-                <span className="focus-input100"></span>
-                <span className="symbol-input100">
-                  <i className="fa fa-user" aria-hidden="true"></i>
-                </span>
-              </div>
-              <div
-                className="wrap-input100 validate-input"
-                data-validate="Valid email is required: ex@abc.xyz"
-              >
-                <input
-                  className="input100"
-                  id="email"
-                  type="text"
-                  name="email"
-                  placeholder="Email"
-                  value={email}
-                  onChange={handleEmailChange}
-                  onBlur={handleEmailBlur}
-                  onKeyPress={(e) =>
-                    handleEnterKey(e, document.getElementById("phoneNumber"))
-                  }
-                />
-                {emailError && <div className="text-danger">{emailError}</div>}
-                <span className="focus-input100"></span>
-                <span className="symbol-input100">
-                  <i className="fa fa-envelope" aria-hidden="true"></i>
-                </span>
-              </div>
-              <div
-                className="wrap-input100 validate-input"
-                data-validate="Valid email is required: ex@abc.xyz"
-              >
-                <input
-                  className="input100"
-                  type="text"
-                  name="phoneNumber"
-                  placeholder="phone no"
-                  value={phoneNumber}
-                  onChange={handlePhoneNumberChange}
-                  onBlur={handlePhoneNumberBlur}
-                  onKeyPress={(e) =>
-                    handleEnterKey(e, document.getElementById("message"))
-                  }
-                />
-                {phoneNumberError && (
-                  <div className="text-danger">{phoneNumberError}</div>
-                )}
-                <span className="focus-input100"></span>
-                <span className="symbol-input100">
-                  <i className="fa fa-envelope" aria-hidden="true"></i>
-                </span>
-              </div>
-              <div
-                className="wrap-input100 validate-input"
-                data-validate="Message is required"
-              >
-                <textarea
-                  className="input100"
-                  id="message"
-                  name="message"
-                  placeholder="Message"
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                />
-                <span className="focus-input100"></span>
-              </div>
-              <div className="container-contact100-form-btn">
-                <button type="submit" className="contact100-form-btn">
-                  Send
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
     </div>
 </div>
 </div>
