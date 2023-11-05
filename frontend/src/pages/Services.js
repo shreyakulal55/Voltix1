@@ -4,13 +4,13 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Import Font Awesome icons
 import { faMobile, faCode, faLaptop, faPalette, faVideo, faBullhorn, faArrowRight } from '@fortawesome/free-solid-svg-icons'; // Import Font Awesome icons
-import URL from '../.env/secret.js';
+
 const Services = () => {
   const [services, setServices] = useState([]);
 
   useEffect(() => {
     // Fetch projects from the API
-    fetch(`${URL}/services`)
+    fetch('http://localhost:5000/services')
       .then((response) => response.json())
       .then((data) => setServices(data));
   }, []);
@@ -18,8 +18,9 @@ const Services = () => {
 
   return (
     <section className='full'>
+      <div className="sticky-top bg-white hidden-spacer"> </div>
       <Container fluid>
-        <Row>
+        {/* <Row>
           <div className="g-container">
             <div className="g-item">
               <div className='title'>
@@ -38,12 +39,35 @@ const Services = () => {
               <img src="https://voltix1.s3.amazonaws.com/service_header.svg" alt="/" height="390px" />
             </div>
           </div>
+        </Row> */}
+        <Row>
+          <div className="h-container">
+            <div className="row">
+              <div className="col" id='c-container'>
+                <div className='title'>
+                  <span className="tagline">OUR SERVICES</span>
+                  <h2 className='heading'>
+                    The software development
+                    company that puts your needs first.
+                  </h2>
+                  <h6 className='head'>
+                    Voltix Solution is a Software company offering web and mobile app development,
+                    digital marketing, with a skilled team focused on tech-driven solutions.
+                  </h6>
+                </div>
+              </div>
+              <br />
+              <div className="col" id='img-container' >
+                <img src="https://voltix1.s3.amazonaws.com/service_header.svg" alt="/" height="300px" />
+              </div>
+            </div>
+          </div>
         </Row>
         <Row>
           <div className='b-container'>
             <div className='row'>
               {services.map((service, index) => (
-                <div key={index} className='col-4'>
+                <div key={index} className='col col-md-4'>
                   <div className='service__box pointer'>
                     <div className='icon'>
                       {service.icon === 'faMobile' ? (

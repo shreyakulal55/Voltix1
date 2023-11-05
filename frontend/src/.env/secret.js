@@ -1,2 +1,2 @@
-const URL= "https://www.voltix1.cloud";
+const URL= "http://www.voltix1.cloud";
 export default URL;
