@@ -102,7 +102,6 @@ const ContactUs = () => {
 
   return (
     <div>
-<<<<<<< HEAD
       <div id="success-message" class="mobt" className={`alert ${successMessage ? 'alert-success' : 'd-none'}`}>
           {successMessage}
         </div>
@@ -260,7 +259,6 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
->>>>>>> e510e48d6bca26616d29b83508200e3b015f4939
     </div>
 </div>
 </div>
