@@ -1,9 +1,3 @@
-/* header {
-  height:180vh;
-  min-height:400px;
-  background-size:cover;
-  background-image:url('https://images.unsplash.com/photo-1470434151738-dc5f4474c239?dpr=1&auto=format&crop=entropy&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb');
-} */
 
 .hidden-spacer {
   height: 56px
@@ -13,80 +7,8 @@
 }
 
 .navbar {
-  
-  background-image: linear-gradient(to right top, #b6d9e5, #add6e9, #a7d2ed, #a2cef1, #a1c9f4, #a6c6f6, #aec3f8, #b6bff8, #c3bdf7, #d0bcf4, #dcbaf1, #e7b9ec);
-
-  /* background-image: linear-gradient(to right top, #d16ba5, #ca7cbd, #c18ed2, #b69ee1, #adaeed, #a4b9f5, #9cc3fb, #96cdfe, #8cd6ff, #86deff, #84e6fc, #88edf7); */
-  
-}
-
-.navbar-nav .nav-link {
-  color:   #333333; 
-}
-
-.ml-auto .btn-secondary {
-  background-color: #333333; /* Dark Gray */
-  color: #333333; /* Orange text */
-  border: #FFA500 ; /* Optionally, remove the border */
+background-image: linear-gradient(to right top, #b6d9e5, #add6e9, #a7d2ed, #a2cef1, #a1c9f4, #a6c6f6, #aec3f8, #b6bff8, #c3bdf7, #d0bcf4, #dcbaf1, #e7b9ec);
 }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 
-.navbar {
-    background-color: #1B1919; 
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    position: sticky;
-  }
-  
-  .nav-list {
-    list-style: none;
-    display: flex;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .nav-item {
-    margin: 0 10px;
-  }
-  
-  .nav-item a {
-    text-decoration: none;
-    color: white;
-  }
-  
-  .nav-item{
-    color: #886f60;
-  }
-  .btn {
-    border-radius: 30px;
-   background-color:#182F38 ;
-     color: aliceblue;
-  }
-   */

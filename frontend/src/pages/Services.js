@@ -4,13 +4,13 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Import Font Awesome icons
 import { faMobile, faCode, faLaptop, faPalette, faVideo, faBullhorn, faArrowRight } from '@fortawesome/free-solid-svg-icons'; // Import Font Awesome icons
-import URL from '../.env/secret.js';
+
 const Services = () => {
   const [services, setServices] = useState([]);
 
   useEffect(() => {
     // Fetch projects from the API
-    fetch(`${URL}/services`)
+    fetch('http://localhost:5000/services')
       .then((response) => response.json())
       .then((data) => setServices(data));
   }, []);
@@ -18,32 +18,33 @@ const Services = () => {
 
   return (
     <section className='full'>
+      <div className="sticky-top bg-white hidden-spacer"> </div>
       <Container fluid>
         <Row>
-          <div className="g-container">
-            <div className="g-item">
-              <div className='title'>
+        <div className="hi-container">
+            <div className="row container ">
+                <div className="col-lg-6" id='cm-container' style={{height:"55.5vh"}}>
                 <span className="tagline">OUR SERVICES</span>
-                <h2 style={{ fontSize: "45px" }}>
-                  The software development
-                  company that puts your needs first.
-                </h2>
-                <h6 style={{ fontSize: "19px" }}>
-                  Voltix Solution is a Software company offering web and mobile app development,
-                  digital marketing, with a skilled team focused on tech-driven solutions.
-                </h6>
-              </div>
+                  <h2 className='heading'>
+                    The software development
+                    company that puts your needs first.
+                  </h2>
+                  <h6 className='head'>
+                    Voltix Solution is a Software company offering web and mobile app development,
+                    digital marketing, with a skilled team focused on tech-driven solutions.
+                  </h6>
+                </div>
+                <div className="col-lg-6 d-flex justify-content-center align-items-end flex-column" style={{height:"55.5vh"}}>
+                    <img className="img-fluid homeimg" src="https://voltix1.s3.amazonaws.com/service_header.svg" alt="/"/>
+                </div>
             </div>
-            <div className="g-item">
-              <img src="https://voltix1.s3.amazonaws.com/service_header.svg" alt="/" height="390px" />
-            </div>
-          </div>
+        </div>
         </Row>
         <Row>
           <div className='b-container'>
             <div className='row'>
               {services.map((service, index) => (
-                <div key={index} className='col-4'>
+                <div key={index} className='col col-md-4'>
                   <div className='service__box pointer'>
                     <div className='icon'>
                       {service.icon === 'faMobile' ? (

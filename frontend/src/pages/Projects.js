@@ -7,22 +7,22 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import URL from '../.env/secret.js';
 // import movingImage from '../images/2.webp';
 const Projects = () => {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
     // Fetch projects from the API
-    fetch(`${URL}/projects`)
+    fetch('http://localhost:5000/projects')
       .then((response) => response.json())
       .then((data) => setProjects(data));
   }, []);
 
   return (<div>
     {/* <h1 className='display-5 text-center mx-auto font-weight-bold custom-heading'>Projects</h1> */}
-    <section className="introduction-section" style={{marginTop:"20px"}}>
-    <div className="g-container">
+    <section className="full">
+    <div className="sticky-top bg-white hidden-spacer"> </div>
+      {/* <div className="g-container">
             <div className="g-item">
               <div className='title'>
                 <h2 style={{ fontSize: "45px" }}> Explore Our Featured Projects.</h2>
@@ -34,17 +34,32 @@ const Projects = () => {
             <div className="g-item">
               <img src="https://voltix1.s3.amazonaws.com/2.webp" alt="/" height="390px" />
             </div>
+          </div> */}
+      <div className="hi-container">
+        <div className="row container ">
+          <div className="col-lg-6" id='cm-container' style={{ height: "55.5vh" }}>
+            <h2 className='h-heading'> Explore Our Featured Projects.</h2>
+            <h6 className='h-head'>
+              Discover a collection of our recent projects showcasing innovation and creativity.
+            </h6>
           </div>
-      </section>
+          <div className="col-lg-6 d-flex justify-content-center align-items-end flex-column" style={{ height: "55.5vh" }}>
+            <img className="img-fluid homeimg" src="https://voltix1.s3.amazonaws.com/2.webp" alt="/" />
+          </div>
+        </div>
+      </div>
+    </section>
     <section>
-      
-    <Container fluid>
-            <Row>
-              {projects.map((project,index) => (
-                <div className="col-4" key={project.id}>
+
+      <Container fluid>
+        <Row>
+          <div className='b-container'>
+            <div className='row'>
+              {projects.map((project, index) => (
+                <div className="col col-md-4" key={project.id}>
                   <div className="p__box pointer">
-                 
-                  {/* <div className="content-number ">{index+1}</div> */}
+
+                    {/* <div className="content-number ">{index+1}</div> */}
                     <div className="p__meta">
                       <h1 className="p__text">{project.name}</h1>
                       <p className="p p_text p_color">
@@ -61,10 +76,12 @@ const Projects = () => {
                   </div>
                 </div>
               ))}
-            </Row>
-          </Container>
+            </div>
+          </div>
+        </Row>
+      </Container>
     </section>
-    </div>
+  </div>
   );
 };
 

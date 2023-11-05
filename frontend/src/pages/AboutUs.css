@@ -37,8 +37,17 @@
         transform: translateY(-20px);
     }
 }
-.aboutus{
+
+
+/* Background gradient for all screen sizes */
+.aboutus {
     background-image: linear-gradient(to right top, #75bfd9, #7bbce4, #89b8eb, #9eb3ee, #b6acec, #bfa7e6, #c7a2de, #ce9dd6, #c89acf, #c397c8, #bd94c2, #b791bb);
+    padding: 30px 0; /* Adjust padding for different screen sizes */
 }
-
-
+.header-img {
+    width: 100%; /* Set the initial width to 100% */
+    height: auto; /* Automatically adjust the height to maintain aspect ratio */
+  
+    /* Add any other styles you want for the image */
+    max-width: 100%; /* Ensure the image doesn't exceed its original size */
+  }

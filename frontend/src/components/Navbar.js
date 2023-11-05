@@ -1,8 +1,5 @@
 import React from "react";
-// import { Link } from "react-router-dom";
 import "./Navbar.css";
-// import voltix_logo from "../images/voltix_logo.png";
-
 
 const Navbar = () => {
   return (
@@ -55,7 +52,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <div className="ml-auto"> {/* Add this div to align "Contact Us" to the right */}
+        <div className="ml-auto">
           <a className="btn btn-info" href="/ContactUs">
             Contact Us
           </a>
@@ -67,53 +64,3 @@ const Navbar = () => {
 
 export default Navbar;
 
-
-
-// const Navbar = () => {
-//   return (
-//     <nav
-//       className="navbar navbar-expand-lg bg-body-primary"
-//
-//     >
-//       <div className="container-fluid">
-//         <img
-//           src="https://www.voltixsolution.com/assets/img/voltix_logo.png"
-//           alt="loading"
-//           height="42.2"
-//           width="170"
-//         ></img>
-//         <Link className="navbar-brand" to="#"></Link>
-//         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-//           <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
-//             <li className="nav-item">
-//               <a className="nav-link " aria-current="page" href="/">
-//                 Home
-//               </a>
-//             </li>
-//             <li className="nav-item">
-//               <a className="nav-link" href="/Services">
-//                 Services
-//               </a>
-//             </li>
-//             <li className="nav-item">
-//               <a className="nav-link" href="/Projects">
-//                 Projects
-//               </a>
-//             </li>
-//             <li className="nav-item">
-//               <a className="nav-link" href="/AboutUs">
-//                 About Us
-//               </a>
-//             </li>
-//           </ul>
-//           <ul className="navbar-nav">
-//           <li className="btn btn-secondary" > <a className="nav-link" href="/ContactUs"> Contact Us </a> </li>
-//           </ul>
-//         </div>
-
-//       </div>
-//     </nav>
-//   );
-// };
-
-// export default Navbar;

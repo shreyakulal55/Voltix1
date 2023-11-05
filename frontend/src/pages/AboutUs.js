@@ -23,13 +23,6 @@ const AboutUs = () => {
                   <h1>
                     {`Digital Transformation to Grow Your Company!
 Our versatile team is built of designers, developers and digital marketers who all bring unique experience.`}{" "}
-                    <span
-                      className="txt-rotate"
-                      dataPeriod="2000"
-                      data-rotate='[ "UI/UX Design", "Web Development","Mobile App","Software Development","Digital Marketing","Video Production" ]'
-                    >
-                      <span className="wrap"></span>
-                    </span>
                   </h1>
                   <p>
                     <br />
@@ -66,7 +59,7 @@ Our versatile team is built of designers, developers and digital marketers who a
                 <div
                   className={isVisible ? "animate_animated animate_zoomIn" : ""}
                 >
-                  <img src={headerImg} alt="Header Img" />
+                  <img class="header-img" src={headerImg} alt="Header Img" />
                 </div>
               )}
             </TrackVisibility>

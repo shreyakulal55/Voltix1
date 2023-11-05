@@ -1,29 +1,78 @@
-.bold-text {
-  padding-top: 10px;
-  font-weight: bold;
-  margin-left: 20px;
-}
-
 .intro-background {
   height: 100vh;
-  /* background-image: linear-gradient(to right top, #d16ba5, #ca7cbd, #c18ed2, #b69ee1, #adaeed, #a4b9f5, #9cc3fb, #96cdfe, #8cd6ff, #86deff, #84e6fc, #88edf7); */
   background-image: url("https://voltix1.s3.amazonaws.com/homepage_img.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   padding-top: 10px;
   margin-top: 68px;
-  /* Adjust this value as needed */
 }
 
+.tag {
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  background: linear-gradient(45deg, #FFD700, #87CEEB);
+  font-size: 30px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  display: inline-block;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    margin-top: 20px;
+    font-size: 24px; 
+    padding: 6px 8px; 
+  }
+}
+
+.above-text {
+  margin-bottom: 20px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 10px; /* Adjust the margin for smaller screens if needed */
+  }
+}
+
+
+.bold-text {
+  padding-top: 10px;
+  font-weight: bold;
+  margin-left: 20px;
+  text-align: center; 
+}
+.dis {
+  margin-left: 20px;
+  text-align: center;
+  font-size: 16px; 
+  line-height: 1.5; 
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
+
+.feel {
+  position: absolute;
+  bottom: 40px; 
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  background-image: linear-gradient(to right top, #95d0e5, #9eccea, #aac8eb, #b7c3e9, #c5bee4, #c3bde3, #c1bde2, #bfbce1, #afc0e3, #a1c3e0, #96c5d9, #92c6d0);
+}
+@media (max-width: 768px) {
+  .feel {
+    bottom: 10px;
+    position: relative;
+    left: auto;
+    transform: none;
+    text-align: center;
+    margin-right: 120px; 
+  }
+}
 
 .card {
   margin: 10px;
-  /* Adjust the margin value as needed */
-}
-
-.dis {
-  margin-left: 20px;
 }
 
 .circular-background {
@@ -40,14 +89,26 @@
   color: #FFF;
   text-align: end;
   left: 59%;
-  /* Adjust this value to move it to the left */
   top: 50%;
   transform: translate(-50%, -50%);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   color: #ededed;
-
-
 }
+@media (max-width: 768px) {
+  .circular-background {
+    width: 100%; 
+    height: auto;
+    left: 50%; 
+    transform: translateX(-50%);
+    top: 90px;
+  }
+
+  .dis {
+    margin: 20px;
+  }
+}
+
+
 
 .left-image {
   position: absolute;
@@ -57,15 +118,24 @@
   height: 650px;
   /* Adjust this value for the desired height */
 }
-
-.above-text {
-  margin-bottom: 20px;
+@media (max-width: 768px) {
+  .left-image {
+   
+    width: auto; /* Adjust the width based on your design */
+    height: 370px; /* Automatically adjust height to maintain aspect ratio */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%);
+    top: 363px; /* Adjust the top position as needed */
+  }
 }
+
 
 .underline-text {
   text-decoration: underline;
   color: black;
 }
+
+
 
 .bold-text {
 /* margin-left: 100px; */
@@ -115,9 +185,9 @@
   font-weight: bold;
 }
 
-.mb-4 {
+/* .mb-4 {
   margin-bottom: 20px;
-}
+} */
 
 .card-body {
   display: flex;
@@ -178,6 +248,7 @@ p.heading.p__color {
 }
 
 .s__box {
+  margin: 20px;
   border-radius: 10px;
   width: 100%;
   background-color: #233e68;
@@ -214,11 +285,26 @@ h1.s__text {
   justify-content: center;
 }
 
-.t_box {
-  background-color: #233e68;
+/* Change the color of the "Next" arrow */
+div.container .slick-next {
+  background-color: gray !important;
 }
 
+div.container .slick-prev {
+  background-color: gray !important;
+}
+/* Hover styles for the arrows (optional) */
+.slick-prev:hover {
+  background-color: gray !important;
+}
+
+.slick-next:hover {
+  background-color: gray !important;
+}
+
+
 .p__box {
+  margin: 20px;
   border-radius: 10px;
   width: 100%;
   background-color: #233e68;
@@ -275,6 +361,9 @@ h1.p__text {
 }
 
 
+.t_box {
+  background-color: #233e68;
+}
 .bg-testimonial {
   background-color: white;
   /* background-image: linear-gradient(to right top, #5abfd2, #4db8e1, #5aafec, #79a3ef, #9f93e8, #a392e6, #a790e4, #ab8fe2, #919dea, #7ba8ea, #6db1e5, #6cb8dd); */
@@ -308,6 +397,7 @@ h1.p__text {
   background-color: #4682DF;
 
 }
+
 
 
 
@@ -349,29 +439,3 @@ h1.p__text {
 
 
 
-
-
-
-
-
-.tag {
-  /* margin-left: 210px; */
-  font-weight: 700;
-  letter-spacing: 0.8px;
-  padding: 8px 10px;
-  background: linear-gradient(45deg, #FFD700, #87CEEB);
-  /* background-image: linear-gradient(to right top, #75bfd9, #7bbce4, #89b8eb, #9eb3ee, #b6acec, #bfa7e6, #c7a2de, #ce9dd6, #c89acf, #c397c8, #bd94c2, #b791bb);; */
-  /* background: linear-gradient(90.21deg, rgb(166, 166, 166), rgb(229, 226, 226),rgb(189, 187, 187)); */
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  font-size: 30px;
-  margin-bottom: 14px;
-  margin-top: 24px;
-  display: inline-block;
-}
-
-.feel {
-
-  margin-right: 160px;
-  /* text-align: center; */
-  background-image: linear-gradient(to right top, #95d0e5, #9eccea, #aac8eb, #b7c3e9, #c5bee4, #c3bde3, #c1bde2, #bfbce1, #afc0e3, #a1c3e0, #96c5d9, #92c6d0);
-}

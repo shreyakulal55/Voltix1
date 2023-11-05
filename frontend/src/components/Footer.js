@@ -26,16 +26,16 @@ const Footer = () => {
           <hr className="w-8 h-1 bg-webGreen mt-2"></hr>
           <ul>
             <li>
-              <a href="/Info">About Us</a>
+              <a href="/AboutUs">About Us</a>
             </li>
             <li>
-              <a href="/Info">Get in Touch</a>
+              <a href="/ContactUs">Get in Touch</a>
             </li>
             <li>
               <a href="/Info">Privacy Policy</a>
             </li>
             <li>
-              <a href="/Info">Support</a>
+              <a href="/ContactUs">Support</a>
             </li>
           </ul>
         </div>
@@ -58,19 +58,20 @@ const Footer = () => {
           </ul>
         </div>
         <div className="grid-item">
-          <a className="FI" href="/Info">
-            <img
-              src="https://voltix1.s3.amazonaws.com/favicon.ico"
-              height="150"
-              width="150"
-            />
-          </a>
+  <a className="FI" href="/ContactUs">
+    <img
+      src="https://voltix1.s3.amazonaws.com/favicon.ico"
+      height="150"
+      width="150"
+    />
+  </a>
 
-          <p className="text-[#8D8D8E] mt-4">
-            Subscribe to our newsletter to stay up-to-date on the latest news
-            and events.
-          </p>
-        </div>
+  <p className="text-[#8D8D8E] mt-4">
+  Get <a href="/ContactUs" style={{ color: 'blue', textDecoration: 'underline', cursor: 'pointer' }}> connected</a> with us and explore how we can collaborate to achieve your goals.
+  </p>
+</div>
+
+
       </div>
 
       <div className="copyright">
