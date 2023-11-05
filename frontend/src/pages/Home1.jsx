@@ -13,8 +13,7 @@ import Row from "react-bootstrap/Row";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import URL from "../.env/secret.js";
-// import back from "../images/back.png";
-// import "../images/back.png";
+
 
 const Home = () => {
   const [socialfeeds, setSocialfeeds] = useState([]);
@@ -61,8 +60,24 @@ const Home = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3, // Display 3 testimonials at a time
+    slidesToShow: 3,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
   return (
     <>
@@ -87,9 +102,9 @@ const Home = () => {
                 <div className="below-text">
                   <div className="dis">
                     <p>
-                      Our team of talented and highly committed professionals is
-                      <br></br>
-                      the key to our success in creating business solutions.
+                      Our team of talented and highly committed professionals   <br></br>is
+                    
+                      the key to our success in creating business solutions.&nbsp;&nbsp;
                     </p>
                   </div>
                   <a className="feel btn btn" href="/ContactUs">
@@ -237,7 +252,6 @@ const Home = () => {
               {projects.slice(0, 3).map((project) => (
                 <div className="col col-md-4" key={project.id}>
                   <div className="p__box pointer">
-                    {/* <div className="content-number ">{index+1}</div> */}
                     <div className="p__meta">
                       <h1 className="p__text">{project.name}</h1>
                       <p className="p p_text p_color">
@@ -261,8 +275,6 @@ const Home = () => {
         <br></br>
       </section>
 
-     
-
       {/* testimonial */}
       <section id="testimonial" className="bg-testimonial">
         <div className="container-lg">
@@ -283,7 +295,7 @@ const Home = () => {
             <div className=" row">
               <Slider {...settings}>
                 {testimonials.map((testimonial, index) => (
-                  <div className="col-12 col-md-4" key={index}>
+                  <div className=" col-md-4" key={index}>
                     <div className="card bg-t_box">
                       <div className="card-body t_box">
                         <div className="card-number">{index + 1}</div>
