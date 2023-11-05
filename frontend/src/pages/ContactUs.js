@@ -103,51 +103,51 @@ const ContactUs = () => {
       <div id="success-message" className={`alert ${successMessage ? 'alert-success' : 'd-none'}`}>
           {successMessage}
         </div>
-    <div class="bg-contact100">
-    <div class="container-contact100">
-        <div class="wrap-contact100">
-            <div class="contact100-pic js-tilt" data-tilt>
+    <div className="bg-contact100">
+    <div className="container-contact100">
+        <div className="wrap-contact100">
+            <div className="contact100-pic js-tilt" data-tilt>
                 <img src="https://i.imgur.com/VRFiMzM.png" alt="IMG" />
             </div>
-            <form class="contact100-form validate-form" onSubmit={handleSubmit}>
-                <span class="contact100-form-title">
+            <form className="contact100-form validate-form" onSubmit={handleSubmit}>
+                <span className="contact100-form-title">
                     Get in touch
                 </span>
-                <div class="wrap-input100 validate-input" data-validate="Name is required">
-                    <input class="input100" id="name" type="text" name="name" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} required/>
-                    <span class="focus-input100"></span>
-                    <span class="symbol-input100">
-                        <i class="fa fa-user" aria-hidden="true"></i>
+                <div className="wrap-input100 validate-input" data-validate="Name is required">
+                    <input className="input100" id="name" type="text" name="name" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} required/>
+                    <span className="focus-input100"></span>
+                    <span className="symbol-input100">
+                        <i className="fa fa-user" aria-hidden="true"></i>
                     </span>
                 </div>
-                <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-                    <input class="input100" id="email" type="text" name="email" placeholder="Email" value={email} 
+                <div className="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+                    <input className="input100" id="email" type="text" name="email" placeholder="Email" value={email} 
                     onChange={handleEmailChange}
                     onBlur={handleEmailBlur}
                     onKeyPress={(e) => handleEnterKey(e, document.getElementById('phoneNumber'))}/>
                     {emailError && <div className="text-danger">{emailError}</div>}
-                    <span class="focus-input100"></span>
-                    <span class="symbol-input100">
-                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <span className="focus-input100"></span>
+                    <span className="symbol-input100">
+                        <i className="fa fa-envelope" aria-hidden="true"></i>
                     </span>
                 </div>
-                <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-                    <input class="input100" type="text" name="phoneNumber" placeholder="phone no"  value={phoneNumber} onChange={handlePhoneNumberChange}
+                <div className="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+                    <input className="input100" type="text" name="phoneNumber" placeholder="phone no"  value={phoneNumber} onChange={handlePhoneNumberChange}
               onBlur={handlePhoneNumberBlur} onKeyPress={(e) => handleEnterKey(e, document.getElementById('message'))}/>
               {phoneNumberError && <div className="text-danger">{phoneNumberError}</div>}
-                    <span class="focus-input100"></span>
-                    <span class="symbol-input100">
-                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <span className="focus-input100"></span>
+                    <span className="symbol-input100">
+                        <i className="fa fa-envelope" aria-hidden="true"></i>
                     </span>
                 </div>
-                <div class="wrap-input100 validate-input" data-validate="Message is required">
-                    <textarea class="input100" id='message' name="message" placeholder="Message" value={message}
+                <div className="wrap-input100 validate-input" data-validate="Message is required">
+                    <textarea className="input100" id='message' name="message" placeholder="Message" value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     />
-                    <span class="focus-input100"></span>
+                    <span className="focus-input100"></span>
                 </div>
-                <div class="container-contact100-form-btn">
-                    <button type='submit' class="contact100-form-btn">
+                <div className="container-contact100-form-btn">
+                    <button type='submit' className="contact100-form-btn">
                         Send
                     </button>
                 </div>
