@@ -25,10 +25,7 @@ const Navbar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div
-          className="collapse navbar-collapse justify-content-center"
-          id="main-nav"
-        >
+        <div className="collapse navbar-collapse justify-content-center" id="main-nav">
           <ul className="navbar-nav">
             <li className="nav-item">
               <a className="nav-link" href="/">
@@ -50,12 +47,12 @@ const Navbar = () => {
                 About Us
               </a>
             </li>
+            <li className="nav-item ml-auto ">
+              <a className="ctn btn btn-info" href="/ContactUs">
+                Contact Us
+              </a>
+            </li>
           </ul>
-        </div>
-        <div className="ml-auto">
-          <a className="btn btn-info" href="/ContactUs">
-            Contact Us
-          </a>
         </div>
       </div>
     </nav>
@@ -63,4 +60,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
