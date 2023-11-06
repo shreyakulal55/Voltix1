@@ -35,11 +35,18 @@ padding-bottom: 20px;
 }
 
 .pr-description {
+  text-align: justify;
 padding-top: 90px;
 font-size: 19px;
-margin: 20px 0;
+padding-left: 300px;
+padding-right: 300px;
 }
-
+@media (max-width: 768px) {
+  .pr-description {
+    padding-left: 10px; 
+    padding-right: 10px; 
+  }
+}
 .pr-details-list {
 list-style-type: none;
 padding: 0;

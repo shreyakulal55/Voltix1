@@ -187,14 +187,15 @@ h1.project__text {
   
   
   h2.h-heading {
-    font-size: 55px;
+    font-weight: bold;
+    font-size: 50px;
     margin-bottom: 20px;
     font-family: Poppins, sans-serif;
     text-align: left;
   }
   
   h6.h-head {
-    font-size: 30px;
+    font-size: 24px;
     font-family: Poppins, sans-serif;
   }
 

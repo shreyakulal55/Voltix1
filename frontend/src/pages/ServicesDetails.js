@@ -31,7 +31,7 @@ const ServicesDetails = ({ match }) => {
                   <span className="taglineD">
                     {serviceData.section1.tagline}
                   </span>
-                  <h2 style={{ fontSize: "45px" }}>
+                  <h2 className="sdh">
                     {serviceData.section1.title}
                   </h2>
                   <br></br>
@@ -70,7 +70,7 @@ const ServicesDetails = ({ match }) => {
         />
         <br></br>
         <br></br>
-        <Container fluid>
+        <Container fluid >
           <Row>
             <div className="titl">
               <h2 style={{ fontSize: "35px" }}>{serviceData.section3.title}</h2>

@@ -30,11 +30,21 @@
 
 .title {
     color: #0e0c0c;
-    padding-left: 90px;
     font-size: 50px;
     border-radius: 4px;
     text-align: left;
     margin-top: 60px;
+    padding-left: 300px;
+    padding-right: 300px;
+}
+.titl {
+    color: #0e0c0c;
+    font-size: 50px;
+    border-radius: 4px;
+    text-align: justify;
+    margin-top: 60px;
+    padding-left: 300px;
+    padding-right: 300px;
 }
 
 .center-container {
@@ -79,19 +89,23 @@
     align-items: center;
     width: 100%;
 }
+.sdh{
+    font-size: 45px;
+}
 
 @media (max-width: 600px) {
     #c-container {
         display: flex;
         flex-wrap: wrap;
     }
-
     #im-container {
         display: flex;
         margin-left: 0;
         align-items: center;
     }
-
+    .sdh{
+        font-size: 35px;
+    }
     .center-container {
         display: flex;
         justify-content: flex-start;

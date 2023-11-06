@@ -26,6 +26,7 @@ const Projects = () => {
         <div className="row container ">
           
           <div className="col-lg-6" id='cm-container' style={{ height: "35.5vh" }}>
+          <span className="tagline">PROJECTS</span>
             <h2 className='h-heading'> Explore Our Featured Projects.</h2>
             <h6 className='h-head'>
               Discover a collection of our recent projects showcasing innovation and creativity.

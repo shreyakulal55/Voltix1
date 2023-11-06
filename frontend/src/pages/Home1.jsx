@@ -19,6 +19,20 @@ const Home = () => {
   const [socialfeeds, setSocialfeeds] = useState([]);
   const [testimonials, setTestimonials] = useState([]);
   const [projects, setProjects] = useState([]);
+  const [services, setServices]=useState([]);
+
+  useEffect(() => {
+    // Fetch services data from your API when the component mounts
+    axios
+      .get(`${URL}/services`)
+      .then((response) => {
+        setServices(response.data);
+      })
+      .catch((error) => {
+        console.error("Error fetching /services: " + error);
+      });
+  }, []);
+
 
   useEffect(() => {
     // Fetch SocialFeeds data from your API when the component mounts
@@ -134,88 +148,35 @@ const Home = () => {
             <br></br>
           </div>
 
+          <Container fluid>
+          <Row>
           <div className="container-md">
             <div className="row">
-              <div className="col col-md-4">
-                <div className="s__box pointer">
-                  <div className="content-number ">1</div>
-                  <div className="s__meta">
-                    <h1 className="s__text">Mobile App</h1>
-                    <p className="p s_text p_color">
-                      Mobile apps are essential for modern business success.
-                      Ignoring mobile means missed opportunities.
-                    </p>
-                    <br />
+              {services.map((service, index) => (
+                <div key={index} className="col col-md-4">
+                  <div className="s__box pointer">
+                  <div className="content-number ">{index+1}</div>
+                    <div className="s__meta">
+                      <h1 className="s__text">
+                        {service.section1.tagline}
+                      </h1>
+                      <p className="p s_text p_color">
+                        {service.section1.title}
+                      </p>
+                      <br />
+                      
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="col col-md-4">
-                <div className="s__box pointer">
-                  <div className="content-number ">2</div>
-                  <div className="s__meta">
-                    <h1 className="s__text">Web Development</h1>
-                    <p className="p s_text p_color">
-                      A well-designed website can help you establish credibility
-                      and trust with potential customers
-                    </p>
-                    <br />
-                  </div>
-                </div>
-              </div>
-              <div className="col col-md-4">
-                <div className="s__box pointer">
-                  <div className="content-number ">3</div>
-                  <div className="s__meta">
-                    <h1 className="s__text">Software Development</h1>
-                    <p className="p s_text p_color">
-                      Software development innovates products, markets, and
-                      enhances customer service.
-                    </p>
-                    <br />
-                  </div>
-                </div>
-              </div>
-              <div className="col col-md-4">
-                <div className="s__box pointer">
-                  <div className="content-number ">4</div>
-                  <div className="s__meta">
-                    <h1 className="s__text">UI/UX Design</h1>
-                    <p className="p s_text p_color">
-                      UI/UX Design A professional UI/UX designer creates
-                      user-friendly interfaces, avoiding design mistakes.
-                    </p>
-                    <br />
-                  </div>
-                </div>
-              </div>
-              <div className="col col-md-4">
-                <div className="s__box pointer">
-                  <div className="content-number ">5</div>
-                  <div className="s__meta">
-                    <h1 className="s__text">Video Production</h1>
-                    <p className="p s_text p_color">
-                      Crafting compelling videos that tell a powerful story,
-                      leaving a lasting impact on viewers.
-                    </p>
-                    <br />
-                  </div>
-                </div>
-              </div>
-              <div className="col col-md-4">
-                <div className="s__box pointer">
-                  <div className="content-number ">6</div>
-                  <div className="s__meta">
-                    <h1 className="s__text">Digital Marketing</h1>
-                    <p className="p s_text p_color">
-                      Digital marketing is the key to reaching your target
-                      audience and growing your business online.
-                    </p>
-                    <br />
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
+        </Row>
+          </Container>
+
+
+
+          
 
           <br></br>
 
@@ -351,6 +312,7 @@ const Home = () => {
                         <div className="card-t">
                           <h2 className="card-n">{socialfeeds.author}</h2>
                           <p className="card-d">{socialfeeds.content}</p>
+                          <h4 className="card-n">{socialfeeds.source}</h4>
                         </div>
                       </div>
                     </div>
